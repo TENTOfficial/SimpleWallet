@@ -50,12 +50,17 @@
     <ApplicationIcon>logo.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="QRCoder, Version=1.3.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QRCoder.1.3.2\lib\net40\QRCoder.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -66,6 +71,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddressBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddressBook.Designer.cs">
+      <DependentUpon>AddressBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="api.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -119,6 +130,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="QrCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QrCode.Designer.cs">
+      <DependentUpon>QrCode.cs</DependentUpon>
+    </Compile>
     <Compile Include="SendingCoin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,7 +160,16 @@
     <Compile Include="Start.Designer.cs">
       <DependentUpon>Start.cs</DependentUpon>
     </Compile>
+    <Compile Include="TransactionDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransactionDetail.Designer.cs">
+      <DependentUpon>TransactionDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="types.cs" />
+    <EmbeddedResource Include="AddressBook.resx">
+      <DependentUpon>AddressBook.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConfigureMasternode.resx">
       <DependentUpon>ConfigureMasternode.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,6 +196,9 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="QrCode.resx">
+      <DependentUpon>QrCode.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SendingCoin.resx">
       <DependentUpon>SendingCoin.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Start.resx">
       <DependentUpon>Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransactionDetail.resx">
+      <DependentUpon>TransactionDetail.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Types.AddressBook.datasource" />
@@ -205,6 +237,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\sng_main.png" />
+    <None Include="Resources\background_bottom.png" />
     <None Include="Images\receive.png" />
     <None Include="Images\send.png" />
     <None Include="Images\search.png" />

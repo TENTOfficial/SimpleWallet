@@ -31,6 +31,9 @@ namespace SimpleWallet
         String dataToGetMasternode = "";
         String getResultMasternode = "";
         String getResultDaemond = "";
+        String dataToGetTransaction = "";
+        String getResultGetTransaction = "";
+
         bool error = false;
         bool isClosedDeamon = true;
 
@@ -122,6 +125,11 @@ namespace SimpleWallet
                 {
                     process.OutputDataReceived += new DataReceivedEventHandler(this.outputHandlerOthers);
                     process.ErrorDataReceived += new DataReceivedEventHandler(this.outputHandlerOthers);
+                }
+                else if(type == Types.OutputType.GET_TRANSACTION)
+                {
+                    process.OutputDataReceived += new DataReceivedEventHandler(this.outputHandlerGetTransaction);
+                    process.ErrorDataReceived += new DataReceivedEventHandler(this.outputHandlerGetTransaction);
                 }
                 process.Start();
                 process.BeginErrorReadLine();
@@ -230,6 +238,25 @@ namespace SimpleWallet
             }
         }
 
+        void outputHandlerGetTransaction(Object sender, DataReceivedEventArgs e)
+        {
+            // Prepend line numbers to each line of the output.
+            if (!String.IsNullOrEmpty(e.Data))
+            {
+                if (e.Data.Contains(dataToGetTransaction))
+                {
+                    if (String.IsNullOrEmpty(getResultGetTransaction))
+                    {
+                        getResultGetTransaction += e.Data;
+                    }
+                    else
+                    {
+                        getResultGetTransaction += "\n" + e.Data;
+                    }
+                }
+            }
+        }
+
         public String executeStart(String command)
         {
             String exportDir = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
@@ -265,6 +292,15 @@ namespace SimpleWallet
             executeCommand(command, Types.OutputType.BALANCE);
             return getResultBalance;
         }
+
+        public String executeGetTransaction(List<String> command, String dataToGet)
+        {
+            dataToGetTransaction = dataToGet;
+            getResultGetTransaction = "";
+            executeCommand(command, Types.OutputType.GET_TRANSACTION);
+            return getResultGetTransaction;
+        }
+        
 
         public String executeOthers(List<String> command, String dataToGet)
         {

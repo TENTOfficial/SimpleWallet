@@ -16,6 +16,48 @@ using System.Net;
 
 namespace SimpleWallet
 {
+    public class VerticalTabControl : TabControl
+    {
+        public VerticalTabControl()
+        {
+            this.Alignment = TabAlignment.Left;
+            this.DrawMode = TabDrawMode.OwnerDrawFixed;
+            this.SizeMode = TabSizeMode.Fixed;
+            this.ItemSize = new Size(this.Font.Height * 3 / 2, 75);
+        }
+        public override Font Font
+        {
+            get { return base.Font; }
+            set
+            {
+                base.Font = value;
+                this.ItemSize = new Size(value.Height * 3 / 2, base.ItemSize.Height);
+            }
+        }
+        protected override void OnDrawItem(DrawItemEventArgs e)
+        {
+            using (SolidBrush _textBrush = new SolidBrush(this.ForeColor))
+            {
+                TabPage _tabPage = this.TabPages[e.Index];
+                Rectangle _tabBounds = this.GetTabRect(e.Index);
+
+                if (e.State != DrawItemState.Selected) e.DrawBackground();
+                else
+                {
+                    using (var brush = new System.Drawing.Drawing2D.LinearGradientBrush(e.Bounds, Color.Transparent, Color.Transparent, 90f))
+                    {
+                        e.Graphics.FillRectangle(brush, e.Bounds);
+                    }
+                }
+
+                StringFormat _stringFlags = new StringFormat();
+                _stringFlags.Alignment = StringAlignment.Center;
+                _stringFlags.LineAlignment = StringAlignment.Center;
+                e.Graphics.DrawString(_tabPage.Text, this.Font, _textBrush, _tabBounds, new StringFormat(_stringFlags));
+            }
+        }
+    }
+
     public class TransparentLabel : Label
     {
         public TransparentLabel()
@@ -143,6 +185,21 @@ namespace SimpleWallet
                 }
                 return instance;
             }
+        }
+
+        public List<Types.AddressBook> readAddressBook()
+        {
+            List<Types.AddressBook> rtn = new List<Types.AddressBook>();
+            if (!File.Exists(Types.addressLabel))
+                File.Create(Types.addressLabel).Close();
+            String data = File.ReadAllText(Types.addressLabel);
+            dynamic parse = JsonConvert.DeserializeObject<Types.ListAddressBook>(data);
+            if (parse != null && parse.addressbook != null)
+            {
+                rtn = new List<Types.AddressBook>(parse.addressbook);
+            }
+            rtn = rtn.OrderBy(o => o.label).ToList();
+            return rtn;
         }
 
         String getRandomString(int length)
@@ -787,6 +844,14 @@ namespace SimpleWallet
             String data = "";
             List<String> command = new List<String> { "listtransactions", "\"\"", "100" };
             String ret = Task.Run(() => exec.executeBalance(command, data)).Result;
+            return ret;
+        }
+
+        public String getTransaction(string txid)
+        {
+            String data = "";
+            List<String> command = new List<String> { "gettransaction", txid };
+            String ret = Task.Run(() => exec.executeGetTransaction(command, data)).Result;
             return ret;
         }
 
