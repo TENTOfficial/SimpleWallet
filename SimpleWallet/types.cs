@@ -114,6 +114,7 @@ namespace SimpleWallet
             SYNC,
             BALANCE,
             MASTERNODE,
+            GET_TRANSACTION,
             OTHERS
         }
 
@@ -202,6 +203,7 @@ namespace SimpleWallet
             public String amount { get; set; }
             public String confirmations { get; set; }
             public String time { get; set; }
+            public String txid { get; set; }
         }
 
         public class TransactionConverted
@@ -211,14 +213,16 @@ namespace SimpleWallet
             public String amount { get; set; }
             public String time { get; set; }
             public String address { get; set; }
+            public String txid { get; set; }
 
-            public TransactionConverted(String category, String confirmations, String amount, String time, String address)
+            public TransactionConverted(String category, String confirmations, String amount, String time, String address, String txid)
             {
                 this.category = category;
                 this.confirmations = confirmations;
                 this.amount = amount;
                 this.time = time;
                 this.address = address;
+                this.txid = txid;
             }
         }
 

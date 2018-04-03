@@ -98,14 +98,10 @@ namespace SimpleWallet
             dtgTransactions.Columns[4].HeaderText = "Send to";
             dtgTransactions.Columns[4].Width = dtgTransactions.Width * 4 / 10;
             dtgTransactions.Columns[4].ReadOnly = true;
-
-            dtgAddressBook.RowHeadersVisible = false;
-            dtgAddressBook.Columns[0].HeaderText = "Label";
-            dtgAddressBook.Columns[0].Width = dtgAddressBook.Width * 4 / 10;
-            dtgAddressBook.Columns[0].ReadOnly = true;
-            dtgAddressBook.Columns[1].HeaderText = "Address";
-            dtgAddressBook.Columns[1].Width = dtgAddressBook.Width * 6 / 10;
-            dtgAddressBook.Columns[1].ReadOnly = true;
+            dtgTransactions.Columns[5].HeaderText = "Txid";
+            dtgTransactions.Columns[5].Width = dtgTransactions.Width * 4 / 10;
+            dtgTransactions.Columns[5].ReadOnly = true;
+            dtgTransactions.Columns[5].Visible = false;
 
             dtgMasternode.RowHeadersVisible = false;
             dtgMasternode.Columns[0].HeaderText = "Alias";
@@ -155,11 +151,7 @@ namespace SimpleWallet
 
             cbUnit.SelectedIndex = 0;
 
-#if !DEBUG
-            tcMain.TabPages.Remove(tpDebug);
-#endif
             tcMain.TabPages.Remove(tpMasternode);
-            tcMain.TabPages.Remove(tpAddressBock);
             tcMain.TabPages.Remove(tpOverview);
             tcMain.TabPages.Remove(tpSend);
             tcMain.TabPages.Remove(tpReceive);
@@ -168,7 +160,6 @@ namespace SimpleWallet
             tcMain.TabPages.Add(tpSend);
             tcMain.TabPages.Add(tpReceive);
             tcMain.TabPages.Add(tpTransactions);
-            tcMain.TabPages.Add(tpAddressBock);
             tcMain.TabPages.Add(tpMasternode);
         }
 
@@ -227,12 +218,11 @@ namespace SimpleWallet
             //populate balance
             populateBalance(walletDic);
 
-            //populate addressbook
-            populateAddressBook(readAddressBook());
-
             dtgTransactions.Invoke(new Action(() => dtgTransactions.Visible = false));
 
-            book = readAddressBook();
+            book = api.readAddressBook();
+
+            loadAddressBook(book);
 
             populateMasternodes();
             
@@ -265,7 +255,6 @@ namespace SimpleWallet
                 btnTurnOffMNMode.Invoke(new Action(() => btnTurnOffMNMode.Enabled = false));
             }
 
-            dtgAddressBook.DataError += Dtg_DataError;
             Task.Run(() => startSync());
             Task.Run(() => startCheckMasternodeList());
             //Task.Run(() => startCheckBalance());
@@ -759,122 +748,6 @@ namespace SimpleWallet
         {
             dtg.Invoke(new Action(() => dtg.Sort(dtg.Columns[sortName], ListSortDirection.Ascending)));
         }
-
-        void populateAddressBook(List<Types.AddressBook> datas)
-        {
-
-            dtgAddressBook.Invoke(new Action(() =>
-            {
-                dtgAddressBook.AutoGenerateColumns = true;
-                dtgAddressBook.DataSource = new BindingList<Types.AddressBook>(datas);
-            }));
-
-            loadWallet();
-        }
-
-        void addAddressBook(Types.AddressBook input)
-        {
-            String label = input.label;
-
-            DataGridViewRow row = new DataGridViewRow();
-            try
-            {
-                row = dtgAddressBook.Rows
-                .Cast<DataGridViewRow>()
-                .Where(r => r.Cells[0].Value.ToString().Equals(label))
-                .First();
-
-                MessageBox.Show("Duplicated label");
-            }
-            catch (Exception ex)
-            {
-                try
-                {
-                    book.Add(new Types.AddressBook(label, input.address));
-                    saveAddressBook(book);
-                    loadAddressBook(book);
-                    book.Sort(delegate(Types.AddressBook x, Types.AddressBook y)
-                    {
-                        return x.label.CompareTo(y.label);
-                    });
-                    dtgAddressBook.Invoke(new Action(() =>
-                    {
-                        dtgAddressBook.AutoGenerateColumns = true;
-                        dtgAddressBook.DataSource = new BindingList<Types.AddressBook>(book);
-                    }));
-                }
-                catch (Exception ex1)
-                {
-                    if (shouldRestart)
-                    {
-                        return;
-                    }
-                    addTextToRtb(rtbError, "Exception: " + ex.Message + "\n");
-                }
-            }
-        }
-
-        void editAddressBook(Types.AddressBook input, DataGridView dtg, int index, string oldLabel)
-        {
-            try
-            {
-                DataGridViewRow row = new DataGridViewRow();
-                row = dtgAddressBook.Rows
-                .Cast<DataGridViewRow>()
-                .Where(r => r.Cells[0].Value.ToString().Equals(input.label))
-                .First();
-
-                if (row.Index != index)
-                {
-                    MessageBox.Show("Duplicated label");
-                    return;
-                }
-            }
-            catch (Exception ex)
-            {
-            }
-            book.RemoveAll(x => x.label == oldLabel);
-            book.Add(new Types.AddressBook(input.label, input.address));
-            book.Sort(delegate(Types.AddressBook x, Types.AddressBook y)
-            {
-                return x.label.CompareTo(y.label);
-            });
-            dtgAddressBook.Invoke(new Action(() =>
-            {
-                dtgAddressBook.AutoGenerateColumns = true;
-                dtgAddressBook.DataSource = new BindingList<Types.AddressBook>(book);
-            }));
-            saveAddressBook(book);
-            Task.Run(() => loadAddressBook(book));
-        }
-
-        void saveAddressBook(List<Types.AddressBook> addr)
-        {
-            addr.Sort(delegate(Types.AddressBook x, Types.AddressBook y)
-            {
-                return x.label.CompareTo(y.label);
-            });
-            Dictionary<String, List<Types.AddressBook>> jsonData = new Dictionary<String, List<Types.AddressBook>>();
-            jsonData["addressbook"] = addr;
-            String json = JsonConvert.SerializeObject(jsonData, Formatting.Indented);
-            File.WriteAllText(Types.addressLabel, json);
-        }
-
-        List<Types.AddressBook> readAddressBook()
-        {
-            List<Types.AddressBook> rtn = new List<Types.AddressBook>();
-            if (!File.Exists(Types.addressLabel))
-                File.Create(Types.addressLabel).Close();
-            String data = File.ReadAllText(Types.addressLabel);
-            dynamic parse = JsonConvert.DeserializeObject<Types.ListAddressBook>(data);
-            if (parse != null && parse.addressbook != null)
-            {
-                rtn = new List<Types.AddressBook>(parse.addressbook);
-            }
-            rtn = rtn.OrderBy(o => o.label).ToList();
-            return rtn;
-        }
-
         List<Types.MasternodeDetail> readMasternodeList(String mns)
         {
             mns = "{\n" +
@@ -1140,7 +1013,7 @@ namespace SimpleWallet
                 String amount = t.amount.TrimStart('-');
                 rtn.Add(new Types.TransactionConverted(t.category == "send" ? "<==" : "==>",
                                             Convert.ToInt32(t.confirmations) >= 5 ? "YES" : "NO (" + t.confirmations + ")",
-                                            amount, strTime, t.address == null ? "Private address" : t.address));
+                                            amount, strTime, t.address == null ? "Private address" : t.address, t.txid));
             }
             return rtn;
         }
@@ -1476,9 +1349,8 @@ namespace SimpleWallet
         {
             if (((DataGridView)(sender)).CurrentCell.Value != null)
             {
-                String text = ((DataGridView)(sender)).CurrentCell.Value.ToString();
-                Clipboard.SetText(text);
-                MessageBox.Show("Copied \"" + text + "\" to clipboard");
+                QrCode qr = new QrCode(((DataGridView)(sender)).CurrentCell.Value.ToString());
+                qr.ShowDialog();
             }
         }
 
@@ -1537,14 +1409,14 @@ Are you sure?", @"Reopen to scan the wallet", MessageBoxButtons.YesNo);
 
         private void btnNewAddressBook_Click(object sender, EventArgs e)
         {
-            NewLabel newLb = new NewLabel();
-            newLb.ShowDialog();
-            if(newLb.edit)
-            {
-                String name = newLb.name;
-                String address = newLb.address;
-                addAddressBook(new Types.AddressBook(name, address));
-            }
+            //NewLabel newLb = new NewLabel();
+            //newLb.ShowDialog();
+            //if(newLb.edit)
+            //{
+            //    String name = newLb.name;
+            //    String address = newLb.address;
+            //    addAddressBook(new Types.AddressBook(name, address));
+            //}
         }
 
         private void dtgAdressBook_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -1833,6 +1705,20 @@ Are you sure?", @"Reopen to scan the wallet", MessageBoxButtons.YesNo);
                 }
                 catch (Exception ex) {  }
             }
+
+            foreach(string s in walletDic.Keys)
+            {
+                try
+                {
+                    row = ((DataGridView)sender).Rows
+                    .Cast<DataGridViewRow>()
+                    .Where(r => r.Cells[1].Value.ToString().Equals(s))
+                    .First();
+
+                    row.DefaultCellStyle.BackColor = Color.LightGreen;
+                }
+                catch (Exception ex) { }
+            }
             return;
         }
 
@@ -1988,38 +1874,6 @@ Are you sure?", @"Reopen to scan the wallet", MessageBoxButtons.YesNo);
             }
         }
 
-        private void btnDeleteAddressLabel_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (dtgAddressBook.CurrentCell != null && dtgAddressBook.Rows[dtgAddressBook.CurrentCell.RowIndex].Cells[0].Value != null)
-                {
-                    String name = dtgAddressBook.Rows[dtgAddressBook.CurrentCell.RowIndex].Cells[0].Value.ToString();
-                    if (!String.IsNullOrEmpty(name))
-                    {
-                        DialogResult dialogResult = MessageBox.Show(@"Do you want to delete " + name, "ATTENTION!!!", MessageBoxButtons.YesNo);
-                        if (dialogResult == DialogResult.Yes)
-                        {
-                            List<String> data = File.ReadAllLines(Types.addressLabel).ToList();
-                            int index = data.FindIndex(x => x.StartsWith(name));
-                            if (index >= 0)
-                            {
-                                data.RemoveAt(index);
-                            }
-                            File.WriteAllLines(Types.addressLabel, data);
-                            //populate addressbook
-                            populateAddressBook(readAddressBook());
-                        }
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Cannot delete empty String");
-                }
-            }
-            catch (Exception ex) { }
-        }
-
         private void tbShieldFrom_Enter(object sender, EventArgs e)
         {
             if (tbShieldFrom.Text == "Public address")
@@ -2156,14 +2010,6 @@ Are you sure?", @"Reopen to scan the wallet", MessageBoxButtons.YesNo);
                     Clipboard.SetText(text);
                 }
             }
-            else if (item.type == Types.CtxMenuType.ADDRESS_BOOK)
-            {
-                if (dtgAddressBook.CurrentCell != null && dtgAddressBook.CurrentCell.Value != null)
-                {
-                    String text = dtgAddressBook.CurrentCell.Value.ToString();
-                    Clipboard.SetText(text);
-                }
-            }
             else if (item.type == Types.CtxMenuType.WALLET)
             {
                 if (dtgAddress.CurrentCell != null && dtgAddress.CurrentCell.Value != null)
@@ -2224,19 +2070,6 @@ Are you sure?", @"Reopen to scan the wallet", MessageBoxButtons.YesNo);
                 populateMasternodes();
 
             }
-            else if (item.type == Types.CtxMenuType.ADDRESS_BOOK)
-            {
-                DataGridView dtg = dtgAddressBook;
-                int index = dtg.CurrentRow.Index;
-                String label = dtg.Rows[index].Cells[0].Value.ToString();
-                String address = dtg.Rows[index].Cells[1].Value.ToString();
-                NewLabel newLb = new NewLabel(label, address);
-                newLb.ShowDialog();
-                if (newLb.edit)
-                {
-                    editAddressBook(new Types.AddressBook(newLb.name, newLb.address), dtg, index, label);
-                }
-            }
         }
 
         private void ctxMenu_Delete(Object sender, System.EventArgs e)
@@ -2284,52 +2117,37 @@ Are you sure?", @"Reopen to scan the wallet", MessageBoxButtons.YesNo);
                     MessageBox.Show("Delete Masternode error");
                 }
             }
-            else if(item.type == Types.CtxMenuType.ADDRESS_BOOK)
-            {
-                try
-                {
-                    if (dtgAddressBook.CurrentCell != null && dtgAddressBook.Rows[dtgAddressBook.CurrentCell.RowIndex].Cells[0].Value != null)
-                    {
-                        String name = dtgAddressBook.Rows[dtgAddressBook.CurrentCell.RowIndex].Cells[0].Value.ToString();
-                        if (!String.IsNullOrEmpty(name))
-                        {
-                            DialogResult dialogResult = MessageBox.Show(@"Do you want to delete " + name, "ATTENTION!!!", MessageBoxButtons.YesNo);
-                            if (dialogResult == DialogResult.Yes)
-                            {
-                                int index = book.FindIndex(x => x.label == name);
-                                if (index >= 0)
-                                {
-                                    book.RemoveAt(index);
-                                }
-                                book.Sort(delegate(Types.AddressBook x, Types.AddressBook y)
-                                {
-                                    return x.label.CompareTo(y.label);
-                                });
-                                dtgAddressBook.Invoke(new Action(() =>
-                                {
-                                    dtgAddressBook.AutoGenerateColumns = true;
-                                    dtgAddressBook.DataSource = new BindingList<Types.AddressBook>(book);
-                                }));
-                                saveAddressBook(book);
-                                //populate addressbook
-                                populateAddressBook(book);
-                            }
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Cannot delete empty String");
-                    }
-                }
-                catch (Exception ex) 
-                {
-                    MessageBox.Show("Delete label error");
-                }
-            }
         }
 
         private void Dtg_DataError(object sender, DataGridViewDataErrorEventArgs anError)
         {
+        }
+
+        private void tcMain_DrawItem(object sender, DrawItemEventArgs e)
+        {
+        }
+
+        private void dtgTransactions_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (((DataGridView)(sender)).CurrentCell.Value != null)
+            {
+                //get transaction data
+                DataGridView dtg = (DataGridView)(sender);
+                int index = dtg.CurrentRow.Index;
+                string txid = dtg.Rows[index].Cells[5].Value.ToString();
+                string data = Task.Run(() => api.getTransaction(txid)).Result;
+                TransactionDetail txDetail = new TransactionDetail(data);
+                txDetail.ShowDialog();
+            }
+        }
+
+        private void btnAddressBook_Click(object sender, EventArgs e)
+        {
+            AddressBook addrBook = new AddressBook(book);
+            addrBook.ShowDialog();
+            book = new List<Types.AddressBook>(addrBook.book);
+            Task.Run(() => loadAddressBook(book));
+            loadWallet();
         }
 
     }

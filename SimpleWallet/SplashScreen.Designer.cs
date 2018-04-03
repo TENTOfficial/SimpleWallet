@@ -53,10 +53,10 @@
             // 
             this.lbCurrentStatus.BackColor = System.Drawing.Color.Transparent;
             this.lbCurrentStatus.ForeColor = System.Drawing.Color.Lime;
-            this.lbCurrentStatus.Location = new System.Drawing.Point(242, 328);
+            this.lbCurrentStatus.Location = new System.Drawing.Point(0, 328);
             this.lbCurrentStatus.Name = "lbCurrentStatus";
             this.lbCurrentStatus.Opacity = 0;
-            this.lbCurrentStatus.Size = new System.Drawing.Size(185, 19);
+            this.lbCurrentStatus.Size = new System.Drawing.Size(668, 19);
             this.lbCurrentStatus.TabIndex = 4;
             this.lbCurrentStatus.Text = "Status";
             this.lbCurrentStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
