@@ -53,7 +53,7 @@ namespace SimpleWallet
                                                   DaemonEventArgs e);
     public class Types
     {
-        public static String version = "SnowGem Simple Wallet - Version 2.0.0e";
+        public static String version = "SnowGem Simple Wallet - Version 2.0.0f";
         public static String startCommandsFile = Path.GetTempPath() + "\\commands.dat";
         public static String addressLabel = Path.GetTempPath() + "\\addressLabel.dat";
         public static String masternodeSave = Path.GetTempPath() + "\\masternodesave.dat";

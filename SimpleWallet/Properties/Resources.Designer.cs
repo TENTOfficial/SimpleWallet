@@ -83,6 +83,16 @@ namespace SimpleWallet.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap background_bottom {
+            get {
+                object obj = ResourceManager.GetObject("background_bottom", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap connect0_16 {
             get {
                 object obj = ResourceManager.GetObject("connect0_16", resourceCulture);
@@ -163,7 +173,6 @@ namespace SimpleWallet.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-<<<<<<< HEAD
         internal static System.Drawing.Bitmap search {
             get {
                 object obj = ResourceManager.GetObject("search", resourceCulture);
@@ -204,8 +213,6 @@ namespace SimpleWallet.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-=======
->>>>>>> add source
         internal static System.Drawing.Bitmap send {
             get {
                 object obj = ResourceManager.GetObject("send", resourceCulture);
@@ -216,7 +223,6 @@ namespace SimpleWallet.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-<<<<<<< HEAD
         internal static System.Drawing.Bitmap shield {
             get {
                 object obj = ResourceManager.GetObject("shield", resourceCulture);
@@ -237,8 +243,16 @@ namespace SimpleWallet.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-=======
->>>>>>> add source
+        internal static System.Drawing.Bitmap sng_main {
+            get {
+                object obj = ResourceManager.GetObject("sng_main", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap snowgem_wallet {
             get {
                 object obj = ResourceManager.GetObject("snowgem wallet", resourceCulture);
