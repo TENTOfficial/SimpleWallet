@@ -1438,8 +1438,11 @@ Are you sure?", @"Reopen to scan the wallet", MessageBoxButtons.YesNo);
 
         private void cbbAddress_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int index = book.FindIndex(f => f.label == ((ComboBox)sender).SelectedItem.ToString());
-            tbPayTo.Text = book[index].address;
+            if (((ComboBox)sender).SelectedIndex > -1)
+            {
+                int index = book.FindIndex(f => f.label == ((ComboBox)sender).SelectedItem.ToString());
+                tbPayTo.Text = book[index].address;
+            }
         }
 
         private void tbPayTo_Leave(object sender, EventArgs e)
@@ -1928,36 +1931,6 @@ Are you sure?", @"Reopen to scan the wallet", MessageBoxButtons.YesNo);
             }
         }
 
-        private void dtgMasternode_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Right)
-            {
-                Types.CtxMenuType type = Types.CtxMenuType.MASTERNODE;
-                ContextMenu ctxMenu = new ContextMenu();
-                if (((DataGridView)sender).Name == "dtgMasternode")
-                {
-                    type = Types.CtxMenuType.MASTERNODE;
-                }
-                else if (((DataGridView)sender).Name == "dtgAddressBook")
-                {
-                    type = Types.CtxMenuType.ADDRESS_BOOK;
-                }
-                ctxMenu.MenuItems.Add(new CustomMenuItem("Copy", ctxMenu_Copy, type));
-                ctxMenu.MenuItems.Add(new CustomMenuItem("Edit", ctxMenu_Edit, type));
-                ctxMenu.MenuItems.Add(new CustomMenuItem("Delete", ctxMenu_Delete, type));
-
-                int currentMouseOverRow = ((DataGridView)sender).HitTest(e.X, e.Y).RowIndex;
-                int currentMouseOverColumn = ((DataGridView)sender).HitTest(e.X, e.Y).ColumnIndex;
-                if (currentMouseOverRow >= 0 && currentMouseOverColumn >= 0)
-                {
-                    ((DataGridView)sender).CurrentCell = ((DataGridView)sender).Rows[currentMouseOverRow].Cells[currentMouseOverColumn];
-                }
-
-                ctxMenu.Show(((DataGridView)sender), new Point(e.X, e.Y));
-
-            }
-        }
-
         private void dtgAddress_MouseClick(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right)
@@ -1979,6 +1952,15 @@ Are you sure?", @"Reopen to scan the wallet", MessageBoxButtons.YesNo);
 
                 ctxMenu.MenuItems.Add(new CustomMenuItem("Copy", ctxMenu_Copy, type));
 
+                if (type == Types.CtxMenuType.WALLET)
+                {
+                    ctxMenu.MenuItems.Add(new CustomMenuItem("View QR code", ctxMenu_ViewQrCode, type));
+                }
+                else if (type == Types.CtxMenuType.TRANSACTIONS)
+                {
+                    ctxMenu.MenuItems.Add(new CustomMenuItem("View transaction detail", ctxMenu_ViewDetailTx, type));
+                }
+
                 int currentMouseOverRow = ((DataGridView)sender).HitTest(e.X, e.Y).RowIndex;
                 int currentMouseOverColumn = ((DataGridView)sender).HitTest(e.X, e.Y).ColumnIndex;
                 if (currentMouseOverRow >= 0 && currentMouseOverColumn >= 0)
@@ -1988,6 +1970,37 @@ Are you sure?", @"Reopen to scan the wallet", MessageBoxButtons.YesNo);
 
                 ctxMenu.Show(((DataGridView)sender), new Point(e.X, e.Y));
 
+            }
+        }
+
+        private void ctxMenu_ViewQrCode(Object sender, System.EventArgs e)
+        {
+            CustomMenuItem item = sender as CustomMenuItem;
+            if (item.type == Types.CtxMenuType.WALLET)
+            {
+                if (dtgAddress.CurrentCell.Value != null)
+                {
+                    QrCode qr = new QrCode(dtgAddress.CurrentCell.Value.ToString());
+                    qr.ShowDialog();
+                }
+            }
+        }
+
+        private void ctxMenu_ViewDetailTx(Object sender, System.EventArgs e)
+        {
+            CustomMenuItem item = sender as CustomMenuItem;
+            if (item.type == Types.CtxMenuType.TRANSACTIONS)
+            {
+                if (dtgTransactions.CurrentCell.Value != null)
+                {
+                    //get transaction data
+                    DataGridView dtg = dtgTransactions;
+                    int index = dtg.CurrentRow.Index;
+                    string txid = dtg.Rows[index].Cells[5].Value.ToString();
+                    string data = Task.Run(() => api.getTransaction(txid)).Result;
+                    TransactionDetail txDetail = new TransactionDetail(data);
+                    txDetail.ShowDialog();
+                }
             }
         }
 

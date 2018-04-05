@@ -31,6 +31,47 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Start));
             this.tcMain = new System.Windows.Forms.TabControl();
+            this.tpOverview = new System.Windows.Forms.TabPage();
+            this.pbTransaction4 = new System.Windows.Forms.PictureBox();
+            this.pbTransaction3 = new System.Windows.Forms.PictureBox();
+            this.pbTransaction2 = new System.Windows.Forms.PictureBox();
+            this.pbTransaction1 = new System.Windows.Forms.PictureBox();
+            this.tpSend = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.btnSendMany = new System.Windows.Forms.Button();
+            this.cbbAddress = new System.Windows.Forms.ComboBox();
+            this.cbDefaultFee = new System.Windows.Forms.CheckBox();
+            this.cbbFrom = new System.Windows.Forms.ComboBox();
+            this.btnSend = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.tbAmount = new System.Windows.Forms.TextBox();
+            this.cbUnit = new System.Windows.Forms.ComboBox();
+            this.tbFee = new System.Windows.Forms.TextBox();
+            this.tbLabel = new System.Windows.Forms.TextBox();
+            this.tbPayTo = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tbShieldFrom = new System.Windows.Forms.TextBox();
+            this.tbShieldUtxo = new System.Windows.Forms.TextBox();
+            this.cbShieldDefaultFee = new System.Windows.Forms.CheckBox();
+            this.tbShieldFee = new System.Windows.Forms.TextBox();
+            this.tbShieldTo = new System.Windows.Forms.TextBox();
+            this.tpReceive = new System.Windows.Forms.TabPage();
+            this.dtgAddress = new System.Windows.Forms.DataGridView();
+            this.btnNewZAddress = new System.Windows.Forms.Button();
+            this.btnAddressBook = new System.Windows.Forms.Button();
+            this.btnNewAddress = new System.Windows.Forms.Button();
+            this.tpTransactions = new System.Windows.Forms.TabPage();
+            this.btnReindex = new System.Windows.Forms.Button();
+            this.btnRescan = new System.Windows.Forms.Button();
+            this.dtgTransactions = new System.Windows.Forms.DataGridView();
+            this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.confirmationsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.transactionConvertedBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tpMasternode = new System.Windows.Forms.TabPage();
             this.tbSearch = new System.Windows.Forms.TextBox();
             this.lbUpdateTime = new System.Windows.Forms.Label();
@@ -61,47 +102,6 @@
             this.txHashDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.indexDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.masternodeBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.tpTransactions = new System.Windows.Forms.TabPage();
-            this.btnReindex = new System.Windows.Forms.Button();
-            this.btnRescan = new System.Windows.Forms.Button();
-            this.dtgTransactions = new System.Windows.Forms.DataGridView();
-            this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.confirmationsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.transactionConvertedBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tpReceive = new System.Windows.Forms.TabPage();
-            this.dtgAddress = new System.Windows.Forms.DataGridView();
-            this.btnNewZAddress = new System.Windows.Forms.Button();
-            this.btnAddressBook = new System.Windows.Forms.Button();
-            this.btnNewAddress = new System.Windows.Forms.Button();
-            this.tpSend = new System.Windows.Forms.TabPage();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.btnSendMany = new System.Windows.Forms.Button();
-            this.cbbAddress = new System.Windows.Forms.ComboBox();
-            this.cbDefaultFee = new System.Windows.Forms.CheckBox();
-            this.cbbFrom = new System.Windows.Forms.ComboBox();
-            this.btnSend = new System.Windows.Forms.Button();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.tbAmount = new System.Windows.Forms.TextBox();
-            this.cbUnit = new System.Windows.Forms.ComboBox();
-            this.tbFee = new System.Windows.Forms.TextBox();
-            this.tbLabel = new System.Windows.Forms.TextBox();
-            this.tbPayTo = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tbShieldFrom = new System.Windows.Forms.TextBox();
-            this.tbShieldUtxo = new System.Windows.Forms.TextBox();
-            this.cbShieldDefaultFee = new System.Windows.Forms.CheckBox();
-            this.tbShieldFee = new System.Windows.Forms.TextBox();
-            this.tbShieldTo = new System.Windows.Forms.TextBox();
-            this.tpOverview = new System.Windows.Forms.TabPage();
-            this.pbTransaction4 = new System.Windows.Forms.PictureBox();
-            this.pbTransaction3 = new System.Windows.Forms.PictureBox();
-            this.pbTransaction2 = new System.Windows.Forms.PictureBox();
-            this.pbTransaction1 = new System.Windows.Forms.PictureBox();
             this.imgList = new System.Windows.Forms.ImageList(this.components);
             this.addressBookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pbPercent = new System.Windows.Forms.ProgressBar();
@@ -169,24 +169,24 @@
             this.btnSearch = new SimpleWallet.RoundButton();
             this.typesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tcMain.SuspendLayout();
-            this.tpMasternode.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgGlobalMN)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.masternodeDetailConvertedBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgMasternode)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.masternodeBindingSource2)).BeginInit();
-            this.tpTransactions.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgTransactions)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.transactionConvertedBindingSource)).BeginInit();
-            this.tpReceive.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgAddress)).BeginInit();
-            this.tpSend.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.tpOverview.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTransaction4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTransaction3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTransaction2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTransaction1)).BeginInit();
+            this.tpSend.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.tpReceive.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgAddress)).BeginInit();
+            this.tpTransactions.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgTransactions)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transactionConvertedBindingSource)).BeginInit();
+            this.tpMasternode.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgGlobalMN)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masternodeDetailConvertedBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgMasternode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masternodeBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addressBookBindingSource)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbStatus)).BeginInit();
@@ -219,6 +219,495 @@
             this.tcMain.Size = new System.Drawing.Size(856, 495);
             this.tcMain.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tcMain.TabIndex = 5;
+            // 
+            // tpOverview
+            // 
+            this.tpOverview.BackgroundImage = global::SimpleWallet.Properties.Resources.background_bottom;
+            this.tpOverview.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tpOverview.Controls.Add(this.pbTransaction4);
+            this.tpOverview.Controls.Add(this.pbTransaction3);
+            this.tpOverview.Controls.Add(this.pbTransaction2);
+            this.tpOverview.Controls.Add(this.pbTransaction1);
+            this.tpOverview.Controls.Add(this.lbAddress4);
+            this.tpOverview.Controls.Add(this.lbAddress3);
+            this.tpOverview.Controls.Add(this.lbAddress2);
+            this.tpOverview.Controls.Add(this.lbAddress1);
+            this.tpOverview.Controls.Add(this.lbValue4);
+            this.tpOverview.Controls.Add(this.lbValue3);
+            this.tpOverview.Controls.Add(this.lbValue2);
+            this.tpOverview.Controls.Add(this.lbValue1);
+            this.tpOverview.Controls.Add(this.lbTime4);
+            this.tpOverview.Controls.Add(this.lbTime3);
+            this.tpOverview.Controls.Add(this.lbTime2);
+            this.tpOverview.Controls.Add(this.lbTime1);
+            this.tpOverview.Controls.Add(this.label5);
+            this.tpOverview.Controls.Add(this.label12);
+            this.tpOverview.Controls.Add(this.label7);
+            this.tpOverview.Controls.Add(this.label4);
+            this.tpOverview.Controls.Add(this.lbUnconfirmed);
+            this.tpOverview.Controls.Add(this.label2);
+            this.tpOverview.Controls.Add(this.lbTransparent);
+            this.tpOverview.Controls.Add(this.tlTransparentBalance);
+            this.tpOverview.Controls.Add(this.lbLocked);
+            this.tpOverview.Controls.Add(this.lbPrivate);
+            this.tpOverview.Controls.Add(this.transparentLabel2);
+            this.tpOverview.Controls.Add(this.transparentLabel1);
+            this.tpOverview.Controls.Add(this.lbTotal);
+            this.tpOverview.Controls.Add(this.label1);
+            this.tpOverview.Controls.Add(this.lbBestHash);
+            this.tpOverview.Controls.Add(this.lbBestTime);
+            this.tpOverview.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tpOverview.ImageIndex = 2;
+            this.tpOverview.Location = new System.Drawing.Point(4, 30);
+            this.tpOverview.Name = "tpOverview";
+            this.tpOverview.Padding = new System.Windows.Forms.Padding(3);
+            this.tpOverview.Size = new System.Drawing.Size(848, 461);
+            this.tpOverview.TabIndex = 0;
+            this.tpOverview.Text = "Overview";
+            this.tpOverview.UseVisualStyleBackColor = true;
+            // 
+            // pbTransaction4
+            // 
+            this.pbTransaction4.BackColor = System.Drawing.Color.Transparent;
+            this.pbTransaction4.Location = new System.Drawing.Point(435, 227);
+            this.pbTransaction4.Name = "pbTransaction4";
+            this.pbTransaction4.Size = new System.Drawing.Size(58, 58);
+            this.pbTransaction4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbTransaction4.TabIndex = 10;
+            this.pbTransaction4.TabStop = false;
+            this.pbTransaction4.Visible = false;
+            // 
+            // pbTransaction3
+            // 
+            this.pbTransaction3.BackColor = System.Drawing.Color.Transparent;
+            this.pbTransaction3.Location = new System.Drawing.Point(435, 163);
+            this.pbTransaction3.Name = "pbTransaction3";
+            this.pbTransaction3.Size = new System.Drawing.Size(58, 58);
+            this.pbTransaction3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbTransaction3.TabIndex = 10;
+            this.pbTransaction3.TabStop = false;
+            this.pbTransaction3.Visible = false;
+            // 
+            // pbTransaction2
+            // 
+            this.pbTransaction2.BackColor = System.Drawing.Color.Transparent;
+            this.pbTransaction2.Location = new System.Drawing.Point(435, 99);
+            this.pbTransaction2.Name = "pbTransaction2";
+            this.pbTransaction2.Size = new System.Drawing.Size(58, 58);
+            this.pbTransaction2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbTransaction2.TabIndex = 10;
+            this.pbTransaction2.TabStop = false;
+            this.pbTransaction2.Visible = false;
+            // 
+            // pbTransaction1
+            // 
+            this.pbTransaction1.BackColor = System.Drawing.Color.Transparent;
+            this.pbTransaction1.Location = new System.Drawing.Point(435, 35);
+            this.pbTransaction1.Name = "pbTransaction1";
+            this.pbTransaction1.Size = new System.Drawing.Size(58, 58);
+            this.pbTransaction1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbTransaction1.TabIndex = 10;
+            this.pbTransaction1.TabStop = false;
+            this.pbTransaction1.Visible = false;
+            // 
+            // tpSend
+            // 
+            this.tpSend.Controls.Add(this.groupBox2);
+            this.tpSend.Controls.Add(this.groupBox1);
+            this.tpSend.ImageIndex = 4;
+            this.tpSend.Location = new System.Drawing.Point(4, 30);
+            this.tpSend.Name = "tpSend";
+            this.tpSend.Padding = new System.Windows.Forms.Padding(3);
+            this.tpSend.Size = new System.Drawing.Size(848, 461);
+            this.tpSend.TabIndex = 1;
+            this.tpSend.Text = "Send coins";
+            this.tpSend.UseVisualStyleBackColor = true;
+            this.tpSend.Enter += new System.EventHandler(this.tpSend_Enter);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label15);
+            this.groupBox2.Controls.Add(this.btnSendMany);
+            this.groupBox2.Controls.Add(this.cbbAddress);
+            this.groupBox2.Controls.Add(this.cbDefaultFee);
+            this.groupBox2.Controls.Add(this.cbbFrom);
+            this.groupBox2.Controls.Add(this.btnSend);
+            this.groupBox2.Controls.Add(this.btnRefresh);
+            this.groupBox2.Controls.Add(this.tbAmount);
+            this.groupBox2.Controls.Add(this.cbUnit);
+            this.groupBox2.Controls.Add(this.tbFee);
+            this.groupBox2.Controls.Add(this.tbLabel);
+            this.groupBox2.Controls.Add(this.tbPayTo);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Location = new System.Drawing.Point(9, 6);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(831, 261);
+            this.groupBox2.TabIndex = 17;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Normal send";
+            // 
+            // label15
+            // 
+            this.label15.Location = new System.Drawing.Point(9, 162);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(816, 63);
+            this.label15.TabIndex = 9;
+            this.label15.Text = resources.GetString("label15.Text");
+            // 
+            // btnSendMany
+            // 
+            this.btnSendMany.Location = new System.Drawing.Point(707, 228);
+            this.btnSendMany.Name = "btnSendMany";
+            this.btnSendMany.Size = new System.Drawing.Size(118, 27);
+            this.btnSendMany.TabIndex = 16;
+            this.btnSendMany.Text = "Send Many";
+            this.btnSendMany.UseVisualStyleBackColor = true;
+            this.btnSendMany.Click += new System.EventHandler(this.btnSendMany_Click);
+            // 
+            // cbbAddress
+            // 
+            this.cbbAddress.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbAddress.FormattingEnabled = true;
+            this.cbbAddress.Location = new System.Drawing.Point(584, 48);
+            this.cbbAddress.Name = "cbbAddress";
+            this.cbbAddress.Size = new System.Drawing.Size(241, 23);
+            this.cbbAddress.Sorted = true;
+            this.cbbAddress.TabIndex = 2;
+            this.cbbAddress.SelectedIndexChanged += new System.EventHandler(this.cbbAddress_SelectedIndexChanged);
+            // 
+            // cbDefaultFee
+            // 
+            this.cbDefaultFee.AutoSize = true;
+            this.cbDefaultFee.Checked = true;
+            this.cbDefaultFee.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbDefaultFee.Location = new System.Drawing.Point(177, 132);
+            this.cbDefaultFee.Name = "cbDefaultFee";
+            this.cbDefaultFee.Size = new System.Drawing.Size(85, 19);
+            this.cbDefaultFee.TabIndex = 7;
+            this.cbDefaultFee.Text = "Default fee";
+            this.cbDefaultFee.UseVisualStyleBackColor = true;
+            this.cbDefaultFee.CheckedChanged += new System.EventHandler(this.cbFee_CheckedChanged);
+            // 
+            // cbbFrom
+            // 
+            this.cbbFrom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbFrom.FormattingEnabled = true;
+            this.cbbFrom.Location = new System.Drawing.Point(69, 20);
+            this.cbbFrom.Name = "cbbFrom";
+            this.cbbFrom.Size = new System.Drawing.Size(756, 23);
+            this.cbbFrom.Sorted = true;
+            this.cbbFrom.TabIndex = 0;
+            this.cbbFrom.SelectedIndexChanged += new System.EventHandler(this.cbbFrom_SelectedIndexChanged);
+            // 
+            // btnSend
+            // 
+            this.btnSend.Location = new System.Drawing.Point(614, 228);
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Size = new System.Drawing.Size(87, 27);
+            this.btnSend.TabIndex = 15;
+            this.btnSend.Text = "Send";
+            this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(521, 228);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(87, 27);
+            this.btnRefresh.TabIndex = 14;
+            this.btnRefresh.Text = "Refresh";
+            this.ttStart.SetToolTip(this.btnRefresh, "Refresh address value");
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // tbAmount
+            // 
+            this.tbAmount.Location = new System.Drawing.Point(69, 103);
+            this.tbAmount.Name = "tbAmount";
+            this.tbAmount.Size = new System.Drawing.Size(102, 21);
+            this.tbAmount.TabIndex = 4;
+            this.tbAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAmount_KeyPress);
+            // 
+            // cbUnit
+            // 
+            this.cbUnit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbUnit.FormattingEnabled = true;
+            this.cbUnit.Items.AddRange(new object[] {
+            "SNG",
+            "mSNG"});
+            this.cbUnit.Location = new System.Drawing.Point(177, 103);
+            this.cbUnit.Name = "cbUnit";
+            this.cbUnit.Size = new System.Drawing.Size(100, 23);
+            this.cbUnit.TabIndex = 5;
+            // 
+            // tbFee
+            // 
+            this.tbFee.Enabled = false;
+            this.tbFee.Location = new System.Drawing.Point(69, 130);
+            this.tbFee.Name = "tbFee";
+            this.tbFee.Size = new System.Drawing.Size(102, 21);
+            this.tbFee.TabIndex = 6;
+            this.tbFee.Text = "0.0001";
+            this.tbFee.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAmount_KeyPress);
+            // 
+            // tbLabel
+            // 
+            this.tbLabel.Location = new System.Drawing.Point(69, 76);
+            this.tbLabel.Name = "tbLabel";
+            this.tbLabel.Size = new System.Drawing.Size(756, 21);
+            this.tbLabel.TabIndex = 3;
+            // 
+            // tbPayTo
+            // 
+            this.tbPayTo.Location = new System.Drawing.Point(69, 49);
+            this.tbPayTo.Name = "tbPayTo";
+            this.tbPayTo.Size = new System.Drawing.Size(507, 21);
+            this.tbPayTo.TabIndex = 1;
+            this.tbPayTo.Leave += new System.EventHandler(this.tbPayTo_Leave);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.tbShieldFrom);
+            this.groupBox1.Controls.Add(this.tbShieldUtxo);
+            this.groupBox1.Controls.Add(this.cbShieldDefaultFee);
+            this.groupBox1.Controls.Add(this.tbShieldFee);
+            this.groupBox1.Controls.Add(this.tbShieldTo);
+            this.groupBox1.Controls.Add(this.transparentLabel3);
+            this.groupBox1.Controls.Add(this.transparentLabel6);
+            this.groupBox1.Controls.Add(this.transparentLabel5);
+            this.groupBox1.Controls.Add(this.btnShield);
+            this.groupBox1.Controls.Add(this.transparentLabel4);
+            this.groupBox1.Location = new System.Drawing.Point(9, 273);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(831, 182);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Shield coinbase";
+            // 
+            // tbShieldFrom
+            // 
+            this.tbShieldFrom.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.tbShieldFrom.Location = new System.Drawing.Point(69, 20);
+            this.tbShieldFrom.Name = "tbShieldFrom";
+            this.tbShieldFrom.Size = new System.Drawing.Size(756, 21);
+            this.tbShieldFrom.TabIndex = 8;
+            this.tbShieldFrom.Text = "Public address";
+            this.tbShieldFrom.Enter += new System.EventHandler(this.tbShieldFrom_Enter);
+            this.tbShieldFrom.Leave += new System.EventHandler(this.tbShieldFrom_Leave);
+            // 
+            // tbShieldUtxo
+            // 
+            this.tbShieldUtxo.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.tbShieldUtxo.Location = new System.Drawing.Point(69, 74);
+            this.tbShieldUtxo.Name = "tbShieldUtxo";
+            this.tbShieldUtxo.Size = new System.Drawing.Size(756, 21);
+            this.tbShieldUtxo.TabIndex = 10;
+            this.tbShieldUtxo.Text = "utxo to shield";
+            this.tbShieldUtxo.Enter += new System.EventHandler(this.tbShieldUtxo_Enter);
+            this.tbShieldUtxo.Leave += new System.EventHandler(this.tbShieldUtxo_Leave);
+            // 
+            // cbShieldDefaultFee
+            // 
+            this.cbShieldDefaultFee.AutoSize = true;
+            this.cbShieldDefaultFee.Checked = true;
+            this.cbShieldDefaultFee.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbShieldDefaultFee.Location = new System.Drawing.Point(740, 103);
+            this.cbShieldDefaultFee.Name = "cbShieldDefaultFee";
+            this.cbShieldDefaultFee.Size = new System.Drawing.Size(85, 19);
+            this.cbShieldDefaultFee.TabIndex = 12;
+            this.cbShieldDefaultFee.Text = "Default fee";
+            this.cbShieldDefaultFee.UseVisualStyleBackColor = true;
+            this.cbShieldDefaultFee.CheckedChanged += new System.EventHandler(this.cbShieldDefaultFee_CheckedChanged);
+            // 
+            // tbShieldFee
+            // 
+            this.tbShieldFee.Enabled = false;
+            this.tbShieldFee.Location = new System.Drawing.Point(69, 101);
+            this.tbShieldFee.Name = "tbShieldFee";
+            this.tbShieldFee.Size = new System.Drawing.Size(665, 21);
+            this.tbShieldFee.TabIndex = 11;
+            this.tbShieldFee.Text = "0.0001";
+            this.tbShieldFee.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAmount_KeyPress);
+            this.tbShieldFee.Leave += new System.EventHandler(this.tbPayTo_Leave);
+            // 
+            // tbShieldTo
+            // 
+            this.tbShieldTo.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.tbShieldTo.Location = new System.Drawing.Point(69, 47);
+            this.tbShieldTo.Name = "tbShieldTo";
+            this.tbShieldTo.Size = new System.Drawing.Size(756, 21);
+            this.tbShieldTo.TabIndex = 9;
+            this.tbShieldTo.Text = "Private address";
+            this.tbShieldTo.Enter += new System.EventHandler(this.tbShieldTo_Enter);
+            this.tbShieldTo.Leave += new System.EventHandler(this.tbShieldTo_Leave);
+            // 
+            // tpReceive
+            // 
+            this.tpReceive.Controls.Add(this.dtgAddress);
+            this.tpReceive.Controls.Add(this.btnNewZAddress);
+            this.tpReceive.Controls.Add(this.btnAddressBook);
+            this.tpReceive.Controls.Add(this.btnNewAddress);
+            this.tpReceive.ImageIndex = 3;
+            this.tpReceive.Location = new System.Drawing.Point(4, 30);
+            this.tpReceive.Name = "tpReceive";
+            this.tpReceive.Padding = new System.Windows.Forms.Padding(3);
+            this.tpReceive.Size = new System.Drawing.Size(848, 461);
+            this.tpReceive.TabIndex = 2;
+            this.tpReceive.Text = "Receive coins";
+            this.tpReceive.UseVisualStyleBackColor = true;
+            this.tpReceive.Enter += new System.EventHandler(this.tpReceive_Enter);
+            this.tpReceive.Leave += new System.EventHandler(this.tpReceive_Leave);
+            // 
+            // dtgAddress
+            // 
+            this.dtgAddress.AllowUserToAddRows = false;
+            this.dtgAddress.AllowUserToDeleteRows = false;
+            this.dtgAddress.AllowUserToResizeColumns = false;
+            this.dtgAddress.AllowUserToResizeRows = false;
+            this.dtgAddress.BackgroundColor = System.Drawing.SystemColors.ControlDark;
+            this.dtgAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgAddress.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgAddress.Location = new System.Drawing.Point(7, 8);
+            this.dtgAddress.Name = "dtgAddress";
+            this.dtgAddress.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dtgAddress.Size = new System.Drawing.Size(831, 417);
+            this.dtgAddress.TabIndex = 9;
+            this.dtgAddress.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgAddress_CellDoubleClick);
+            this.dtgAddress.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dtgAddress_MouseClick);
+            // 
+            // btnNewZAddress
+            // 
+            this.btnNewZAddress.Location = new System.Drawing.Point(658, 430);
+            this.btnNewZAddress.Name = "btnNewZAddress";
+            this.btnNewZAddress.Size = new System.Drawing.Size(180, 27);
+            this.btnNewZAddress.TabIndex = 7;
+            this.btnNewZAddress.Text = "Get new Z address";
+            this.btnNewZAddress.UseVisualStyleBackColor = true;
+            this.btnNewZAddress.Click += new System.EventHandler(this.btnNewZAddress_Click);
+            // 
+            // btnAddressBook
+            // 
+            this.btnAddressBook.Location = new System.Drawing.Point(286, 430);
+            this.btnAddressBook.Name = "btnAddressBook";
+            this.btnAddressBook.Size = new System.Drawing.Size(180, 27);
+            this.btnAddressBook.TabIndex = 7;
+            this.btnAddressBook.Text = "Address Book";
+            this.btnAddressBook.UseVisualStyleBackColor = true;
+            this.btnAddressBook.Click += new System.EventHandler(this.btnAddressBook_Click);
+            // 
+            // btnNewAddress
+            // 
+            this.btnNewAddress.Location = new System.Drawing.Point(472, 430);
+            this.btnNewAddress.Name = "btnNewAddress";
+            this.btnNewAddress.Size = new System.Drawing.Size(180, 27);
+            this.btnNewAddress.TabIndex = 7;
+            this.btnNewAddress.Text = "Get new address";
+            this.btnNewAddress.UseVisualStyleBackColor = true;
+            this.btnNewAddress.Click += new System.EventHandler(this.btnNewAddress_Click);
+            // 
+            // tpTransactions
+            // 
+            this.tpTransactions.Controls.Add(this.btnReindex);
+            this.tpTransactions.Controls.Add(this.btnRescan);
+            this.tpTransactions.Controls.Add(this.dtgTransactions);
+            this.tpTransactions.ImageIndex = 1;
+            this.tpTransactions.Location = new System.Drawing.Point(4, 30);
+            this.tpTransactions.Name = "tpTransactions";
+            this.tpTransactions.Padding = new System.Windows.Forms.Padding(3);
+            this.tpTransactions.Size = new System.Drawing.Size(848, 461);
+            this.tpTransactions.TabIndex = 3;
+            this.tpTransactions.Text = "Transactions";
+            this.tpTransactions.UseVisualStyleBackColor = true;
+            this.tpTransactions.Enter += new System.EventHandler(this.tpTransactions_Enter);
+            this.tpTransactions.Leave += new System.EventHandler(this.tpTransactions_Leave);
+            // 
+            // btnReindex
+            // 
+            this.btnReindex.Location = new System.Drawing.Point(472, 430);
+            this.btnReindex.Name = "btnReindex";
+            this.btnReindex.Size = new System.Drawing.Size(180, 27);
+            this.btnReindex.TabIndex = 10;
+            this.btnReindex.Text = "Reindex the wallet";
+            this.btnReindex.UseVisualStyleBackColor = true;
+            this.btnReindex.Click += new System.EventHandler(this.btnReindex_Click);
+            // 
+            // btnRescan
+            // 
+            this.btnRescan.Location = new System.Drawing.Point(658, 430);
+            this.btnRescan.Name = "btnRescan";
+            this.btnRescan.Size = new System.Drawing.Size(180, 27);
+            this.btnRescan.TabIndex = 10;
+            this.btnRescan.Text = "Rescan the transactions";
+            this.btnRescan.UseVisualStyleBackColor = true;
+            this.btnRescan.Click += new System.EventHandler(this.btnRescan_Click);
+            // 
+            // dtgTransactions
+            // 
+            this.dtgTransactions.AllowUserToResizeColumns = false;
+            this.dtgTransactions.AllowUserToResizeRows = false;
+            this.dtgTransactions.AutoGenerateColumns = false;
+            this.dtgTransactions.BackgroundColor = System.Drawing.SystemColors.ControlDark;
+            this.dtgTransactions.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgTransactions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgTransactions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.categoryDataGridViewTextBoxColumn,
+            this.confirmationsDataGridViewTextBoxColumn,
+            this.amountDataGridViewTextBoxColumn,
+            this.timeDataGridViewTextBoxColumn,
+            this.addressDataGridViewTextBoxColumn,
+            this.txidDataGridViewTextBoxColumn});
+            this.dtgTransactions.DataSource = this.transactionConvertedBindingSource;
+            this.dtgTransactions.Location = new System.Drawing.Point(7, 8);
+            this.dtgTransactions.Name = "dtgTransactions";
+            this.dtgTransactions.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dtgTransactions.Size = new System.Drawing.Size(831, 417);
+            this.dtgTransactions.TabIndex = 0;
+            this.dtgTransactions.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgTransactions_CellDoubleClick);
+            this.dtgTransactions.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dtgAddress_MouseClick);
+            // 
+            // categoryDataGridViewTextBoxColumn
+            // 
+            this.categoryDataGridViewTextBoxColumn.DataPropertyName = "category";
+            this.categoryDataGridViewTextBoxColumn.HeaderText = "category";
+            this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
+            // 
+            // confirmationsDataGridViewTextBoxColumn
+            // 
+            this.confirmationsDataGridViewTextBoxColumn.DataPropertyName = "confirmations";
+            this.confirmationsDataGridViewTextBoxColumn.HeaderText = "confirmations";
+            this.confirmationsDataGridViewTextBoxColumn.Name = "confirmationsDataGridViewTextBoxColumn";
+            // 
+            // amountDataGridViewTextBoxColumn
+            // 
+            this.amountDataGridViewTextBoxColumn.DataPropertyName = "amount";
+            this.amountDataGridViewTextBoxColumn.HeaderText = "amount";
+            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
+            // 
+            // timeDataGridViewTextBoxColumn
+            // 
+            this.timeDataGridViewTextBoxColumn.DataPropertyName = "time";
+            this.timeDataGridViewTextBoxColumn.HeaderText = "time";
+            this.timeDataGridViewTextBoxColumn.Name = "timeDataGridViewTextBoxColumn";
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "address";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            // 
+            // txidDataGridViewTextBoxColumn
+            // 
+            this.txidDataGridViewTextBoxColumn.DataPropertyName = "txid";
+            this.txidDataGridViewTextBoxColumn.HeaderText = "txid";
+            this.txidDataGridViewTextBoxColumn.Name = "txidDataGridViewTextBoxColumn";
+            // 
+            // transactionConvertedBindingSource
+            // 
+            this.transactionConvertedBindingSource.DataSource = typeof(SimpleWallet.Types.TransactionConverted);
             // 
             // tpMasternode
             // 
@@ -457,7 +946,7 @@
             this.dtgMasternode.Size = new System.Drawing.Size(832, 89);
             this.dtgMasternode.TabIndex = 0;
             this.dtgMasternode.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgAddress_CellDoubleClick);
-            this.dtgMasternode.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dtgMasternode_MouseClick);
+            this.dtgMasternode.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dtgAddress_MouseClick);
             // 
             // aliasDataGridViewTextBoxColumn
             // 
@@ -492,495 +981,6 @@
             // masternodeBindingSource2
             // 
             this.masternodeBindingSource2.DataSource = typeof(SimpleWallet.Types.Masternode);
-            // 
-            // tpTransactions
-            // 
-            this.tpTransactions.Controls.Add(this.btnReindex);
-            this.tpTransactions.Controls.Add(this.btnRescan);
-            this.tpTransactions.Controls.Add(this.dtgTransactions);
-            this.tpTransactions.ImageIndex = 1;
-            this.tpTransactions.Location = new System.Drawing.Point(4, 30);
-            this.tpTransactions.Name = "tpTransactions";
-            this.tpTransactions.Padding = new System.Windows.Forms.Padding(3);
-            this.tpTransactions.Size = new System.Drawing.Size(848, 461);
-            this.tpTransactions.TabIndex = 3;
-            this.tpTransactions.Text = "Transactions";
-            this.tpTransactions.UseVisualStyleBackColor = true;
-            this.tpTransactions.Enter += new System.EventHandler(this.tpTransactions_Enter);
-            this.tpTransactions.Leave += new System.EventHandler(this.tpTransactions_Leave);
-            // 
-            // btnReindex
-            // 
-            this.btnReindex.Location = new System.Drawing.Point(472, 430);
-            this.btnReindex.Name = "btnReindex";
-            this.btnReindex.Size = new System.Drawing.Size(180, 27);
-            this.btnReindex.TabIndex = 10;
-            this.btnReindex.Text = "Reindex the wallet";
-            this.btnReindex.UseVisualStyleBackColor = true;
-            this.btnReindex.Click += new System.EventHandler(this.btnReindex_Click);
-            // 
-            // btnRescan
-            // 
-            this.btnRescan.Location = new System.Drawing.Point(658, 430);
-            this.btnRescan.Name = "btnRescan";
-            this.btnRescan.Size = new System.Drawing.Size(180, 27);
-            this.btnRescan.TabIndex = 10;
-            this.btnRescan.Text = "Rescan the transactions";
-            this.btnRescan.UseVisualStyleBackColor = true;
-            this.btnRescan.Click += new System.EventHandler(this.btnRescan_Click);
-            // 
-            // dtgTransactions
-            // 
-            this.dtgTransactions.AllowUserToResizeColumns = false;
-            this.dtgTransactions.AllowUserToResizeRows = false;
-            this.dtgTransactions.AutoGenerateColumns = false;
-            this.dtgTransactions.BackgroundColor = System.Drawing.SystemColors.ControlDark;
-            this.dtgTransactions.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtgTransactions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgTransactions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.categoryDataGridViewTextBoxColumn,
-            this.confirmationsDataGridViewTextBoxColumn,
-            this.amountDataGridViewTextBoxColumn,
-            this.timeDataGridViewTextBoxColumn,
-            this.addressDataGridViewTextBoxColumn,
-            this.txidDataGridViewTextBoxColumn});
-            this.dtgTransactions.DataSource = this.transactionConvertedBindingSource;
-            this.dtgTransactions.Location = new System.Drawing.Point(7, 8);
-            this.dtgTransactions.Name = "dtgTransactions";
-            this.dtgTransactions.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dtgTransactions.Size = new System.Drawing.Size(831, 417);
-            this.dtgTransactions.TabIndex = 0;
-            this.dtgTransactions.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgTransactions_CellDoubleClick);
-            this.dtgTransactions.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dtgAddress_MouseClick);
-            // 
-            // categoryDataGridViewTextBoxColumn
-            // 
-            this.categoryDataGridViewTextBoxColumn.DataPropertyName = "category";
-            this.categoryDataGridViewTextBoxColumn.HeaderText = "category";
-            this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
-            // 
-            // confirmationsDataGridViewTextBoxColumn
-            // 
-            this.confirmationsDataGridViewTextBoxColumn.DataPropertyName = "confirmations";
-            this.confirmationsDataGridViewTextBoxColumn.HeaderText = "confirmations";
-            this.confirmationsDataGridViewTextBoxColumn.Name = "confirmationsDataGridViewTextBoxColumn";
-            // 
-            // amountDataGridViewTextBoxColumn
-            // 
-            this.amountDataGridViewTextBoxColumn.DataPropertyName = "amount";
-            this.amountDataGridViewTextBoxColumn.HeaderText = "amount";
-            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
-            // 
-            // timeDataGridViewTextBoxColumn
-            // 
-            this.timeDataGridViewTextBoxColumn.DataPropertyName = "time";
-            this.timeDataGridViewTextBoxColumn.HeaderText = "time";
-            this.timeDataGridViewTextBoxColumn.Name = "timeDataGridViewTextBoxColumn";
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "address";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            // 
-            // txidDataGridViewTextBoxColumn
-            // 
-            this.txidDataGridViewTextBoxColumn.DataPropertyName = "txid";
-            this.txidDataGridViewTextBoxColumn.HeaderText = "txid";
-            this.txidDataGridViewTextBoxColumn.Name = "txidDataGridViewTextBoxColumn";
-            // 
-            // transactionConvertedBindingSource
-            // 
-            this.transactionConvertedBindingSource.DataSource = typeof(SimpleWallet.Types.TransactionConverted);
-            // 
-            // tpReceive
-            // 
-            this.tpReceive.Controls.Add(this.dtgAddress);
-            this.tpReceive.Controls.Add(this.btnNewZAddress);
-            this.tpReceive.Controls.Add(this.btnAddressBook);
-            this.tpReceive.Controls.Add(this.btnNewAddress);
-            this.tpReceive.ImageIndex = 3;
-            this.tpReceive.Location = new System.Drawing.Point(4, 30);
-            this.tpReceive.Name = "tpReceive";
-            this.tpReceive.Padding = new System.Windows.Forms.Padding(3);
-            this.tpReceive.Size = new System.Drawing.Size(848, 461);
-            this.tpReceive.TabIndex = 2;
-            this.tpReceive.Text = "Receive coins";
-            this.tpReceive.UseVisualStyleBackColor = true;
-            this.tpReceive.Enter += new System.EventHandler(this.tpReceive_Enter);
-            this.tpReceive.Leave += new System.EventHandler(this.tpReceive_Leave);
-            // 
-            // dtgAddress
-            // 
-            this.dtgAddress.AllowUserToAddRows = false;
-            this.dtgAddress.AllowUserToDeleteRows = false;
-            this.dtgAddress.AllowUserToResizeColumns = false;
-            this.dtgAddress.AllowUserToResizeRows = false;
-            this.dtgAddress.BackgroundColor = System.Drawing.SystemColors.ControlDark;
-            this.dtgAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtgAddress.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgAddress.Location = new System.Drawing.Point(7, 8);
-            this.dtgAddress.Name = "dtgAddress";
-            this.dtgAddress.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dtgAddress.Size = new System.Drawing.Size(831, 417);
-            this.dtgAddress.TabIndex = 9;
-            this.dtgAddress.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgAddress_CellDoubleClick);
-            this.dtgAddress.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dtgAddress_MouseClick);
-            // 
-            // btnNewZAddress
-            // 
-            this.btnNewZAddress.Location = new System.Drawing.Point(658, 430);
-            this.btnNewZAddress.Name = "btnNewZAddress";
-            this.btnNewZAddress.Size = new System.Drawing.Size(180, 27);
-            this.btnNewZAddress.TabIndex = 7;
-            this.btnNewZAddress.Text = "Get new Z address";
-            this.btnNewZAddress.UseVisualStyleBackColor = true;
-            this.btnNewZAddress.Click += new System.EventHandler(this.btnNewZAddress_Click);
-            // 
-            // btnAddressBook
-            // 
-            this.btnAddressBook.Location = new System.Drawing.Point(286, 430);
-            this.btnAddressBook.Name = "btnAddressBook";
-            this.btnAddressBook.Size = new System.Drawing.Size(180, 27);
-            this.btnAddressBook.TabIndex = 7;
-            this.btnAddressBook.Text = "Address Book";
-            this.btnAddressBook.UseVisualStyleBackColor = true;
-            this.btnAddressBook.Click += new System.EventHandler(this.btnAddressBook_Click);
-            // 
-            // btnNewAddress
-            // 
-            this.btnNewAddress.Location = new System.Drawing.Point(472, 430);
-            this.btnNewAddress.Name = "btnNewAddress";
-            this.btnNewAddress.Size = new System.Drawing.Size(180, 27);
-            this.btnNewAddress.TabIndex = 7;
-            this.btnNewAddress.Text = "Get new address";
-            this.btnNewAddress.UseVisualStyleBackColor = true;
-            this.btnNewAddress.Click += new System.EventHandler(this.btnNewAddress_Click);
-            // 
-            // tpSend
-            // 
-            this.tpSend.Controls.Add(this.groupBox2);
-            this.tpSend.Controls.Add(this.groupBox1);
-            this.tpSend.ImageIndex = 4;
-            this.tpSend.Location = new System.Drawing.Point(4, 30);
-            this.tpSend.Name = "tpSend";
-            this.tpSend.Padding = new System.Windows.Forms.Padding(3);
-            this.tpSend.Size = new System.Drawing.Size(848, 461);
-            this.tpSend.TabIndex = 1;
-            this.tpSend.Text = "Send coins";
-            this.tpSend.UseVisualStyleBackColor = true;
-            this.tpSend.Enter += new System.EventHandler(this.tpSend_Enter);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.btnSendMany);
-            this.groupBox2.Controls.Add(this.cbbAddress);
-            this.groupBox2.Controls.Add(this.cbDefaultFee);
-            this.groupBox2.Controls.Add(this.cbbFrom);
-            this.groupBox2.Controls.Add(this.btnSend);
-            this.groupBox2.Controls.Add(this.btnRefresh);
-            this.groupBox2.Controls.Add(this.tbAmount);
-            this.groupBox2.Controls.Add(this.cbUnit);
-            this.groupBox2.Controls.Add(this.tbFee);
-            this.groupBox2.Controls.Add(this.tbLabel);
-            this.groupBox2.Controls.Add(this.tbPayTo);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Location = new System.Drawing.Point(9, 6);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(831, 261);
-            this.groupBox2.TabIndex = 17;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Normal send";
-            // 
-            // label15
-            // 
-            this.label15.Location = new System.Drawing.Point(9, 162);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(816, 63);
-            this.label15.TabIndex = 9;
-            this.label15.Text = resources.GetString("label15.Text");
-            // 
-            // btnSendMany
-            // 
-            this.btnSendMany.Location = new System.Drawing.Point(707, 228);
-            this.btnSendMany.Name = "btnSendMany";
-            this.btnSendMany.Size = new System.Drawing.Size(118, 27);
-            this.btnSendMany.TabIndex = 16;
-            this.btnSendMany.Text = "Send Many";
-            this.btnSendMany.UseVisualStyleBackColor = true;
-            this.btnSendMany.Click += new System.EventHandler(this.btnSendMany_Click);
-            // 
-            // cbbAddress
-            // 
-            this.cbbAddress.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbAddress.FormattingEnabled = true;
-            this.cbbAddress.Location = new System.Drawing.Point(584, 48);
-            this.cbbAddress.Name = "cbbAddress";
-            this.cbbAddress.Size = new System.Drawing.Size(241, 23);
-            this.cbbAddress.Sorted = true;
-            this.cbbAddress.TabIndex = 2;
-            this.cbbAddress.SelectedIndexChanged += new System.EventHandler(this.cbbAddress_SelectedIndexChanged);
-            // 
-            // cbDefaultFee
-            // 
-            this.cbDefaultFee.AutoSize = true;
-            this.cbDefaultFee.Checked = true;
-            this.cbDefaultFee.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbDefaultFee.Location = new System.Drawing.Point(177, 132);
-            this.cbDefaultFee.Name = "cbDefaultFee";
-            this.cbDefaultFee.Size = new System.Drawing.Size(85, 19);
-            this.cbDefaultFee.TabIndex = 7;
-            this.cbDefaultFee.Text = "Default fee";
-            this.cbDefaultFee.UseVisualStyleBackColor = true;
-            this.cbDefaultFee.CheckedChanged += new System.EventHandler(this.cbFee_CheckedChanged);
-            // 
-            // cbbFrom
-            // 
-            this.cbbFrom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbFrom.FormattingEnabled = true;
-            this.cbbFrom.Location = new System.Drawing.Point(69, 20);
-            this.cbbFrom.Name = "cbbFrom";
-            this.cbbFrom.Size = new System.Drawing.Size(756, 23);
-            this.cbbFrom.Sorted = true;
-            this.cbbFrom.TabIndex = 0;
-            this.cbbFrom.SelectedIndexChanged += new System.EventHandler(this.cbbFrom_SelectedIndexChanged);
-            // 
-            // btnSend
-            // 
-            this.btnSend.Location = new System.Drawing.Point(614, 228);
-            this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(87, 27);
-            this.btnSend.TabIndex = 15;
-            this.btnSend.Text = "Send";
-            this.btnSend.UseVisualStyleBackColor = true;
-            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Location = new System.Drawing.Point(521, 228);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(87, 27);
-            this.btnRefresh.TabIndex = 14;
-            this.btnRefresh.Text = "Refresh";
-            this.ttStart.SetToolTip(this.btnRefresh, "Refresh address value");
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
-            // tbAmount
-            // 
-            this.tbAmount.Location = new System.Drawing.Point(69, 103);
-            this.tbAmount.Name = "tbAmount";
-            this.tbAmount.Size = new System.Drawing.Size(102, 21);
-            this.tbAmount.TabIndex = 4;
-            this.tbAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAmount_KeyPress);
-            // 
-            // cbUnit
-            // 
-            this.cbUnit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbUnit.FormattingEnabled = true;
-            this.cbUnit.Items.AddRange(new object[] {
-            "SNG",
-            "mSNG"});
-            this.cbUnit.Location = new System.Drawing.Point(177, 103);
-            this.cbUnit.Name = "cbUnit";
-            this.cbUnit.Size = new System.Drawing.Size(100, 23);
-            this.cbUnit.TabIndex = 5;
-            // 
-            // tbFee
-            // 
-            this.tbFee.Enabled = false;
-            this.tbFee.Location = new System.Drawing.Point(69, 130);
-            this.tbFee.Name = "tbFee";
-            this.tbFee.Size = new System.Drawing.Size(102, 21);
-            this.tbFee.TabIndex = 6;
-            this.tbFee.Text = "0.0001";
-            this.tbFee.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAmount_KeyPress);
-            // 
-            // tbLabel
-            // 
-            this.tbLabel.Location = new System.Drawing.Point(69, 76);
-            this.tbLabel.Name = "tbLabel";
-            this.tbLabel.Size = new System.Drawing.Size(756, 21);
-            this.tbLabel.TabIndex = 3;
-            // 
-            // tbPayTo
-            // 
-            this.tbPayTo.Location = new System.Drawing.Point(69, 49);
-            this.tbPayTo.Name = "tbPayTo";
-            this.tbPayTo.Size = new System.Drawing.Size(507, 21);
-            this.tbPayTo.TabIndex = 1;
-            this.tbPayTo.Leave += new System.EventHandler(this.tbPayTo_Leave);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.tbShieldFrom);
-            this.groupBox1.Controls.Add(this.tbShieldUtxo);
-            this.groupBox1.Controls.Add(this.cbShieldDefaultFee);
-            this.groupBox1.Controls.Add(this.tbShieldFee);
-            this.groupBox1.Controls.Add(this.tbShieldTo);
-            this.groupBox1.Controls.Add(this.transparentLabel3);
-            this.groupBox1.Controls.Add(this.transparentLabel6);
-            this.groupBox1.Controls.Add(this.transparentLabel5);
-            this.groupBox1.Controls.Add(this.btnShield);
-            this.groupBox1.Controls.Add(this.transparentLabel4);
-            this.groupBox1.Location = new System.Drawing.Point(9, 273);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(831, 182);
-            this.groupBox1.TabIndex = 10;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Shield coinbase";
-            // 
-            // tbShieldFrom
-            // 
-            this.tbShieldFrom.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.tbShieldFrom.Location = new System.Drawing.Point(69, 20);
-            this.tbShieldFrom.Name = "tbShieldFrom";
-            this.tbShieldFrom.Size = new System.Drawing.Size(756, 21);
-            this.tbShieldFrom.TabIndex = 8;
-            this.tbShieldFrom.Text = "Public address";
-            this.tbShieldFrom.Enter += new System.EventHandler(this.tbShieldFrom_Enter);
-            this.tbShieldFrom.Leave += new System.EventHandler(this.tbShieldFrom_Leave);
-            // 
-            // tbShieldUtxo
-            // 
-            this.tbShieldUtxo.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.tbShieldUtxo.Location = new System.Drawing.Point(69, 74);
-            this.tbShieldUtxo.Name = "tbShieldUtxo";
-            this.tbShieldUtxo.Size = new System.Drawing.Size(756, 21);
-            this.tbShieldUtxo.TabIndex = 10;
-            this.tbShieldUtxo.Text = "utxo to shield";
-            this.tbShieldUtxo.Enter += new System.EventHandler(this.tbShieldUtxo_Enter);
-            this.tbShieldUtxo.Leave += new System.EventHandler(this.tbShieldUtxo_Leave);
-            // 
-            // cbShieldDefaultFee
-            // 
-            this.cbShieldDefaultFee.AutoSize = true;
-            this.cbShieldDefaultFee.Checked = true;
-            this.cbShieldDefaultFee.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbShieldDefaultFee.Location = new System.Drawing.Point(740, 103);
-            this.cbShieldDefaultFee.Name = "cbShieldDefaultFee";
-            this.cbShieldDefaultFee.Size = new System.Drawing.Size(85, 19);
-            this.cbShieldDefaultFee.TabIndex = 12;
-            this.cbShieldDefaultFee.Text = "Default fee";
-            this.cbShieldDefaultFee.UseVisualStyleBackColor = true;
-            this.cbShieldDefaultFee.CheckedChanged += new System.EventHandler(this.cbShieldDefaultFee_CheckedChanged);
-            // 
-            // tbShieldFee
-            // 
-            this.tbShieldFee.Enabled = false;
-            this.tbShieldFee.Location = new System.Drawing.Point(69, 101);
-            this.tbShieldFee.Name = "tbShieldFee";
-            this.tbShieldFee.Size = new System.Drawing.Size(665, 21);
-            this.tbShieldFee.TabIndex = 11;
-            this.tbShieldFee.Text = "0.0001";
-            this.tbShieldFee.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAmount_KeyPress);
-            this.tbShieldFee.Leave += new System.EventHandler(this.tbPayTo_Leave);
-            // 
-            // tbShieldTo
-            // 
-            this.tbShieldTo.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.tbShieldTo.Location = new System.Drawing.Point(69, 47);
-            this.tbShieldTo.Name = "tbShieldTo";
-            this.tbShieldTo.Size = new System.Drawing.Size(756, 21);
-            this.tbShieldTo.TabIndex = 9;
-            this.tbShieldTo.Text = "Private address";
-            this.tbShieldTo.Enter += new System.EventHandler(this.tbShieldTo_Enter);
-            this.tbShieldTo.Leave += new System.EventHandler(this.tbShieldTo_Leave);
-            // 
-            // tpOverview
-            // 
-            this.tpOverview.BackgroundImage = global::SimpleWallet.Properties.Resources.background_bottom;
-            this.tpOverview.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tpOverview.Controls.Add(this.pbTransaction4);
-            this.tpOverview.Controls.Add(this.pbTransaction3);
-            this.tpOverview.Controls.Add(this.pbTransaction2);
-            this.tpOverview.Controls.Add(this.pbTransaction1);
-            this.tpOverview.Controls.Add(this.lbAddress4);
-            this.tpOverview.Controls.Add(this.lbAddress3);
-            this.tpOverview.Controls.Add(this.lbAddress2);
-            this.tpOverview.Controls.Add(this.lbAddress1);
-            this.tpOverview.Controls.Add(this.lbValue4);
-            this.tpOverview.Controls.Add(this.lbValue3);
-            this.tpOverview.Controls.Add(this.lbValue2);
-            this.tpOverview.Controls.Add(this.lbValue1);
-            this.tpOverview.Controls.Add(this.lbTime4);
-            this.tpOverview.Controls.Add(this.lbTime3);
-            this.tpOverview.Controls.Add(this.lbTime2);
-            this.tpOverview.Controls.Add(this.lbTime1);
-            this.tpOverview.Controls.Add(this.label5);
-            this.tpOverview.Controls.Add(this.label12);
-            this.tpOverview.Controls.Add(this.label7);
-            this.tpOverview.Controls.Add(this.label4);
-            this.tpOverview.Controls.Add(this.lbUnconfirmed);
-            this.tpOverview.Controls.Add(this.label2);
-            this.tpOverview.Controls.Add(this.lbTransparent);
-            this.tpOverview.Controls.Add(this.tlTransparentBalance);
-            this.tpOverview.Controls.Add(this.lbLocked);
-            this.tpOverview.Controls.Add(this.lbPrivate);
-            this.tpOverview.Controls.Add(this.transparentLabel2);
-            this.tpOverview.Controls.Add(this.transparentLabel1);
-            this.tpOverview.Controls.Add(this.lbTotal);
-            this.tpOverview.Controls.Add(this.label1);
-            this.tpOverview.Controls.Add(this.lbBestHash);
-            this.tpOverview.Controls.Add(this.lbBestTime);
-            this.tpOverview.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tpOverview.ImageIndex = 2;
-            this.tpOverview.Location = new System.Drawing.Point(4, 30);
-            this.tpOverview.Name = "tpOverview";
-            this.tpOverview.Padding = new System.Windows.Forms.Padding(3);
-            this.tpOverview.Size = new System.Drawing.Size(848, 461);
-            this.tpOverview.TabIndex = 0;
-            this.tpOverview.Text = "Overview";
-            this.tpOverview.UseVisualStyleBackColor = true;
-            // 
-            // pbTransaction4
-            // 
-            this.pbTransaction4.BackColor = System.Drawing.Color.Transparent;
-            this.pbTransaction4.Location = new System.Drawing.Point(435, 227);
-            this.pbTransaction4.Name = "pbTransaction4";
-            this.pbTransaction4.Size = new System.Drawing.Size(58, 58);
-            this.pbTransaction4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbTransaction4.TabIndex = 10;
-            this.pbTransaction4.TabStop = false;
-            this.pbTransaction4.Visible = false;
-            // 
-            // pbTransaction3
-            // 
-            this.pbTransaction3.BackColor = System.Drawing.Color.Transparent;
-            this.pbTransaction3.Location = new System.Drawing.Point(435, 163);
-            this.pbTransaction3.Name = "pbTransaction3";
-            this.pbTransaction3.Size = new System.Drawing.Size(58, 58);
-            this.pbTransaction3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbTransaction3.TabIndex = 10;
-            this.pbTransaction3.TabStop = false;
-            this.pbTransaction3.Visible = false;
-            // 
-            // pbTransaction2
-            // 
-            this.pbTransaction2.BackColor = System.Drawing.Color.Transparent;
-            this.pbTransaction2.Location = new System.Drawing.Point(435, 99);
-            this.pbTransaction2.Name = "pbTransaction2";
-            this.pbTransaction2.Size = new System.Drawing.Size(58, 58);
-            this.pbTransaction2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbTransaction2.TabIndex = 10;
-            this.pbTransaction2.TabStop = false;
-            this.pbTransaction2.Visible = false;
-            // 
-            // pbTransaction1
-            // 
-            this.pbTransaction1.BackColor = System.Drawing.Color.Transparent;
-            this.pbTransaction1.Location = new System.Drawing.Point(435, 35);
-            this.pbTransaction1.Name = "pbTransaction1";
-            this.pbTransaction1.Size = new System.Drawing.Size(58, 58);
-            this.pbTransaction1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbTransaction1.TabIndex = 10;
-            this.pbTransaction1.TabStop = false;
-            this.pbTransaction1.Visible = false;
             // 
             // imgList
             // 
@@ -1701,28 +1701,28 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Start_FormClosed);
             this.Load += new System.EventHandler(this.Start_Load);
             this.tcMain.ResumeLayout(false);
-            this.tpMasternode.ResumeLayout(false);
-            this.tpMasternode.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgGlobalMN)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.masternodeDetailConvertedBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgMasternode)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.masternodeBindingSource2)).EndInit();
-            this.tpTransactions.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgTransactions)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.transactionConvertedBindingSource)).EndInit();
-            this.tpReceive.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgAddress)).EndInit();
-            this.tpSend.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.tpOverview.ResumeLayout(false);
             this.tpOverview.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTransaction4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTransaction3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTransaction2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTransaction1)).EndInit();
+            this.tpSend.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.tpReceive.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgAddress)).EndInit();
+            this.tpTransactions.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgTransactions)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transactionConvertedBindingSource)).EndInit();
+            this.tpMasternode.ResumeLayout(false);
+            this.tpMasternode.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgGlobalMN)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masternodeDetailConvertedBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgMasternode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masternodeBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addressBookBindingSource)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

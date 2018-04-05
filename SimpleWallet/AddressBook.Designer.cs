@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddressBook));
             this.dtgAddressBook = new System.Windows.Forms.DataGridView();
-            this.addressBookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressBookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnNewAddressBook = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgAddressBook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addressBookBindingSource)).BeginInit();
@@ -53,10 +53,6 @@
             this.dtgAddressBook.TabIndex = 0;
             this.dtgAddressBook.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dtgAddressBook_MouseClick);
             // 
-            // addressBookBindingSource
-            // 
-            this.addressBookBindingSource.DataSource = typeof(SimpleWallet.Types.AddressBook);
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "label";
@@ -68,6 +64,10 @@
             this.dataGridViewTextBoxColumn2.DataPropertyName = "address";
             this.dataGridViewTextBoxColumn2.HeaderText = "address";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // addressBookBindingSource
+            // 
+            this.addressBookBindingSource.DataSource = typeof(SimpleWallet.Types.AddressBook);
             // 
             // btnNewAddressBook
             // 
@@ -86,8 +86,11 @@
             this.ClientSize = new System.Drawing.Size(924, 501);
             this.Controls.Add(this.btnNewAddressBook);
             this.Controls.Add(this.dtgAddressBook);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "AddressBook";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AddressBook";
             this.Load += new System.EventHandler(this.AddressBook_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgAddressBook)).EndInit();
