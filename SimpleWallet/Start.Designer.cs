@@ -51,6 +51,8 @@
             this.tbLabel = new System.Windows.Forms.TextBox();
             this.tbPayTo = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbbShieldTo = new System.Windows.Forms.ComboBox();
+            this.cbbShieldFrom = new System.Windows.Forms.ComboBox();
             this.tbShieldUtxo = new System.Windows.Forms.TextBox();
             this.cbShieldDefaultFee = new System.Windows.Forms.CheckBox();
             this.tbShieldFee = new System.Windows.Forms.TextBox();
@@ -94,12 +96,7 @@
             this.ipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.masternodeDetailConvertedBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dtgMasternode = new System.Windows.Forms.DataGridView();
-            this.aliasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ipAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.privKeyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txHashDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.indexDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.masternodeBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.masternodeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.imgList = new System.Windows.Forms.ImageList(this.components);
             this.addressBookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pbPercent = new System.Windows.Forms.ProgressBar();
@@ -117,17 +114,19 @@
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.peersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.copyMasternodeDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copySnowgemconfDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.copyMasternodeDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ttStart = new System.Windows.Forms.ToolTip(this.components);
             this.pbStatus = new System.Windows.Forms.PictureBox();
             this.pbSignal = new System.Windows.Forms.PictureBox();
             this.masternodeListBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.masternodeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.masternodeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cbbShieldFrom = new System.Windows.Forms.ComboBox();
-            this.cbbShieldTo = new System.Windows.Forms.ComboBox();
+            this.statusDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aliasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ipAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.privKeyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txHashDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.indexDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbAddress4 = new SimpleWallet.TransparentLabel();
             this.lbAddress3 = new SimpleWallet.TransparentLabel();
             this.lbAddress2 = new SimpleWallet.TransparentLabel();
@@ -186,14 +185,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgGlobalMN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.masternodeDetailConvertedBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgMasternode)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.masternodeBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masternodeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addressBookBindingSource)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSignal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.masternodeListBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.masternodeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.masternodeBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.typesBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -488,6 +485,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Shield coinbase";
             // 
+            // cbbShieldTo
+            // 
+            this.cbbShieldTo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbShieldTo.FormattingEnabled = true;
+            this.cbbShieldTo.Location = new System.Drawing.Point(69, 45);
+            this.cbbShieldTo.Name = "cbbShieldTo";
+            this.cbbShieldTo.Size = new System.Drawing.Size(756, 23);
+            this.cbbShieldTo.TabIndex = 9;
+            // 
+            // cbbShieldFrom
+            // 
+            this.cbbShieldFrom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbShieldFrom.FormattingEnabled = true;
+            this.cbbShieldFrom.Location = new System.Drawing.Point(69, 18);
+            this.cbbShieldFrom.Name = "cbbShieldFrom";
+            this.cbbShieldFrom.Size = new System.Drawing.Size(756, 23);
+            this.cbbShieldFrom.TabIndex = 8;
+            // 
             // tbShieldUtxo
             // 
             this.tbShieldUtxo.ForeColor = System.Drawing.SystemColors.GrayText;
@@ -742,9 +757,9 @@
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(8, 3);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(115, 15);
+            this.label16.Size = new System.Drawing.Size(144, 15);
             this.label16.TabIndex = 2;
-            this.label16.Text = "Your masternode(s)";
+            this.label16.Text = "Your local masternode(s)";
             // 
             // label3
             // 
@@ -914,52 +929,25 @@
             this.dtgMasternode.AutoGenerateColumns = false;
             this.dtgMasternode.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgMasternode.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.statusDataGridViewTextBoxColumn1,
             this.aliasDataGridViewTextBoxColumn,
             this.ipAddressDataGridViewTextBoxColumn,
             this.privKeyDataGridViewTextBoxColumn,
             this.txHashDataGridViewTextBoxColumn1,
             this.indexDataGridViewTextBoxColumn});
-            this.dtgMasternode.DataSource = this.masternodeBindingSource2;
+            this.dtgMasternode.DataSource = this.masternodeBindingSource;
             this.dtgMasternode.Location = new System.Drawing.Point(8, 21);
             this.dtgMasternode.Name = "dtgMasternode";
             this.dtgMasternode.Size = new System.Drawing.Size(832, 89);
             this.dtgMasternode.TabIndex = 0;
             this.dtgMasternode.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgAddress_CellDoubleClick);
+            this.dtgMasternode.Paint += new System.Windows.Forms.PaintEventHandler(this.dtgMasternode_Paint);
+            this.dtgMasternode.Leave += new System.EventHandler(this.dtgMasternode_Leave);
             this.dtgMasternode.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dtgAddress_MouseClick);
             // 
-            // aliasDataGridViewTextBoxColumn
+            // masternodeBindingSource
             // 
-            this.aliasDataGridViewTextBoxColumn.DataPropertyName = "alias";
-            this.aliasDataGridViewTextBoxColumn.HeaderText = "alias";
-            this.aliasDataGridViewTextBoxColumn.Name = "aliasDataGridViewTextBoxColumn";
-            // 
-            // ipAddressDataGridViewTextBoxColumn
-            // 
-            this.ipAddressDataGridViewTextBoxColumn.DataPropertyName = "ipAddress";
-            this.ipAddressDataGridViewTextBoxColumn.HeaderText = "ipAddress";
-            this.ipAddressDataGridViewTextBoxColumn.Name = "ipAddressDataGridViewTextBoxColumn";
-            // 
-            // privKeyDataGridViewTextBoxColumn
-            // 
-            this.privKeyDataGridViewTextBoxColumn.DataPropertyName = "privKey";
-            this.privKeyDataGridViewTextBoxColumn.HeaderText = "privKey";
-            this.privKeyDataGridViewTextBoxColumn.Name = "privKeyDataGridViewTextBoxColumn";
-            // 
-            // txHashDataGridViewTextBoxColumn1
-            // 
-            this.txHashDataGridViewTextBoxColumn1.DataPropertyName = "txHash";
-            this.txHashDataGridViewTextBoxColumn1.HeaderText = "txHash";
-            this.txHashDataGridViewTextBoxColumn1.Name = "txHashDataGridViewTextBoxColumn1";
-            // 
-            // indexDataGridViewTextBoxColumn
-            // 
-            this.indexDataGridViewTextBoxColumn.DataPropertyName = "index";
-            this.indexDataGridViewTextBoxColumn.HeaderText = "index";
-            this.indexDataGridViewTextBoxColumn.Name = "indexDataGridViewTextBoxColumn";
-            // 
-            // masternodeBindingSource2
-            // 
-            this.masternodeBindingSource2.DataSource = typeof(SimpleWallet.Types.Masternode);
+            this.masternodeBindingSource.DataSource = typeof(SimpleWallet.Types.Masternode);
             // 
             // imgList
             // 
@@ -1086,8 +1074,8 @@
             this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.debugToolStripMenuItem,
             this.peersToolStripMenuItem,
-            this.copyMasternodeDataToolStripMenuItem,
-            this.copySnowgemconfDataToolStripMenuItem});
+            this.copySnowgemconfDataToolStripMenuItem,
+            this.copyMasternodeDataToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
             this.toolsToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.toolsToolStripMenuItem.Text = "Tools";
@@ -1105,19 +1093,19 @@
             this.peersToolStripMenuItem.Text = "Peers";
             this.peersToolStripMenuItem.Click += new System.EventHandler(this.peersToolStripMenuItem_Click);
             // 
-            // copyMasternodeDataToolStripMenuItem
-            // 
-            this.copyMasternodeDataToolStripMenuItem.Name = "copyMasternodeDataToolStripMenuItem";
-            this.copyMasternodeDataToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
-            this.copyMasternodeDataToolStripMenuItem.Text = "Copy masternode.conf data";
-            this.copyMasternodeDataToolStripMenuItem.Click += new System.EventHandler(this.copyMasternodeDataToolStripMenuItem_Click);
-            // 
             // copySnowgemconfDataToolStripMenuItem
             // 
             this.copySnowgemconfDataToolStripMenuItem.Name = "copySnowgemconfDataToolStripMenuItem";
             this.copySnowgemconfDataToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
             this.copySnowgemconfDataToolStripMenuItem.Text = "Copy snowgem.conf data";
             this.copySnowgemconfDataToolStripMenuItem.Click += new System.EventHandler(this.copySnowgemconfDataToolStripMenuItem_Click);
+            // 
+            // copyMasternodeDataToolStripMenuItem
+            // 
+            this.copyMasternodeDataToolStripMenuItem.Name = "copyMasternodeDataToolStripMenuItem";
+            this.copyMasternodeDataToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.copyMasternodeDataToolStripMenuItem.Text = "Copy masternode.conf data";
+            this.copyMasternodeDataToolStripMenuItem.Click += new System.EventHandler(this.copyMasternodeDataToolStripMenuItem_Click);
             // 
             // pbStatus
             // 
@@ -1144,14 +1132,6 @@
             // 
             this.masternodeListBindingSource.DataSource = typeof(SimpleWallet.Types.MasternodeList);
             // 
-            // masternodeBindingSource
-            // 
-            this.masternodeBindingSource.DataSource = typeof(SimpleWallet.Types.Masternode);
-            // 
-            // masternodeBindingSource1
-            // 
-            this.masternodeBindingSource1.DataSource = typeof(SimpleWallet.Types.Masternode);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::SimpleWallet.Properties.Resources.sng_main;
@@ -1163,23 +1143,41 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
-            // cbbShieldFrom
+            // statusDataGridViewTextBoxColumn1
             // 
-            this.cbbShieldFrom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbShieldFrom.FormattingEnabled = true;
-            this.cbbShieldFrom.Location = new System.Drawing.Point(69, 18);
-            this.cbbShieldFrom.Name = "cbbShieldFrom";
-            this.cbbShieldFrom.Size = new System.Drawing.Size(756, 23);
-            this.cbbShieldFrom.TabIndex = 8;
+            this.statusDataGridViewTextBoxColumn1.DataPropertyName = "status";
+            this.statusDataGridViewTextBoxColumn1.HeaderText = "status";
+            this.statusDataGridViewTextBoxColumn1.Name = "statusDataGridViewTextBoxColumn1";
             // 
-            // cbbShieldTo
+            // aliasDataGridViewTextBoxColumn
             // 
-            this.cbbShieldTo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbShieldTo.FormattingEnabled = true;
-            this.cbbShieldTo.Location = new System.Drawing.Point(69, 45);
-            this.cbbShieldTo.Name = "cbbShieldTo";
-            this.cbbShieldTo.Size = new System.Drawing.Size(756, 23);
-            this.cbbShieldTo.TabIndex = 9;
+            this.aliasDataGridViewTextBoxColumn.DataPropertyName = "alias";
+            this.aliasDataGridViewTextBoxColumn.HeaderText = "alias";
+            this.aliasDataGridViewTextBoxColumn.Name = "aliasDataGridViewTextBoxColumn";
+            // 
+            // ipAddressDataGridViewTextBoxColumn
+            // 
+            this.ipAddressDataGridViewTextBoxColumn.DataPropertyName = "ipAddress";
+            this.ipAddressDataGridViewTextBoxColumn.HeaderText = "ipAddress";
+            this.ipAddressDataGridViewTextBoxColumn.Name = "ipAddressDataGridViewTextBoxColumn";
+            // 
+            // privKeyDataGridViewTextBoxColumn
+            // 
+            this.privKeyDataGridViewTextBoxColumn.DataPropertyName = "privKey";
+            this.privKeyDataGridViewTextBoxColumn.HeaderText = "privKey";
+            this.privKeyDataGridViewTextBoxColumn.Name = "privKeyDataGridViewTextBoxColumn";
+            // 
+            // txHashDataGridViewTextBoxColumn1
+            // 
+            this.txHashDataGridViewTextBoxColumn1.DataPropertyName = "txHash";
+            this.txHashDataGridViewTextBoxColumn1.HeaderText = "txHash";
+            this.txHashDataGridViewTextBoxColumn1.Name = "txHashDataGridViewTextBoxColumn1";
+            // 
+            // indexDataGridViewTextBoxColumn
+            // 
+            this.indexDataGridViewTextBoxColumn.DataPropertyName = "index";
+            this.indexDataGridViewTextBoxColumn.HeaderText = "index";
+            this.indexDataGridViewTextBoxColumn.Name = "indexDataGridViewTextBoxColumn";
             // 
             // lbAddress4
             // 
@@ -1719,15 +1717,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgGlobalMN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.masternodeDetailConvertedBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgMasternode)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.masternodeBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masternodeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addressBookBindingSource)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSignal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.masternodeListBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.masternodeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.masternodeBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.typesBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -1856,14 +1852,6 @@
         private SimpleWallet.TransparentButton btnShield;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.BindingSource addressBookBindingSource;
-        private System.Windows.Forms.BindingSource masternodeBindingSource;
-        private System.Windows.Forms.BindingSource masternodeBindingSource2;
-        private System.Windows.Forms.BindingSource masternodeBindingSource1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn aliasDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ipAddressDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn privKeyDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txHashDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn indexDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn confirmationsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
@@ -1875,5 +1863,12 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox cbbShieldTo;
         private System.Windows.Forms.ComboBox cbbShieldFrom;
+        private System.Windows.Forms.BindingSource masternodeBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn aliasDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ipAddressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn privKeyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txHashDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn indexDataGridViewTextBoxColumn;
     }
 }

@@ -46,7 +46,7 @@ namespace SimpleWallet
             }
         }
 
-        void configure()
+        void configure(bool enable = true)
         {
             if (String.IsNullOrEmpty(tbName.Text))
             {
@@ -77,7 +77,7 @@ namespace SimpleWallet
                 return;
             }
 
-            result = api.editComfigureFile(tbName.Text, tbIP.Text, tbPrivKey.Text, split[0], split[1], oldName, isNew);
+            result = api.editComfigureFile("DISABLE",tbName.Text, tbIP.Text, tbPrivKey.Text, split[0], split[1], oldName, isNew);
 
             if (result == Types.ConfigureResult.FAIL)
             {

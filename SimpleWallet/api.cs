@@ -255,13 +255,17 @@ namespace SimpleWallet
             }
         }
 
-        public Types.ConfigureResult editComfigureFile(String aliasName, String IP, String privKey, String txHash, String txIndex, String oldName, bool isNew = true)
+        public Types.ConfigureResult editComfigureFile(String status, String aliasName, String IP, String privKey, String txHash, String txIndex, String oldName, bool isNew = true)
         {
             Types.ConfigureResult result = Types.ConfigureResult.OK;
             String appdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
                              + "\\Snowgem";
             String confFile = appdata + "\\snowgem.conf";
             String mnFile = appdata + "\\masternode.conf";
+            if (aliasName.StartsWith("#"))
+            {
+                aliasName = aliasName.Substring(1, aliasName.Length - 1);
+            }
 
             List<Types.Masternode> mns = getMasternodes();
             if (oldName != aliasName && mns.FindIndex(f => f.alias == aliasName) != -1)
@@ -344,7 +348,7 @@ namespace SimpleWallet
                                 mns.RemoveAt(index);
                             }
                         }
-                        mns.Add(new Types.Masternode(aliasName, IP + ":16113", privKey, txHash, txIndex));
+                        mns.Add(new Types.Masternode(status, aliasName, IP + ":16113", privKey, txHash, txIndex));
 
                         List<String> data = new List<string>();
                         foreach(Types.Masternode m in mns)
@@ -364,6 +368,114 @@ namespace SimpleWallet
             return result;
         }
 
+        public Types.ConfigureResult changeStatus(String status, String aliasName, String IP, String privKey, String txHash, String txIndex)
+        {
+            Types.ConfigureResult result = Types.ConfigureResult.OK;
+            String appdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
+                             + "\\Snowgem";
+            String confFile = appdata + "\\snowgem.conf";
+            String mnFile = appdata + "\\masternode.conf";
+
+            if(aliasName.StartsWith("#"))
+            {
+                aliasName = aliasName.Substring(1, aliasName.Length - 1);
+            }
+            List<Types.Masternode> mns = getMasternodes();
+            try
+            {
+                if (!File.Exists(confFile))
+                {
+                    result = Types.ConfigureResult.FAIL;
+                }
+                else
+                {
+                    int index = 0;
+                    if (status == "ENABLE")
+                    {
+                        //config file
+                        List<String> text = File.ReadAllLines(confFile).ToList();
+                        text.RemoveAll(String.IsNullOrEmpty);
+                        index = text.FindIndex(x => x.StartsWith("port"));
+                        if (index != -1)
+                        {
+                            text.RemoveAt(index);
+                        }
+                        text.Add("port=16113");
+                        index = text.FindIndex(x => x.StartsWith("listen"));
+                        if (index != -1)
+                        {
+                            text.RemoveAt(index);
+                        }
+                        text.Add("listen=1");
+                        index = text.FindIndex(x => x.StartsWith("server"));
+                        if (index != -1)
+                        {
+                            text.RemoveAt(index);
+                        }
+                        text.Add("server=1");
+                        index = text.FindIndex(x => x.StartsWith("masternode="));
+                        if (index != -1)
+                        {
+                            text.RemoveAt(index);
+                        }
+                        text.Add("masternode=1");
+                        index = text.FindIndex(x => x.StartsWith("masternodeaddr"));
+                        if (index != -1)
+                        {
+                            text.RemoveAt(index);
+                        }
+                        text.Add("masternodeaddr=" + IP);
+                        index = text.FindIndex(x => x.StartsWith("externalip"));
+                        if (index != -1)
+                        {
+                            text.RemoveAt(index);
+                        }
+                        text.Add("externalip=" + IP);
+                        index = text.FindIndex(x => x.StartsWith("masternodeprivkey"));
+                        if (index != -1)
+                        {
+                            text.RemoveAt(index);
+                        }
+                        text.Add("masternodeprivkey=" + privKey);
+                        index = text.FindIndex(x => x.StartsWith("txindex"));
+                        if (index != -1)
+                        {
+                            text.RemoveAt(index);
+                        }
+                        else
+                        {
+                            result = Types.ConfigureResult.REINDEX;
+                        }
+                        text.Add("txindex=1");
+
+                        File.WriteAllLines(confFile, text.ToArray());
+                    }
+
+                    index = mns.FindIndex(f => f.alias == aliasName);
+                    if (index > -1)
+                    {
+                        mns.RemoveAt(index);
+                    }
+
+                    mns.Add(new Types.Masternode(status, aliasName, IP, privKey, txHash, txIndex));
+
+                    List<String> data = new List<string>();
+                    foreach (Types.Masternode m in mns)
+                    {
+                        data.Add(m.ToString());
+                    }
+
+                    File.WriteAllLines(mnFile, data);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                result = Types.ConfigureResult.FAIL;
+            }
+            return result;
+        }
+
         public List<Types.Masternode> getMasternodes()
         {
             List<Types.Masternode> rtn = new List<Types.Masternode>();
@@ -375,9 +487,16 @@ namespace SimpleWallet
             data.RemoveAll(String.IsNullOrEmpty);
             foreach (String s in data)
             {
-                if (s[0] == '#')
-                    continue;
-                List<String> temp = s.Split(' ').ToList();
+                List<String> temp = new List<string>();
+                String strTmp = s;
+                if (strTmp[0] == '#')
+                {
+                    strTmp = strTmp.Substring(1, s.Length - 1);
+                    temp.Add("DISABLE");
+                }
+                else
+                    temp.Add("ENABLE");
+                temp.AddRange(strTmp.Split(' ').ToList());
                 temp.RemoveAll(String.IsNullOrEmpty);
                 rtn.Add(new Types.Masternode(temp));
             }

@@ -281,8 +281,9 @@ namespace SimpleWallet
 
         public class Masternode
         {
-            public Masternode(string alias, string ipAddress, string privKey, string txHash, string txindex)
+            public Masternode(string status, string alias, string ipAddress, string privKey, string txHash, string txindex)
             {
+                this.status = status;
                 this.alias = alias;
                 this.privKey = privKey;
                 this.ipAddress = ipAddress;
@@ -291,11 +292,12 @@ namespace SimpleWallet
             }
             public Masternode()
             {
-                this.alias = this.privKey = this.ipAddress = this.txHash = this.index = "";
+                this.status = this.alias = this.privKey = this.ipAddress = this.txHash = this.index = "";
             }
 
             public Masternode(Masternode temp)
             {
+                this.status = temp.status;
                 this.alias = temp.alias;
                 this.privKey = temp.privKey;
                 this.ipAddress = temp.ipAddress;
@@ -305,18 +307,20 @@ namespace SimpleWallet
 
             public Masternode(List<String> temp)
             {
-                this.alias = temp[0];
-                this.ipAddress = temp[1];
-                this.privKey = temp[2];
-                this.txHash = temp[3];
-                this.index = temp[4];
+                this.status = temp[0];
+                this.alias = temp[1];
+                this.ipAddress = temp[2];
+                this.privKey = temp[3];
+                this.txHash = temp[4];
+                this.index = temp[5];
             }
 
             public String ToString()
             {
-                return alias + " " + ipAddress + " " + privKey + " " + txHash + " " + index;
+                return (status == "ENABLE" ? "" : "#") + alias + " " + ipAddress + " " + privKey + " " + txHash + " " + index;
             }
 
+            public String status { get; set; }
             public String alias { get; set; }
             public String privKey { get; set; }
             public String ipAddress { get; set; }
