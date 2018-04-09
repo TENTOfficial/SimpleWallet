@@ -1970,6 +1970,10 @@ Are you sure?", @"Reopen to scan the wallet", MessageBoxButtons.YesNo);
                 {
                     type = Types.CtxMenuType.MASTERNODE_GLOBAL;
                 }
+                else if (((DataGridView)sender).Name == "dtgMasternode")
+                {
+                    type = Types.CtxMenuType.MASTERNODE;
+                }
 
                 ctxMenu.MenuItems.Add(new CustomMenuItem("Copy", ctxMenu_Copy, type));
 
@@ -1980,6 +1984,10 @@ Are you sure?", @"Reopen to scan the wallet", MessageBoxButtons.YesNo);
                 else if (type == Types.CtxMenuType.TRANSACTIONS)
                 {
                     ctxMenu.MenuItems.Add(new CustomMenuItem("View transaction detail", ctxMenu_ViewDetailTx, type));
+                }
+                else if (type == Types.CtxMenuType.MASTERNODE)
+                {
+                    ctxMenu.MenuItems.Add(new CustomMenuItem("View transaction detail", ctxMenu_Edit, type));
                 }
 
                 int currentMouseOverRow = ((DataGridView)sender).HitTest(e.X, e.Y).RowIndex;
