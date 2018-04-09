@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SendingCoin));
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbChecking = new System.Windows.Forms.Label();
             this.pbTransaction = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
-            // label1
+            // lbChecking
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 16);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Checking transaction";
+            this.lbChecking.AutoSize = true;
+            this.lbChecking.Location = new System.Drawing.Point(17, 16);
+            this.lbChecking.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbChecking.Name = "lbChecking";
+            this.lbChecking.Size = new System.Drawing.Size(121, 15);
+            this.lbChecking.TabIndex = 0;
+            this.lbChecking.Text = "Checking transaction";
             // 
             // pbTransaction
             // 
@@ -58,7 +58,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(379, 75);
             this.Controls.Add(this.pbTransaction);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbChecking);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -76,7 +76,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbChecking;
         private System.Windows.Forms.ProgressBar pbTransaction;
     }
 }

@@ -51,11 +51,9 @@
             this.tbLabel = new System.Windows.Forms.TextBox();
             this.tbPayTo = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tbShieldFrom = new System.Windows.Forms.TextBox();
             this.tbShieldUtxo = new System.Windows.Forms.TextBox();
             this.cbShieldDefaultFee = new System.Windows.Forms.CheckBox();
             this.tbShieldFee = new System.Windows.Forms.TextBox();
-            this.tbShieldTo = new System.Windows.Forms.TextBox();
             this.tpReceive = new System.Windows.Forms.TabPage();
             this.dtgAddress = new System.Windows.Forms.DataGridView();
             this.btnNewZAddress = new System.Windows.Forms.Button();
@@ -128,6 +126,8 @@
             this.masternodeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.masternodeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cbbShieldFrom = new System.Windows.Forms.ComboBox();
+            this.cbbShieldTo = new System.Windows.Forms.ComboBox();
             this.lbAddress4 = new SimpleWallet.TransparentLabel();
             this.lbAddress3 = new SimpleWallet.TransparentLabel();
             this.lbAddress2 = new SimpleWallet.TransparentLabel();
@@ -437,8 +437,8 @@
             this.cbUnit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbUnit.FormattingEnabled = true;
             this.cbUnit.Items.AddRange(new object[] {
-            "SNG",
-            "mSNG"});
+            "XSG",
+            "mXSG"});
             this.cbUnit.Location = new System.Drawing.Point(177, 103);
             this.cbUnit.Name = "cbUnit";
             this.cbUnit.Size = new System.Drawing.Size(100, 23);
@@ -471,11 +471,11 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.tbShieldFrom);
+            this.groupBox1.Controls.Add(this.cbbShieldTo);
+            this.groupBox1.Controls.Add(this.cbbShieldFrom);
             this.groupBox1.Controls.Add(this.tbShieldUtxo);
             this.groupBox1.Controls.Add(this.cbShieldDefaultFee);
             this.groupBox1.Controls.Add(this.tbShieldFee);
-            this.groupBox1.Controls.Add(this.tbShieldTo);
             this.groupBox1.Controls.Add(this.transparentLabel3);
             this.groupBox1.Controls.Add(this.transparentLabel6);
             this.groupBox1.Controls.Add(this.transparentLabel5);
@@ -488,17 +488,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Shield coinbase";
             // 
-            // tbShieldFrom
-            // 
-            this.tbShieldFrom.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.tbShieldFrom.Location = new System.Drawing.Point(69, 20);
-            this.tbShieldFrom.Name = "tbShieldFrom";
-            this.tbShieldFrom.Size = new System.Drawing.Size(756, 21);
-            this.tbShieldFrom.TabIndex = 8;
-            this.tbShieldFrom.Text = "Public address";
-            this.tbShieldFrom.Enter += new System.EventHandler(this.tbShieldFrom_Enter);
-            this.tbShieldFrom.Leave += new System.EventHandler(this.tbShieldFrom_Leave);
-            // 
             // tbShieldUtxo
             // 
             this.tbShieldUtxo.ForeColor = System.Drawing.SystemColors.GrayText;
@@ -508,6 +497,7 @@
             this.tbShieldUtxo.TabIndex = 10;
             this.tbShieldUtxo.Text = "utxo to shield";
             this.tbShieldUtxo.Enter += new System.EventHandler(this.tbShieldUtxo_Enter);
+            this.tbShieldUtxo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAmount_KeyPress);
             this.tbShieldUtxo.Leave += new System.EventHandler(this.tbShieldUtxo_Leave);
             // 
             // cbShieldDefaultFee
@@ -533,17 +523,6 @@
             this.tbShieldFee.Text = "0.0001";
             this.tbShieldFee.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAmount_KeyPress);
             this.tbShieldFee.Leave += new System.EventHandler(this.tbPayTo_Leave);
-            // 
-            // tbShieldTo
-            // 
-            this.tbShieldTo.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.tbShieldTo.Location = new System.Drawing.Point(69, 47);
-            this.tbShieldTo.Name = "tbShieldTo";
-            this.tbShieldTo.Size = new System.Drawing.Size(756, 21);
-            this.tbShieldTo.TabIndex = 9;
-            this.tbShieldTo.Text = "Private address";
-            this.tbShieldTo.Enter += new System.EventHandler(this.tbShieldTo_Enter);
-            this.tbShieldTo.Leave += new System.EventHandler(this.tbShieldTo_Leave);
             // 
             // tpReceive
             // 
@@ -1183,6 +1162,24 @@
             this.pictureBox1.Size = new System.Drawing.Size(168, 58);
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
+            // 
+            // cbbShieldFrom
+            // 
+            this.cbbShieldFrom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbShieldFrom.FormattingEnabled = true;
+            this.cbbShieldFrom.Location = new System.Drawing.Point(69, 18);
+            this.cbbShieldFrom.Name = "cbbShieldFrom";
+            this.cbbShieldFrom.Size = new System.Drawing.Size(756, 23);
+            this.cbbShieldFrom.TabIndex = 8;
+            // 
+            // cbbShieldTo
+            // 
+            this.cbbShieldTo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbShieldTo.FormattingEnabled = true;
+            this.cbbShieldTo.Location = new System.Drawing.Point(69, 45);
+            this.cbbShieldTo.Name = "cbbShieldTo";
+            this.cbbShieldTo.Size = new System.Drawing.Size(756, 23);
+            this.cbbShieldTo.TabIndex = 9;
             // 
             // lbAddress4
             // 
@@ -1849,13 +1846,11 @@
         private SimpleWallet.RoundButton btnSearch;
         private System.Windows.Forms.Button btnTurnOffMNMode;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox tbShieldFrom;
         private TransparentLabel transparentLabel3;
         private System.Windows.Forms.TextBox tbShieldUtxo;
         private TransparentLabel transparentLabel6;
         private System.Windows.Forms.TextBox tbShieldFee;
         private TransparentLabel transparentLabel5;
-        private System.Windows.Forms.TextBox tbShieldTo;
         private TransparentLabel transparentLabel4;
         private System.Windows.Forms.CheckBox cbShieldDefaultFee;
         private SimpleWallet.TransparentButton btnShield;
@@ -1878,5 +1873,7 @@
         private System.Windows.Forms.BindingSource transactionConvertedBindingSource;
         private System.Windows.Forms.Button btnAddressBook;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox cbbShieldTo;
+        private System.Windows.Forms.ComboBox cbbShieldFrom;
     }
 }

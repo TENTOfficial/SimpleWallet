@@ -743,6 +743,11 @@ namespace SimpleWallet
 
         public Dictionary<String, String> shieldCoin(String from, String to, String utxo, String fee, bool defaultFee)
         {
+            if(Convert.ToDouble(utxo) > 500)
+            {
+                utxo = "500";
+            }
+
             Dictionary<String, String> strDict = new Dictionary<String, String>();
             List<String> command = new List<String> { "z_shieldcoinbase", from, to, defaultFee ? "0.0001" : fee, utxo};
             String data = "";

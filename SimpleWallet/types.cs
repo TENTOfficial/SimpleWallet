@@ -82,6 +82,13 @@ namespace SimpleWallet
             END
         }
 
+        public enum TransactionType
+        {
+            SEND_COIN = 0,
+            SHIELD_COIN,
+            END
+        }
+
         public enum StepSync
         {
             GET_BEST_HASH = 0,
@@ -150,6 +157,15 @@ namespace SimpleWallet
         public class ListAddressBook
         {
             public List<AddressBook> addressbook { get; set; }
+        }
+
+        public class ShieldData
+        {
+            public float remainingUTXOs { get; set; }
+            public float remainingValue { get; set; }
+            public float shieldingUTXOs { get; set; }
+            public float shieldingValue { get; set; }
+            public String opid { get; set; }
         }
 
         public class AllData

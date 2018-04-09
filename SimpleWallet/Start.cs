@@ -393,7 +393,11 @@ namespace SimpleWallet
                             return;
                         }
                         //MessageBox.Show("Couldn't connect to SnowGem server, please restart the wallet");
-                        this.Close();
+                        try
+                        {
+                            this.Close();
+                        }
+                        catch (Exception ex2) { }
                     }
                 }
                 Thread.Sleep(8000);
@@ -920,19 +924,37 @@ namespace SimpleWallet
             lock (lockObj)
             {
                 String selectedAddress = "";
+                String selectedShieldFromAddress = "";
+                String selectedShieldToAddress = "";
                 object slItem = getSelectedItem(cbbFrom);
                 if (slItem != null)
                 {
                     selectedAddress = slItem.ToString().Split(new String[] { " - " }, StringSplitOptions.None)[0];
                 }
+                slItem = getSelectedItem(cbbShieldFrom);
+                if (slItem != null)
+                {
+                    selectedShieldFromAddress = slItem.ToString().Split(new String[] { " - " }, StringSplitOptions.None)[0];
+                }
+                slItem = getSelectedItem(cbbShieldTo);
+                if (slItem != null)
+                {
+                    selectedShieldToAddress = slItem.ToString().Split(new String[] { " - " }, StringSplitOptions.None)[0];
+                }
                 cbbClear(cbbFrom);
+                cbbClear(cbbShieldFrom);
+                cbbClear(cbbShieldTo);
                 if (walletDic.Keys.Count > 0)
                 {
                     btnEnable(btnSend, true);
                     btnEnable(btnSendMany, true);
                     double output;
                     int selectedIdx = 0;
+                    int selectedShieldFromIdx = -1;
+                    int selectedShieldToIdx = -1;
                     int count = 0;
+                    int countShieldFrom = 0;
+                    int countShieldTo = 0;
                     foreach (String wallet in walletDic.Keys.ToList())
                     {
                         if ((Double.TryParse(walletDic[wallet], out output) && Convert.ToDouble(walletDic[wallet]) != 0) ||
@@ -944,11 +966,38 @@ namespace SimpleWallet
                                 selectedIdx = count;
                             }
                             count++;
+
+                            if (wallet.StartsWith("s"))
+                            {
+                                if (selectedShieldFromAddress == wallet)
+                                {
+                                    selectedShieldFromIdx = countShieldFrom;
+                                }
+                                cbbAdd(cbbShieldFrom, wallet + " - " + walletDic[wallet]);
+                                countShieldFrom++;
+                            }
+                            else if (wallet.StartsWith("zc"))
+                            {
+                                if (selectedShieldToAddress == wallet)
+                                {
+                                    selectedShieldToIdx = countShieldTo;
+                                }
+                                cbbAdd(cbbShieldTo, wallet);
+                                countShieldTo++;
+                            }
                         }
                     }
                     if (cbbFrom.Items.Count > 0)
                     {
                         cbbSelectedIndex(cbbFrom, selectedIdx);
+                    }
+                    if (cbbShieldFrom.Items.Count > 0)
+                    {
+                        cbbSelectedIndex(cbbShieldFrom, selectedShieldFromIdx);
+                    }
+                    if (cbbShieldTo.Items.Count > 0)
+                    {
+                        cbbSelectedIndex(cbbShieldTo, selectedShieldToIdx);
                     }
                 }
                 else
@@ -1087,7 +1136,18 @@ namespace SimpleWallet
             }
             else
             {
-                MessageBox.Show(Api.getMessage(strDict));
+                string err = Api.getMessage(strDict);
+                
+                if (err.Contains("bad-txns-oversize"))
+                {
+                    err += "\nGo to https://snowgem.org/faq to get help.";
+                    ErrorMessage errMsg = new ErrorMessage(err);
+                    errMsg.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show(err);
+                }
             }
             ((Button)sender).Enabled = true;
         }
@@ -1817,20 +1877,14 @@ Are you sure?", @"Reopen to scan the wallet", MessageBoxButtons.YesNo);
 
         private void btnShield_Click(object sender, EventArgs e)
         {
-            Dictionary<String, String> strDict = api.checkWallet(tbPayTo.Text);
-            if (String.IsNullOrEmpty(tbPayTo.Text) || !Api.checkResult(strDict))
+            if(cbbShieldFrom.SelectedIndex == -1)
             {
-                MessageBox.Show("Destination wallet is invalid","Error");
+                MessageBox.Show("Please select shielding wallet ");
                 return;
             }
-            if(String.IsNullOrEmpty(tbShieldFrom.Text))
+            if (cbbShieldFrom.SelectedIndex == -1)
             {
-                MessageBox.Show("Shield address is empty");
-                return;
-            }
-            if (String.IsNullOrEmpty(tbShieldTo.Text))
-            {
-                MessageBox.Show("Shield destination address is empty");
+                MessageBox.Show("Please select destination wallet");
                 return;
             } 
 
@@ -1839,20 +1893,23 @@ Are you sure?", @"Reopen to scan the wallet", MessageBoxButtons.YesNo);
                 MessageBox.Show("Shield utxo is empty");
                 return;
             }
+
             ((Button)sender).Enabled = false;
 
-            strDict = api.checkWallet(tbPayTo.Text);
-            strDict = Task.Run(() => api.shieldCoin(tbShieldFrom.Text, tbShieldTo.Text, tbShieldUtxo.Text,
+            String from = cbbShieldFrom.SelectedItem.ToString().Split(new String[] { " - " }, StringSplitOptions.None)[0];
+            String to = cbbShieldTo.SelectedItem.ToString();
+            Dictionary<String, String> strDict = api.checkWallet(tbPayTo.Text);
+            strDict = Task.Run(() => api.shieldCoin(from, to, tbShieldUtxo.Text,
                 tbShieldFee.Text, cbShieldDefaultFee.Checked)).Result;
 
-            SendingCoin send = new SendingCoin(strDict);
+            SendingCoin send = new SendingCoin(strDict, Types.TransactionType.SHIELD_COIN);
             send.ShowDialog();
             strDict = send.data;
 
             if (Api.checkResult(strDict))
             {
-                addressBalanceChange.Add(tbShieldFrom.Text);
-                addressBalanceChange.Add(tbShieldTo.Text);
+                addressBalanceChange.Add(from);
+                addressBalanceChange.Add(to);
                 shouldGetTransaction = true;
                 shouldGetWallet = true;
                 MessageBox.Show("Success\n" + strDict["message"]);
@@ -1874,42 +1931,6 @@ Are you sure?", @"Reopen to scan the wallet", MessageBoxButtons.YesNo);
             else
             {
                 tbShieldFee.Enabled = true;
-            }
-        }
-
-        private void tbShieldFrom_Enter(object sender, EventArgs e)
-        {
-            if (tbShieldFrom.Text == "Public address")
-            {
-                tbShieldFrom.Text = "";
-                tbShieldFrom.ForeColor = Color.Black;
-            }
-        }
-
-        private void tbShieldFrom_Leave(object sender, EventArgs e)
-        {
-            if (tbShieldFrom.Text == "")
-            {
-                tbShieldFrom.Text = "Public address";
-                tbShieldFrom.ForeColor = Color.Gray;
-            }
-        }
-
-        private void tbShieldTo_Enter(object sender, EventArgs e)
-        {
-            if (tbShieldTo.Text == "Private address")
-            {
-                tbShieldTo.Text = "";
-                tbShieldTo.ForeColor = Color.Black;
-            }
-        }
-
-        private void tbShieldTo_Leave(object sender, EventArgs e)
-        {
-            if (tbShieldTo.Text == "")
-            {
-                tbShieldTo.Text = "Private address";
-                tbShieldTo.ForeColor = Color.Gray;
             }
         }
 
@@ -1978,9 +1999,9 @@ Are you sure?", @"Reopen to scan the wallet", MessageBoxButtons.YesNo);
             CustomMenuItem item = sender as CustomMenuItem;
             if (item.type == Types.CtxMenuType.WALLET)
             {
-                if (dtgAddress.CurrentCell.Value != null)
+                if (dtgAddress.CurrentCell != null && dtgAddress.CurrentCell.Value != null)
                 {
-                    QrCode qr = new QrCode(dtgAddress.CurrentCell.Value.ToString());
+                    QrCode qr = new QrCode(dtgAddress.Rows[dtgAddress.CurrentRow.Index].Cells[1].Value.ToString());
                     qr.ShowDialog();
                 }
             }
@@ -1991,7 +2012,7 @@ Are you sure?", @"Reopen to scan the wallet", MessageBoxButtons.YesNo);
             CustomMenuItem item = sender as CustomMenuItem;
             if (item.type == Types.CtxMenuType.TRANSACTIONS)
             {
-                if (dtgTransactions.CurrentCell.Value != null)
+                if (dtgTransactions.CurrentCell != null && dtgTransactions.CurrentCell.Value != null)
                 {
                     //get transaction data
                     DataGridView dtg = dtgTransactions;
