@@ -36,97 +36,6 @@
             this.pbTransaction3 = new System.Windows.Forms.PictureBox();
             this.pbTransaction2 = new System.Windows.Forms.PictureBox();
             this.pbTransaction1 = new System.Windows.Forms.PictureBox();
-            this.tpSend = new System.Windows.Forms.TabPage();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.btnSendMany = new System.Windows.Forms.Button();
-            this.cbbAddress = new System.Windows.Forms.ComboBox();
-            this.cbDefaultFee = new System.Windows.Forms.CheckBox();
-            this.cbbFrom = new System.Windows.Forms.ComboBox();
-            this.btnSend = new System.Windows.Forms.Button();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.tbAmount = new System.Windows.Forms.TextBox();
-            this.cbUnit = new System.Windows.Forms.ComboBox();
-            this.tbFee = new System.Windows.Forms.TextBox();
-            this.tbLabel = new System.Windows.Forms.TextBox();
-            this.tbPayTo = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbbShieldTo = new System.Windows.Forms.ComboBox();
-            this.cbbShieldFrom = new System.Windows.Forms.ComboBox();
-            this.tbShieldUtxo = new System.Windows.Forms.TextBox();
-            this.cbShieldDefaultFee = new System.Windows.Forms.CheckBox();
-            this.tbShieldFee = new System.Windows.Forms.TextBox();
-            this.tpReceive = new System.Windows.Forms.TabPage();
-            this.dtgAddress = new System.Windows.Forms.DataGridView();
-            this.btnNewZAddress = new System.Windows.Forms.Button();
-            this.btnAddressBook = new System.Windows.Forms.Button();
-            this.btnNewAddress = new System.Windows.Forms.Button();
-            this.tpTransactions = new System.Windows.Forms.TabPage();
-            this.btnReindex = new System.Windows.Forms.Button();
-            this.btnRescan = new System.Windows.Forms.Button();
-            this.dtgTransactions = new System.Windows.Forms.DataGridView();
-            this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.confirmationsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.transactionConvertedBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tpMasternode = new System.Windows.Forms.TabPage();
-            this.tbSearch = new System.Windows.Forms.TextBox();
-            this.lbUpdateTime = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnRefreshMasternode = new System.Windows.Forms.Button();
-            this.btnStartAlias = new System.Windows.Forms.Button();
-            this.btnStartMasternode = new System.Windows.Forms.Button();
-            this.btnEditConfigFile = new System.Windows.Forms.Button();
-            this.btnGetOutputs = new System.Windows.Forms.Button();
-            this.btnTurnOffMNMode = new System.Windows.Forms.Button();
-            this.btnGetMNPrivKey = new System.Windows.Forms.Button();
-            this.dtgGlobalMN = new System.Windows.Forms.DataGridView();
-            this.rankDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.versionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.activetimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastseenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastpaidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txhashDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.masternodeDetailConvertedBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dtgMasternode = new System.Windows.Forms.DataGridView();
-            this.masternodeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.imgList = new System.Windows.Forms.ImageList(this.components);
-            this.addressBookBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pbPercent = new System.Windows.Forms.ProgressBar();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.walletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.backupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exportPrivateKeyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.importPrivateKeysToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.showPrivateKeyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.importOnePrivateKeyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.enableAutoBackupWalletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.peersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.copySnowgemconfDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.copyMasternodeDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ttStart = new System.Windows.Forms.ToolTip(this.components);
-            this.pbStatus = new System.Windows.Forms.PictureBox();
-            this.pbSignal = new System.Windows.Forms.PictureBox();
-            this.masternodeListBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.statusDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aliasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ipAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.privKeyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txHashDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.indexDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbAddress4 = new SimpleWallet.TransparentLabel();
             this.lbAddress3 = new SimpleWallet.TransparentLabel();
             this.lbAddress2 = new SimpleWallet.TransparentLabel();
@@ -155,17 +64,109 @@
             this.label1 = new SimpleWallet.TransparentLabel();
             this.lbBestHash = new SimpleWallet.TransparentLabel();
             this.lbBestTime = new SimpleWallet.TransparentLabel();
+            this.tpSend = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.btnSendMany = new System.Windows.Forms.Button();
+            this.cbbAddress = new System.Windows.Forms.ComboBox();
+            this.cbDefaultFee = new System.Windows.Forms.CheckBox();
+            this.cbbFrom = new System.Windows.Forms.ComboBox();
+            this.btnSend = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.tbAmount = new System.Windows.Forms.TextBox();
+            this.cbUnit = new System.Windows.Forms.ComboBox();
+            this.tbFee = new System.Windows.Forms.TextBox();
+            this.tbLabel = new System.Windows.Forms.TextBox();
+            this.tbPayTo = new System.Windows.Forms.TextBox();
             this.label6 = new SimpleWallet.TransparentLabel();
             this.label9 = new SimpleWallet.TransparentLabel();
             this.label8 = new SimpleWallet.TransparentLabel();
             this.label10 = new SimpleWallet.TransparentLabel();
             this.label11 = new SimpleWallet.TransparentLabel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbbShieldTo = new System.Windows.Forms.ComboBox();
+            this.cbbShieldFrom = new System.Windows.Forms.ComboBox();
+            this.tbShieldUtxo = new System.Windows.Forms.TextBox();
+            this.cbShieldDefaultFee = new System.Windows.Forms.CheckBox();
+            this.tbShieldFee = new System.Windows.Forms.TextBox();
             this.transparentLabel3 = new SimpleWallet.TransparentLabel();
             this.transparentLabel6 = new SimpleWallet.TransparentLabel();
             this.transparentLabel5 = new SimpleWallet.TransparentLabel();
             this.btnShield = new SimpleWallet.TransparentButton();
             this.transparentLabel4 = new SimpleWallet.TransparentLabel();
+            this.tpReceive = new System.Windows.Forms.TabPage();
+            this.dtgAddress = new System.Windows.Forms.DataGridView();
+            this.btnNewZAddress = new System.Windows.Forms.Button();
+            this.btnAddressBook = new System.Windows.Forms.Button();
+            this.btnNewAddress = new System.Windows.Forms.Button();
+            this.tpTransactions = new System.Windows.Forms.TabPage();
+            this.btnReindex = new System.Windows.Forms.Button();
+            this.btnRescan = new System.Windows.Forms.Button();
+            this.dtgTransactions = new System.Windows.Forms.DataGridView();
+            this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.confirmationsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.transactionConvertedBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tpMasternode = new System.Windows.Forms.TabPage();
+            this.tbSearch = new System.Windows.Forms.TextBox();
+            this.lbUpdateTime = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnRefreshMasternode = new System.Windows.Forms.Button();
+            this.btnStartAll = new System.Windows.Forms.Button();
+            this.btnStartAlias = new System.Windows.Forms.Button();
+            this.btnStartMasternode = new System.Windows.Forms.Button();
+            this.btnEditConfigFile = new System.Windows.Forms.Button();
+            this.btnGetOutputs = new System.Windows.Forms.Button();
+            this.btnTurnOffMNMode = new System.Windows.Forms.Button();
+            this.btnGetMNPrivKey = new System.Windows.Forms.Button();
+            this.dtgGlobalMN = new System.Windows.Forms.DataGridView();
+            this.rankDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.versionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activetimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastseenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastpaidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txhashDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.masternodeDetailConvertedBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dtgMasternode = new System.Windows.Forms.DataGridView();
+            this.statusDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aliasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ipAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.privKeyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txHashDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.indexDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.masternodeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnSearch = new SimpleWallet.RoundButton();
+            this.imgList = new System.Windows.Forms.ImageList(this.components);
+            this.addressBookBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pbPercent = new System.Windows.Forms.ProgressBar();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.walletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.backupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportPrivateKeyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.importPrivateKeysToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showPrivateKeyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.importOnePrivateKeyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.enableAutoBackupWalletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.peersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.copySnowgemconfDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.copyMasternodeDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ttStart = new System.Windows.Forms.ToolTip(this.components);
+            this.pbStatus = new System.Windows.Forms.PictureBox();
+            this.pbSignal = new System.Windows.Forms.PictureBox();
+            this.masternodeListBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.typesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tcMain.SuspendLayout();
             this.tpOverview.SuspendLayout();
@@ -306,878 +307,6 @@
             this.pbTransaction1.TabIndex = 10;
             this.pbTransaction1.TabStop = false;
             this.pbTransaction1.Visible = false;
-            // 
-            // tpSend
-            // 
-            this.tpSend.Controls.Add(this.groupBox2);
-            this.tpSend.Controls.Add(this.groupBox1);
-            this.tpSend.ImageIndex = 4;
-            this.tpSend.Location = new System.Drawing.Point(4, 30);
-            this.tpSend.Name = "tpSend";
-            this.tpSend.Padding = new System.Windows.Forms.Padding(3);
-            this.tpSend.Size = new System.Drawing.Size(848, 461);
-            this.tpSend.TabIndex = 1;
-            this.tpSend.Text = "Send coins";
-            this.tpSend.UseVisualStyleBackColor = true;
-            this.tpSend.Enter += new System.EventHandler(this.tpSend_Enter);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.btnSendMany);
-            this.groupBox2.Controls.Add(this.cbbAddress);
-            this.groupBox2.Controls.Add(this.cbDefaultFee);
-            this.groupBox2.Controls.Add(this.cbbFrom);
-            this.groupBox2.Controls.Add(this.btnSend);
-            this.groupBox2.Controls.Add(this.btnRefresh);
-            this.groupBox2.Controls.Add(this.tbAmount);
-            this.groupBox2.Controls.Add(this.cbUnit);
-            this.groupBox2.Controls.Add(this.tbFee);
-            this.groupBox2.Controls.Add(this.tbLabel);
-            this.groupBox2.Controls.Add(this.tbPayTo);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Location = new System.Drawing.Point(9, 6);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(831, 261);
-            this.groupBox2.TabIndex = 17;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Normal send";
-            // 
-            // label15
-            // 
-            this.label15.Location = new System.Drawing.Point(9, 162);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(816, 63);
-            this.label15.TabIndex = 9;
-            this.label15.Text = resources.GetString("label15.Text");
-            // 
-            // btnSendMany
-            // 
-            this.btnSendMany.Location = new System.Drawing.Point(707, 228);
-            this.btnSendMany.Name = "btnSendMany";
-            this.btnSendMany.Size = new System.Drawing.Size(118, 27);
-            this.btnSendMany.TabIndex = 16;
-            this.btnSendMany.Text = "Send Many";
-            this.btnSendMany.UseVisualStyleBackColor = true;
-            this.btnSendMany.Click += new System.EventHandler(this.btnSendMany_Click);
-            // 
-            // cbbAddress
-            // 
-            this.cbbAddress.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbAddress.FormattingEnabled = true;
-            this.cbbAddress.Location = new System.Drawing.Point(584, 48);
-            this.cbbAddress.Name = "cbbAddress";
-            this.cbbAddress.Size = new System.Drawing.Size(241, 23);
-            this.cbbAddress.Sorted = true;
-            this.cbbAddress.TabIndex = 2;
-            this.cbbAddress.SelectedIndexChanged += new System.EventHandler(this.cbbAddress_SelectedIndexChanged);
-            // 
-            // cbDefaultFee
-            // 
-            this.cbDefaultFee.AutoSize = true;
-            this.cbDefaultFee.Checked = true;
-            this.cbDefaultFee.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbDefaultFee.Location = new System.Drawing.Point(177, 132);
-            this.cbDefaultFee.Name = "cbDefaultFee";
-            this.cbDefaultFee.Size = new System.Drawing.Size(85, 19);
-            this.cbDefaultFee.TabIndex = 7;
-            this.cbDefaultFee.Text = "Default fee";
-            this.cbDefaultFee.UseVisualStyleBackColor = true;
-            this.cbDefaultFee.CheckedChanged += new System.EventHandler(this.cbFee_CheckedChanged);
-            // 
-            // cbbFrom
-            // 
-            this.cbbFrom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbFrom.FormattingEnabled = true;
-            this.cbbFrom.Location = new System.Drawing.Point(69, 20);
-            this.cbbFrom.Name = "cbbFrom";
-            this.cbbFrom.Size = new System.Drawing.Size(756, 23);
-            this.cbbFrom.Sorted = true;
-            this.cbbFrom.TabIndex = 0;
-            this.cbbFrom.SelectedIndexChanged += new System.EventHandler(this.cbbFrom_SelectedIndexChanged);
-            // 
-            // btnSend
-            // 
-            this.btnSend.Location = new System.Drawing.Point(614, 228);
-            this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(87, 27);
-            this.btnSend.TabIndex = 15;
-            this.btnSend.Text = "Send";
-            this.btnSend.UseVisualStyleBackColor = true;
-            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Location = new System.Drawing.Point(521, 228);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(87, 27);
-            this.btnRefresh.TabIndex = 14;
-            this.btnRefresh.Text = "Refresh";
-            this.ttStart.SetToolTip(this.btnRefresh, "Refresh address value");
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
-            // tbAmount
-            // 
-            this.tbAmount.Location = new System.Drawing.Point(69, 103);
-            this.tbAmount.Name = "tbAmount";
-            this.tbAmount.Size = new System.Drawing.Size(102, 21);
-            this.tbAmount.TabIndex = 4;
-            this.tbAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAmount_KeyPress);
-            // 
-            // cbUnit
-            // 
-            this.cbUnit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbUnit.FormattingEnabled = true;
-            this.cbUnit.Items.AddRange(new object[] {
-            "XSG",
-            "mXSG"});
-            this.cbUnit.Location = new System.Drawing.Point(177, 103);
-            this.cbUnit.Name = "cbUnit";
-            this.cbUnit.Size = new System.Drawing.Size(100, 23);
-            this.cbUnit.TabIndex = 5;
-            // 
-            // tbFee
-            // 
-            this.tbFee.Enabled = false;
-            this.tbFee.Location = new System.Drawing.Point(69, 130);
-            this.tbFee.Name = "tbFee";
-            this.tbFee.Size = new System.Drawing.Size(102, 21);
-            this.tbFee.TabIndex = 6;
-            this.tbFee.Text = "0.0001";
-            this.tbFee.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAmount_KeyPress);
-            // 
-            // tbLabel
-            // 
-            this.tbLabel.Location = new System.Drawing.Point(69, 76);
-            this.tbLabel.Name = "tbLabel";
-            this.tbLabel.Size = new System.Drawing.Size(756, 21);
-            this.tbLabel.TabIndex = 3;
-            // 
-            // tbPayTo
-            // 
-            this.tbPayTo.Location = new System.Drawing.Point(69, 49);
-            this.tbPayTo.Name = "tbPayTo";
-            this.tbPayTo.Size = new System.Drawing.Size(507, 21);
-            this.tbPayTo.TabIndex = 1;
-            this.tbPayTo.Leave += new System.EventHandler(this.tbPayTo_Leave);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.cbbShieldTo);
-            this.groupBox1.Controls.Add(this.cbbShieldFrom);
-            this.groupBox1.Controls.Add(this.tbShieldUtxo);
-            this.groupBox1.Controls.Add(this.cbShieldDefaultFee);
-            this.groupBox1.Controls.Add(this.tbShieldFee);
-            this.groupBox1.Controls.Add(this.transparentLabel3);
-            this.groupBox1.Controls.Add(this.transparentLabel6);
-            this.groupBox1.Controls.Add(this.transparentLabel5);
-            this.groupBox1.Controls.Add(this.btnShield);
-            this.groupBox1.Controls.Add(this.transparentLabel4);
-            this.groupBox1.Location = new System.Drawing.Point(9, 273);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(831, 182);
-            this.groupBox1.TabIndex = 10;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Shield coinbase";
-            // 
-            // cbbShieldTo
-            // 
-            this.cbbShieldTo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbShieldTo.FormattingEnabled = true;
-            this.cbbShieldTo.Location = new System.Drawing.Point(69, 45);
-            this.cbbShieldTo.Name = "cbbShieldTo";
-            this.cbbShieldTo.Size = new System.Drawing.Size(756, 23);
-            this.cbbShieldTo.TabIndex = 9;
-            // 
-            // cbbShieldFrom
-            // 
-            this.cbbShieldFrom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbShieldFrom.FormattingEnabled = true;
-            this.cbbShieldFrom.Location = new System.Drawing.Point(69, 18);
-            this.cbbShieldFrom.Name = "cbbShieldFrom";
-            this.cbbShieldFrom.Size = new System.Drawing.Size(756, 23);
-            this.cbbShieldFrom.TabIndex = 8;
-            // 
-            // tbShieldUtxo
-            // 
-            this.tbShieldUtxo.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.tbShieldUtxo.Location = new System.Drawing.Point(69, 74);
-            this.tbShieldUtxo.Name = "tbShieldUtxo";
-            this.tbShieldUtxo.Size = new System.Drawing.Size(756, 21);
-            this.tbShieldUtxo.TabIndex = 10;
-            this.tbShieldUtxo.Text = "utxo to shield";
-            this.tbShieldUtxo.Enter += new System.EventHandler(this.tbShieldUtxo_Enter);
-            this.tbShieldUtxo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAmount_KeyPress);
-            this.tbShieldUtxo.Leave += new System.EventHandler(this.tbShieldUtxo_Leave);
-            // 
-            // cbShieldDefaultFee
-            // 
-            this.cbShieldDefaultFee.AutoSize = true;
-            this.cbShieldDefaultFee.Checked = true;
-            this.cbShieldDefaultFee.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbShieldDefaultFee.Location = new System.Drawing.Point(740, 103);
-            this.cbShieldDefaultFee.Name = "cbShieldDefaultFee";
-            this.cbShieldDefaultFee.Size = new System.Drawing.Size(85, 19);
-            this.cbShieldDefaultFee.TabIndex = 12;
-            this.cbShieldDefaultFee.Text = "Default fee";
-            this.cbShieldDefaultFee.UseVisualStyleBackColor = true;
-            this.cbShieldDefaultFee.CheckedChanged += new System.EventHandler(this.cbShieldDefaultFee_CheckedChanged);
-            // 
-            // tbShieldFee
-            // 
-            this.tbShieldFee.Enabled = false;
-            this.tbShieldFee.Location = new System.Drawing.Point(69, 101);
-            this.tbShieldFee.Name = "tbShieldFee";
-            this.tbShieldFee.Size = new System.Drawing.Size(665, 21);
-            this.tbShieldFee.TabIndex = 11;
-            this.tbShieldFee.Text = "0.0001";
-            this.tbShieldFee.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAmount_KeyPress);
-            this.tbShieldFee.Leave += new System.EventHandler(this.tbPayTo_Leave);
-            // 
-            // tpReceive
-            // 
-            this.tpReceive.Controls.Add(this.dtgAddress);
-            this.tpReceive.Controls.Add(this.btnNewZAddress);
-            this.tpReceive.Controls.Add(this.btnAddressBook);
-            this.tpReceive.Controls.Add(this.btnNewAddress);
-            this.tpReceive.ImageIndex = 3;
-            this.tpReceive.Location = new System.Drawing.Point(4, 30);
-            this.tpReceive.Name = "tpReceive";
-            this.tpReceive.Padding = new System.Windows.Forms.Padding(3);
-            this.tpReceive.Size = new System.Drawing.Size(848, 461);
-            this.tpReceive.TabIndex = 2;
-            this.tpReceive.Text = "Receive coins";
-            this.tpReceive.UseVisualStyleBackColor = true;
-            this.tpReceive.Enter += new System.EventHandler(this.tpReceive_Enter);
-            this.tpReceive.Leave += new System.EventHandler(this.tpReceive_Leave);
-            // 
-            // dtgAddress
-            // 
-            this.dtgAddress.AllowUserToAddRows = false;
-            this.dtgAddress.AllowUserToDeleteRows = false;
-            this.dtgAddress.AllowUserToResizeColumns = false;
-            this.dtgAddress.AllowUserToResizeRows = false;
-            this.dtgAddress.BackgroundColor = System.Drawing.SystemColors.ControlDark;
-            this.dtgAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtgAddress.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgAddress.Location = new System.Drawing.Point(7, 8);
-            this.dtgAddress.Name = "dtgAddress";
-            this.dtgAddress.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dtgAddress.Size = new System.Drawing.Size(831, 417);
-            this.dtgAddress.TabIndex = 9;
-            this.dtgAddress.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgAddress_CellDoubleClick);
-            this.dtgAddress.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dtgAddress_MouseClick);
-            // 
-            // btnNewZAddress
-            // 
-            this.btnNewZAddress.Location = new System.Drawing.Point(658, 430);
-            this.btnNewZAddress.Name = "btnNewZAddress";
-            this.btnNewZAddress.Size = new System.Drawing.Size(180, 27);
-            this.btnNewZAddress.TabIndex = 7;
-            this.btnNewZAddress.Text = "Get new Z address";
-            this.btnNewZAddress.UseVisualStyleBackColor = true;
-            this.btnNewZAddress.Click += new System.EventHandler(this.btnNewZAddress_Click);
-            // 
-            // btnAddressBook
-            // 
-            this.btnAddressBook.Location = new System.Drawing.Point(286, 430);
-            this.btnAddressBook.Name = "btnAddressBook";
-            this.btnAddressBook.Size = new System.Drawing.Size(180, 27);
-            this.btnAddressBook.TabIndex = 7;
-            this.btnAddressBook.Text = "Address Book";
-            this.btnAddressBook.UseVisualStyleBackColor = true;
-            this.btnAddressBook.Click += new System.EventHandler(this.btnAddressBook_Click);
-            // 
-            // btnNewAddress
-            // 
-            this.btnNewAddress.Location = new System.Drawing.Point(472, 430);
-            this.btnNewAddress.Name = "btnNewAddress";
-            this.btnNewAddress.Size = new System.Drawing.Size(180, 27);
-            this.btnNewAddress.TabIndex = 7;
-            this.btnNewAddress.Text = "Get new address";
-            this.btnNewAddress.UseVisualStyleBackColor = true;
-            this.btnNewAddress.Click += new System.EventHandler(this.btnNewAddress_Click);
-            // 
-            // tpTransactions
-            // 
-            this.tpTransactions.Controls.Add(this.btnReindex);
-            this.tpTransactions.Controls.Add(this.btnRescan);
-            this.tpTransactions.Controls.Add(this.dtgTransactions);
-            this.tpTransactions.ImageIndex = 1;
-            this.tpTransactions.Location = new System.Drawing.Point(4, 30);
-            this.tpTransactions.Name = "tpTransactions";
-            this.tpTransactions.Padding = new System.Windows.Forms.Padding(3);
-            this.tpTransactions.Size = new System.Drawing.Size(848, 461);
-            this.tpTransactions.TabIndex = 3;
-            this.tpTransactions.Text = "Transactions";
-            this.tpTransactions.UseVisualStyleBackColor = true;
-            this.tpTransactions.Enter += new System.EventHandler(this.tpTransactions_Enter);
-            this.tpTransactions.Leave += new System.EventHandler(this.tpTransactions_Leave);
-            // 
-            // btnReindex
-            // 
-            this.btnReindex.Location = new System.Drawing.Point(472, 430);
-            this.btnReindex.Name = "btnReindex";
-            this.btnReindex.Size = new System.Drawing.Size(180, 27);
-            this.btnReindex.TabIndex = 10;
-            this.btnReindex.Text = "Reindex the wallet";
-            this.btnReindex.UseVisualStyleBackColor = true;
-            this.btnReindex.Click += new System.EventHandler(this.btnReindex_Click);
-            // 
-            // btnRescan
-            // 
-            this.btnRescan.Location = new System.Drawing.Point(658, 430);
-            this.btnRescan.Name = "btnRescan";
-            this.btnRescan.Size = new System.Drawing.Size(180, 27);
-            this.btnRescan.TabIndex = 10;
-            this.btnRescan.Text = "Rescan the transactions";
-            this.btnRescan.UseVisualStyleBackColor = true;
-            this.btnRescan.Click += new System.EventHandler(this.btnRescan_Click);
-            // 
-            // dtgTransactions
-            // 
-            this.dtgTransactions.AllowUserToResizeColumns = false;
-            this.dtgTransactions.AllowUserToResizeRows = false;
-            this.dtgTransactions.AutoGenerateColumns = false;
-            this.dtgTransactions.BackgroundColor = System.Drawing.SystemColors.ControlDark;
-            this.dtgTransactions.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtgTransactions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgTransactions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.categoryDataGridViewTextBoxColumn,
-            this.confirmationsDataGridViewTextBoxColumn,
-            this.amountDataGridViewTextBoxColumn,
-            this.timeDataGridViewTextBoxColumn,
-            this.addressDataGridViewTextBoxColumn,
-            this.txidDataGridViewTextBoxColumn});
-            this.dtgTransactions.DataSource = this.transactionConvertedBindingSource;
-            this.dtgTransactions.Location = new System.Drawing.Point(7, 8);
-            this.dtgTransactions.Name = "dtgTransactions";
-            this.dtgTransactions.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dtgTransactions.Size = new System.Drawing.Size(831, 417);
-            this.dtgTransactions.TabIndex = 0;
-            this.dtgTransactions.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgTransactions_CellDoubleClick);
-            this.dtgTransactions.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dtgAddress_MouseClick);
-            // 
-            // categoryDataGridViewTextBoxColumn
-            // 
-            this.categoryDataGridViewTextBoxColumn.DataPropertyName = "category";
-            this.categoryDataGridViewTextBoxColumn.HeaderText = "category";
-            this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
-            // 
-            // confirmationsDataGridViewTextBoxColumn
-            // 
-            this.confirmationsDataGridViewTextBoxColumn.DataPropertyName = "confirmations";
-            this.confirmationsDataGridViewTextBoxColumn.HeaderText = "confirmations";
-            this.confirmationsDataGridViewTextBoxColumn.Name = "confirmationsDataGridViewTextBoxColumn";
-            // 
-            // amountDataGridViewTextBoxColumn
-            // 
-            this.amountDataGridViewTextBoxColumn.DataPropertyName = "amount";
-            this.amountDataGridViewTextBoxColumn.HeaderText = "amount";
-            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
-            // 
-            // timeDataGridViewTextBoxColumn
-            // 
-            this.timeDataGridViewTextBoxColumn.DataPropertyName = "time";
-            this.timeDataGridViewTextBoxColumn.HeaderText = "time";
-            this.timeDataGridViewTextBoxColumn.Name = "timeDataGridViewTextBoxColumn";
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "address";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            // 
-            // txidDataGridViewTextBoxColumn
-            // 
-            this.txidDataGridViewTextBoxColumn.DataPropertyName = "txid";
-            this.txidDataGridViewTextBoxColumn.HeaderText = "txid";
-            this.txidDataGridViewTextBoxColumn.Name = "txidDataGridViewTextBoxColumn";
-            // 
-            // transactionConvertedBindingSource
-            // 
-            this.transactionConvertedBindingSource.DataSource = typeof(SimpleWallet.Types.TransactionConverted);
-            // 
-            // tpMasternode
-            // 
-            this.tpMasternode.Controls.Add(this.tbSearch);
-            this.tpMasternode.Controls.Add(this.lbUpdateTime);
-            this.tpMasternode.Controls.Add(this.label16);
-            this.tpMasternode.Controls.Add(this.label3);
-            this.tpMasternode.Controls.Add(this.btnRefreshMasternode);
-            this.tpMasternode.Controls.Add(this.btnStartAlias);
-            this.tpMasternode.Controls.Add(this.btnStartMasternode);
-            this.tpMasternode.Controls.Add(this.btnEditConfigFile);
-            this.tpMasternode.Controls.Add(this.btnGetOutputs);
-            this.tpMasternode.Controls.Add(this.btnTurnOffMNMode);
-            this.tpMasternode.Controls.Add(this.btnGetMNPrivKey);
-            this.tpMasternode.Controls.Add(this.dtgGlobalMN);
-            this.tpMasternode.Controls.Add(this.dtgMasternode);
-            this.tpMasternode.Controls.Add(this.btnSearch);
-            this.tpMasternode.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tpMasternode.ImageIndex = 5;
-            this.tpMasternode.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tpMasternode.Location = new System.Drawing.Point(4, 30);
-            this.tpMasternode.Name = "tpMasternode";
-            this.tpMasternode.Padding = new System.Windows.Forms.Padding(3);
-            this.tpMasternode.Size = new System.Drawing.Size(848, 461);
-            this.tpMasternode.TabIndex = 6;
-            this.tpMasternode.Text = "Masternode";
-            this.tpMasternode.UseVisualStyleBackColor = true;
-            this.tpMasternode.Enter += new System.EventHandler(this.tpMasternode_Enter);
-            this.tpMasternode.Leave += new System.EventHandler(this.tpMasternode_Leave);
-            // 
-            // tbSearch
-            // 
-            this.tbSearch.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.tbSearch.Location = new System.Drawing.Point(129, 433);
-            this.tbSearch.Name = "tbSearch";
-            this.tbSearch.Size = new System.Drawing.Size(502, 21);
-            this.tbSearch.TabIndex = 4;
-            this.tbSearch.Text = "Masternode address or tx hash";
-            this.tbSearch.Enter += new System.EventHandler(this.tbSearch_Enter);
-            this.tbSearch.Leave += new System.EventHandler(this.tbSearch_Leave);
-            // 
-            // lbUpdateTime
-            // 
-            this.lbUpdateTime.AutoSize = true;
-            this.lbUpdateTime.Location = new System.Drawing.Point(690, 436);
-            this.lbUpdateTime.Name = "lbUpdateTime";
-            this.lbUpdateTime.Size = new System.Drawing.Size(29, 15);
-            this.lbUpdateTime.TabIndex = 3;
-            this.lbUpdateTime.Text = "(60)";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(8, 3);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(144, 15);
-            this.label16.TabIndex = 2;
-            this.label16.Text = "Your local masternode(s)";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 113);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 15);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "All masternodes";
-            // 
-            // btnRefreshMasternode
-            // 
-            this.btnRefreshMasternode.Location = new System.Drawing.Point(637, 403);
-            this.btnRefreshMasternode.Name = "btnRefreshMasternode";
-            this.btnRefreshMasternode.Size = new System.Drawing.Size(97, 23);
-            this.btnRefreshMasternode.TabIndex = 1;
-            this.btnRefreshMasternode.Text = "Refresh";
-            this.ttStart.SetToolTip(this.btnRefreshMasternode, "Refresh masternode list");
-            this.btnRefreshMasternode.UseVisualStyleBackColor = true;
-            this.btnRefreshMasternode.Click += new System.EventHandler(this.btnRefreshMasternode_Click);
-            // 
-            // btnStartAlias
-            // 
-            this.btnStartAlias.Location = new System.Drawing.Point(521, 403);
-            this.btnStartAlias.Name = "btnStartAlias";
-            this.btnStartAlias.Size = new System.Drawing.Size(110, 23);
-            this.btnStartAlias.TabIndex = 1;
-            this.btnStartAlias.Text = "Start Alias";
-            this.btnStartAlias.UseVisualStyleBackColor = true;
-            this.btnStartAlias.Click += new System.EventHandler(this.btnStartAlias_Click);
-            // 
-            // btnStartMasternode
-            // 
-            this.btnStartMasternode.Location = new System.Drawing.Point(405, 403);
-            this.btnStartMasternode.Name = "btnStartMasternode";
-            this.btnStartMasternode.Size = new System.Drawing.Size(110, 23);
-            this.btnStartMasternode.TabIndex = 1;
-            this.btnStartMasternode.Text = "Start MN";
-            this.btnStartMasternode.UseVisualStyleBackColor = true;
-            this.btnStartMasternode.Click += new System.EventHandler(this.btnStartMasternode_Click);
-            // 
-            // btnEditConfigFile
-            // 
-            this.btnEditConfigFile.Location = new System.Drawing.Point(245, 403);
-            this.btnEditConfigFile.Name = "btnEditConfigFile";
-            this.btnEditConfigFile.Size = new System.Drawing.Size(154, 23);
-            this.btnEditConfigFile.TabIndex = 1;
-            this.btnEditConfigFile.Text = "Configure Masternode";
-            this.btnEditConfigFile.UseVisualStyleBackColor = true;
-            this.btnEditConfigFile.Click += new System.EventHandler(this.btnEditConfigFile_Click);
-            // 
-            // btnGetOutputs
-            // 
-            this.btnGetOutputs.Location = new System.Drawing.Point(129, 403);
-            this.btnGetOutputs.Name = "btnGetOutputs";
-            this.btnGetOutputs.Size = new System.Drawing.Size(110, 23);
-            this.btnGetOutputs.TabIndex = 1;
-            this.btnGetOutputs.Text = "Get Outputs";
-            this.btnGetOutputs.UseVisualStyleBackColor = true;
-            this.btnGetOutputs.Click += new System.EventHandler(this.btnGetOutputs_Click);
-            // 
-            // btnTurnOffMNMode
-            // 
-            this.btnTurnOffMNMode.Enabled = false;
-            this.btnTurnOffMNMode.Location = new System.Drawing.Point(7, 432);
-            this.btnTurnOffMNMode.Name = "btnTurnOffMNMode";
-            this.btnTurnOffMNMode.Size = new System.Drawing.Size(116, 23);
-            this.btnTurnOffMNMode.TabIndex = 1;
-            this.btnTurnOffMNMode.Text = "Turn Off MN Mode";
-            this.ttStart.SetToolTip(this.btnTurnOffMNMode, "Turn off cold masternode option to avoid restarting masternode active time");
-            this.btnTurnOffMNMode.UseVisualStyleBackColor = true;
-            this.btnTurnOffMNMode.Click += new System.EventHandler(this.btnTurnOffMNMode_Click);
-            // 
-            // btnGetMNPrivKey
-            // 
-            this.btnGetMNPrivKey.Location = new System.Drawing.Point(7, 403);
-            this.btnGetMNPrivKey.Name = "btnGetMNPrivKey";
-            this.btnGetMNPrivKey.Size = new System.Drawing.Size(116, 23);
-            this.btnGetMNPrivKey.TabIndex = 1;
-            this.btnGetMNPrivKey.Text = "Get MN Priv Key";
-            this.btnGetMNPrivKey.UseVisualStyleBackColor = true;
-            this.btnGetMNPrivKey.Click += new System.EventHandler(this.btnGetMNPrivKey_Click);
-            // 
-            // dtgGlobalMN
-            // 
-            this.dtgGlobalMN.AutoGenerateColumns = false;
-            this.dtgGlobalMN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgGlobalMN.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.rankDataGridViewTextBoxColumn,
-            this.addrDataGridViewTextBoxColumn,
-            this.versionDataGridViewTextBoxColumn,
-            this.statusDataGridViewTextBoxColumn,
-            this.activetimeDataGridViewTextBoxColumn,
-            this.lastseenDataGridViewTextBoxColumn,
-            this.lastpaidDataGridViewTextBoxColumn,
-            this.txhashDataGridViewTextBoxColumn,
-            this.ipDataGridViewTextBoxColumn});
-            this.dtgGlobalMN.DataSource = this.masternodeDetailConvertedBindingSource;
-            this.dtgGlobalMN.Location = new System.Drawing.Point(8, 131);
-            this.dtgGlobalMN.Name = "dtgGlobalMN";
-            this.dtgGlobalMN.Size = new System.Drawing.Size(832, 266);
-            this.dtgGlobalMN.TabIndex = 0;
-            this.dtgGlobalMN.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgAddress_CellDoubleClick);
-            this.dtgGlobalMN.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dtgGlobalMN_DataBindingComplete);
-            this.dtgGlobalMN.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dtgAddress_MouseClick);
-            // 
-            // rankDataGridViewTextBoxColumn
-            // 
-            this.rankDataGridViewTextBoxColumn.DataPropertyName = "rank";
-            this.rankDataGridViewTextBoxColumn.HeaderText = "rank";
-            this.rankDataGridViewTextBoxColumn.Name = "rankDataGridViewTextBoxColumn";
-            // 
-            // addrDataGridViewTextBoxColumn
-            // 
-            this.addrDataGridViewTextBoxColumn.DataPropertyName = "addr";
-            this.addrDataGridViewTextBoxColumn.HeaderText = "addr";
-            this.addrDataGridViewTextBoxColumn.Name = "addrDataGridViewTextBoxColumn";
-            // 
-            // versionDataGridViewTextBoxColumn
-            // 
-            this.versionDataGridViewTextBoxColumn.DataPropertyName = "version";
-            this.versionDataGridViewTextBoxColumn.HeaderText = "version";
-            this.versionDataGridViewTextBoxColumn.Name = "versionDataGridViewTextBoxColumn";
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "status";
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            // 
-            // activetimeDataGridViewTextBoxColumn
-            // 
-            this.activetimeDataGridViewTextBoxColumn.DataPropertyName = "activetime";
-            this.activetimeDataGridViewTextBoxColumn.HeaderText = "activetime";
-            this.activetimeDataGridViewTextBoxColumn.Name = "activetimeDataGridViewTextBoxColumn";
-            // 
-            // lastseenDataGridViewTextBoxColumn
-            // 
-            this.lastseenDataGridViewTextBoxColumn.DataPropertyName = "lastseen";
-            this.lastseenDataGridViewTextBoxColumn.HeaderText = "lastseen";
-            this.lastseenDataGridViewTextBoxColumn.Name = "lastseenDataGridViewTextBoxColumn";
-            // 
-            // lastpaidDataGridViewTextBoxColumn
-            // 
-            this.lastpaidDataGridViewTextBoxColumn.DataPropertyName = "lastpaid";
-            this.lastpaidDataGridViewTextBoxColumn.HeaderText = "lastpaid";
-            this.lastpaidDataGridViewTextBoxColumn.Name = "lastpaidDataGridViewTextBoxColumn";
-            // 
-            // txhashDataGridViewTextBoxColumn
-            // 
-            this.txhashDataGridViewTextBoxColumn.DataPropertyName = "txhash";
-            this.txhashDataGridViewTextBoxColumn.HeaderText = "txhash";
-            this.txhashDataGridViewTextBoxColumn.Name = "txhashDataGridViewTextBoxColumn";
-            // 
-            // ipDataGridViewTextBoxColumn
-            // 
-            this.ipDataGridViewTextBoxColumn.DataPropertyName = "ip";
-            this.ipDataGridViewTextBoxColumn.HeaderText = "ip";
-            this.ipDataGridViewTextBoxColumn.Name = "ipDataGridViewTextBoxColumn";
-            // 
-            // masternodeDetailConvertedBindingSource
-            // 
-            this.masternodeDetailConvertedBindingSource.DataSource = typeof(SimpleWallet.Types.MasternodeDetailConverted);
-            // 
-            // dtgMasternode
-            // 
-            this.dtgMasternode.AutoGenerateColumns = false;
-            this.dtgMasternode.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgMasternode.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.statusDataGridViewTextBoxColumn1,
-            this.aliasDataGridViewTextBoxColumn,
-            this.ipAddressDataGridViewTextBoxColumn,
-            this.privKeyDataGridViewTextBoxColumn,
-            this.txHashDataGridViewTextBoxColumn1,
-            this.indexDataGridViewTextBoxColumn});
-            this.dtgMasternode.DataSource = this.masternodeBindingSource;
-            this.dtgMasternode.Location = new System.Drawing.Point(8, 21);
-            this.dtgMasternode.Name = "dtgMasternode";
-            this.dtgMasternode.Size = new System.Drawing.Size(832, 89);
-            this.dtgMasternode.TabIndex = 0;
-            this.dtgMasternode.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgAddress_CellDoubleClick);
-            this.dtgMasternode.Paint += new System.Windows.Forms.PaintEventHandler(this.dtgMasternode_Paint);
-            this.dtgMasternode.Leave += new System.EventHandler(this.dtgMasternode_Leave);
-            this.dtgMasternode.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dtgAddress_MouseClick);
-            // 
-            // masternodeBindingSource
-            // 
-            this.masternodeBindingSource.DataSource = typeof(SimpleWallet.Types.Masternode);
-            // 
-            // imgList
-            // 
-            this.imgList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgList.ImageStream")));
-            this.imgList.TransparentColor = System.Drawing.Color.Transparent;
-            this.imgList.Images.SetKeyName(0, "address-book.png");
-            this.imgList.Images.SetKeyName(1, "history.png");
-            this.imgList.Images.SetKeyName(2, "overview.png");
-            this.imgList.Images.SetKeyName(3, "receive.png");
-            this.imgList.Images.SetKeyName(4, "send.png");
-            this.imgList.Images.SetKeyName(5, "masternodes.png");
-            // 
-            // addressBookBindingSource
-            // 
-            this.addressBookBindingSource.DataSource = typeof(SimpleWallet.Types.AddressBook);
-            // 
-            // pbPercent
-            // 
-            this.pbPercent.Location = new System.Drawing.Point(3, 525);
-            this.pbPercent.Maximum = 10000;
-            this.pbPercent.Name = "pbPercent";
-            this.pbPercent.Size = new System.Drawing.Size(800, 16);
-            this.pbPercent.Step = 1;
-            this.pbPercent.TabIndex = 1;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.Control;
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.walletToolStripMenuItem,
-            this.toolsToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, -3);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menuStrip1.Size = new System.Drawing.Size(168, 24);
-            this.menuStrip1.TabIndex = 7;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem,
-            this.quitToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
-            this.fileToolStripMenuItem.Text = "Main";
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
-            this.aboutToolStripMenuItem.Text = "About";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
-            // 
-            // quitToolStripMenuItem
-            // 
-            this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
-            this.quitToolStripMenuItem.Text = "Quit";
-            this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
-            // 
-            // walletToolStripMenuItem
-            // 
-            this.walletToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.backupToolStripMenuItem,
-            this.exportPrivateKeyToolStripMenuItem,
-            this.importPrivateKeysToolStripMenuItem,
-            this.showPrivateKeyToolStripMenuItem,
-            this.importOnePrivateKeyToolStripMenuItem,
-            this.enableAutoBackupWalletToolStripMenuItem});
-            this.walletToolStripMenuItem.Name = "walletToolStripMenuItem";
-            this.walletToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
-            this.walletToolStripMenuItem.Text = "Settings";
-            // 
-            // backupToolStripMenuItem
-            // 
-            this.backupToolStripMenuItem.Name = "backupToolStripMenuItem";
-            this.backupToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
-            this.backupToolStripMenuItem.Text = "Backup";
-            this.backupToolStripMenuItem.Click += new System.EventHandler(this.backupToolStripMenuItem_Click);
-            // 
-            // exportPrivateKeyToolStripMenuItem
-            // 
-            this.exportPrivateKeyToolStripMenuItem.Name = "exportPrivateKeyToolStripMenuItem";
-            this.exportPrivateKeyToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
-            this.exportPrivateKeyToolStripMenuItem.Text = "Export private keys";
-            this.exportPrivateKeyToolStripMenuItem.Click += new System.EventHandler(this.exportPrivateKeyToolStripMenuItem_Click);
-            // 
-            // importPrivateKeysToolStripMenuItem
-            // 
-            this.importPrivateKeysToolStripMenuItem.Name = "importPrivateKeysToolStripMenuItem";
-            this.importPrivateKeysToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
-            this.importPrivateKeysToolStripMenuItem.Text = "Import private keys";
-            this.importPrivateKeysToolStripMenuItem.Click += new System.EventHandler(this.importPrivateKeysToolStripMenuItem_Click);
-            // 
-            // showPrivateKeyToolStripMenuItem
-            // 
-            this.showPrivateKeyToolStripMenuItem.Name = "showPrivateKeyToolStripMenuItem";
-            this.showPrivateKeyToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
-            this.showPrivateKeyToolStripMenuItem.Text = "Show private key";
-            this.showPrivateKeyToolStripMenuItem.Click += new System.EventHandler(this.showPrivateKeyToolStripMenuItem_Click);
-            // 
-            // importOnePrivateKeyToolStripMenuItem
-            // 
-            this.importOnePrivateKeyToolStripMenuItem.Name = "importOnePrivateKeyToolStripMenuItem";
-            this.importOnePrivateKeyToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
-            this.importOnePrivateKeyToolStripMenuItem.Text = "Import one private key";
-            this.importOnePrivateKeyToolStripMenuItem.Click += new System.EventHandler(this.importOnePrivateKeyToolStripMenuItem_Click);
-            // 
-            // enableAutoBackupWalletToolStripMenuItem
-            // 
-            this.enableAutoBackupWalletToolStripMenuItem.Name = "enableAutoBackupWalletToolStripMenuItem";
-            this.enableAutoBackupWalletToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
-            this.enableAutoBackupWalletToolStripMenuItem.Text = "Enable auto backup wallet";
-            this.enableAutoBackupWalletToolStripMenuItem.Click += new System.EventHandler(this.enableAutoBackupWalletToolStripMenuItem_Click);
-            // 
-            // toolsToolStripMenuItem
-            // 
-            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.debugToolStripMenuItem,
-            this.peersToolStripMenuItem,
-            this.copySnowgemconfDataToolStripMenuItem,
-            this.copyMasternodeDataToolStripMenuItem});
-            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
-            this.toolsToolStripMenuItem.Text = "Tools";
-            // 
-            // debugToolStripMenuItem
-            // 
-            this.debugToolStripMenuItem.Name = "debugToolStripMenuItem";
-            this.debugToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
-            this.debugToolStripMenuItem.Text = "Debug";
-            // 
-            // peersToolStripMenuItem
-            // 
-            this.peersToolStripMenuItem.Name = "peersToolStripMenuItem";
-            this.peersToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
-            this.peersToolStripMenuItem.Text = "Peers";
-            this.peersToolStripMenuItem.Click += new System.EventHandler(this.peersToolStripMenuItem_Click);
-            // 
-            // copySnowgemconfDataToolStripMenuItem
-            // 
-            this.copySnowgemconfDataToolStripMenuItem.Name = "copySnowgemconfDataToolStripMenuItem";
-            this.copySnowgemconfDataToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
-            this.copySnowgemconfDataToolStripMenuItem.Text = "Copy snowgem.conf data";
-            this.copySnowgemconfDataToolStripMenuItem.Click += new System.EventHandler(this.copySnowgemconfDataToolStripMenuItem_Click);
-            // 
-            // copyMasternodeDataToolStripMenuItem
-            // 
-            this.copyMasternodeDataToolStripMenuItem.Name = "copyMasternodeDataToolStripMenuItem";
-            this.copyMasternodeDataToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
-            this.copyMasternodeDataToolStripMenuItem.Text = "Copy masternode.conf data";
-            this.copyMasternodeDataToolStripMenuItem.Click += new System.EventHandler(this.copyMasternodeDataToolStripMenuItem_Click);
-            // 
-            // pbStatus
-            // 
-            this.pbStatus.BackgroundImage = global::SimpleWallet.Properties.Resources.notsynced;
-            this.pbStatus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pbStatus.Location = new System.Drawing.Point(832, 525);
-            this.pbStatus.Name = "pbStatus";
-            this.pbStatus.Size = new System.Drawing.Size(16, 16);
-            this.pbStatus.TabIndex = 6;
-            this.pbStatus.TabStop = false;
-            // 
-            // pbSignal
-            // 
-            this.pbSignal.BackgroundImage = global::SimpleWallet.Properties.Resources.connect0_16;
-            this.pbSignal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pbSignal.Location = new System.Drawing.Point(810, 525);
-            this.pbSignal.Name = "pbSignal";
-            this.pbSignal.Size = new System.Drawing.Size(16, 16);
-            this.pbSignal.TabIndex = 6;
-            this.pbSignal.TabStop = false;
-            this.pbSignal.MouseHover += new System.EventHandler(this.pbSignal_MouseHover);
-            // 
-            // masternodeListBindingSource
-            // 
-            this.masternodeListBindingSource.DataSource = typeof(SimpleWallet.Types.MasternodeList);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::SimpleWallet.Properties.Resources.sng_main;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.InitialImage = global::SimpleWallet.Properties.Resources.sng_main;
-            this.pictureBox1.Location = new System.Drawing.Point(684, -2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(168, 58);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            // 
-            // statusDataGridViewTextBoxColumn1
-            // 
-            this.statusDataGridViewTextBoxColumn1.DataPropertyName = "status";
-            this.statusDataGridViewTextBoxColumn1.HeaderText = "status";
-            this.statusDataGridViewTextBoxColumn1.Name = "statusDataGridViewTextBoxColumn1";
-            // 
-            // aliasDataGridViewTextBoxColumn
-            // 
-            this.aliasDataGridViewTextBoxColumn.DataPropertyName = "alias";
-            this.aliasDataGridViewTextBoxColumn.HeaderText = "alias";
-            this.aliasDataGridViewTextBoxColumn.Name = "aliasDataGridViewTextBoxColumn";
-            // 
-            // ipAddressDataGridViewTextBoxColumn
-            // 
-            this.ipAddressDataGridViewTextBoxColumn.DataPropertyName = "ipAddress";
-            this.ipAddressDataGridViewTextBoxColumn.HeaderText = "ipAddress";
-            this.ipAddressDataGridViewTextBoxColumn.Name = "ipAddressDataGridViewTextBoxColumn";
-            // 
-            // privKeyDataGridViewTextBoxColumn
-            // 
-            this.privKeyDataGridViewTextBoxColumn.DataPropertyName = "privKey";
-            this.privKeyDataGridViewTextBoxColumn.HeaderText = "privKey";
-            this.privKeyDataGridViewTextBoxColumn.Name = "privKeyDataGridViewTextBoxColumn";
-            // 
-            // txHashDataGridViewTextBoxColumn1
-            // 
-            this.txHashDataGridViewTextBoxColumn1.DataPropertyName = "txHash";
-            this.txHashDataGridViewTextBoxColumn1.HeaderText = "txHash";
-            this.txHashDataGridViewTextBoxColumn1.Name = "txHashDataGridViewTextBoxColumn1";
-            // 
-            // indexDataGridViewTextBoxColumn
-            // 
-            this.indexDataGridViewTextBoxColumn.DataPropertyName = "index";
-            this.indexDataGridViewTextBoxColumn.HeaderText = "index";
-            this.indexDataGridViewTextBoxColumn.Name = "indexDataGridViewTextBoxColumn";
             // 
             // lbAddress4
             // 
@@ -1532,6 +661,165 @@
             this.lbBestTime.TabIndex = 3;
             this.lbBestTime.TransparentBackColor = System.Drawing.Color.Blue;
             // 
+            // tpSend
+            // 
+            this.tpSend.Controls.Add(this.groupBox2);
+            this.tpSend.Controls.Add(this.groupBox1);
+            this.tpSend.ImageIndex = 4;
+            this.tpSend.Location = new System.Drawing.Point(4, 30);
+            this.tpSend.Name = "tpSend";
+            this.tpSend.Padding = new System.Windows.Forms.Padding(3);
+            this.tpSend.Size = new System.Drawing.Size(848, 461);
+            this.tpSend.TabIndex = 1;
+            this.tpSend.Text = "Send coins";
+            this.tpSend.UseVisualStyleBackColor = true;
+            this.tpSend.Enter += new System.EventHandler(this.tpSend_Enter);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label15);
+            this.groupBox2.Controls.Add(this.btnSendMany);
+            this.groupBox2.Controls.Add(this.cbbAddress);
+            this.groupBox2.Controls.Add(this.cbDefaultFee);
+            this.groupBox2.Controls.Add(this.cbbFrom);
+            this.groupBox2.Controls.Add(this.btnSend);
+            this.groupBox2.Controls.Add(this.btnRefresh);
+            this.groupBox2.Controls.Add(this.tbAmount);
+            this.groupBox2.Controls.Add(this.cbUnit);
+            this.groupBox2.Controls.Add(this.tbFee);
+            this.groupBox2.Controls.Add(this.tbLabel);
+            this.groupBox2.Controls.Add(this.tbPayTo);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Location = new System.Drawing.Point(9, 6);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(831, 261);
+            this.groupBox2.TabIndex = 17;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Normal send";
+            // 
+            // label15
+            // 
+            this.label15.Location = new System.Drawing.Point(9, 162);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(816, 63);
+            this.label15.TabIndex = 9;
+            this.label15.Text = resources.GetString("label15.Text");
+            // 
+            // btnSendMany
+            // 
+            this.btnSendMany.Location = new System.Drawing.Point(707, 228);
+            this.btnSendMany.Name = "btnSendMany";
+            this.btnSendMany.Size = new System.Drawing.Size(118, 27);
+            this.btnSendMany.TabIndex = 16;
+            this.btnSendMany.Text = "Send Many";
+            this.btnSendMany.UseVisualStyleBackColor = true;
+            this.btnSendMany.Click += new System.EventHandler(this.btnSendMany_Click);
+            // 
+            // cbbAddress
+            // 
+            this.cbbAddress.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbAddress.FormattingEnabled = true;
+            this.cbbAddress.Location = new System.Drawing.Point(584, 48);
+            this.cbbAddress.Name = "cbbAddress";
+            this.cbbAddress.Size = new System.Drawing.Size(241, 23);
+            this.cbbAddress.Sorted = true;
+            this.cbbAddress.TabIndex = 2;
+            this.cbbAddress.SelectedIndexChanged += new System.EventHandler(this.cbbAddress_SelectedIndexChanged);
+            // 
+            // cbDefaultFee
+            // 
+            this.cbDefaultFee.AutoSize = true;
+            this.cbDefaultFee.Checked = true;
+            this.cbDefaultFee.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbDefaultFee.Location = new System.Drawing.Point(177, 132);
+            this.cbDefaultFee.Name = "cbDefaultFee";
+            this.cbDefaultFee.Size = new System.Drawing.Size(85, 19);
+            this.cbDefaultFee.TabIndex = 7;
+            this.cbDefaultFee.Text = "Default fee";
+            this.cbDefaultFee.UseVisualStyleBackColor = true;
+            this.cbDefaultFee.CheckedChanged += new System.EventHandler(this.cbFee_CheckedChanged);
+            // 
+            // cbbFrom
+            // 
+            this.cbbFrom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbFrom.FormattingEnabled = true;
+            this.cbbFrom.Location = new System.Drawing.Point(69, 20);
+            this.cbbFrom.Name = "cbbFrom";
+            this.cbbFrom.Size = new System.Drawing.Size(756, 23);
+            this.cbbFrom.Sorted = true;
+            this.cbbFrom.TabIndex = 0;
+            this.cbbFrom.SelectedIndexChanged += new System.EventHandler(this.cbbFrom_SelectedIndexChanged);
+            // 
+            // btnSend
+            // 
+            this.btnSend.Location = new System.Drawing.Point(614, 228);
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Size = new System.Drawing.Size(87, 27);
+            this.btnSend.TabIndex = 15;
+            this.btnSend.Text = "Send";
+            this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(521, 228);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(87, 27);
+            this.btnRefresh.TabIndex = 14;
+            this.btnRefresh.Text = "Refresh";
+            this.ttStart.SetToolTip(this.btnRefresh, "Refresh address value");
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // tbAmount
+            // 
+            this.tbAmount.Location = new System.Drawing.Point(69, 103);
+            this.tbAmount.Name = "tbAmount";
+            this.tbAmount.Size = new System.Drawing.Size(102, 21);
+            this.tbAmount.TabIndex = 4;
+            this.tbAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAmount_KeyPress);
+            // 
+            // cbUnit
+            // 
+            this.cbUnit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbUnit.FormattingEnabled = true;
+            this.cbUnit.Items.AddRange(new object[] {
+            "XSG",
+            "mXSG"});
+            this.cbUnit.Location = new System.Drawing.Point(177, 103);
+            this.cbUnit.Name = "cbUnit";
+            this.cbUnit.Size = new System.Drawing.Size(100, 23);
+            this.cbUnit.TabIndex = 5;
+            // 
+            // tbFee
+            // 
+            this.tbFee.Enabled = false;
+            this.tbFee.Location = new System.Drawing.Point(69, 130);
+            this.tbFee.Name = "tbFee";
+            this.tbFee.Size = new System.Drawing.Size(102, 21);
+            this.tbFee.TabIndex = 6;
+            this.tbFee.Text = "0.0001";
+            this.tbFee.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAmount_KeyPress);
+            // 
+            // tbLabel
+            // 
+            this.tbLabel.Location = new System.Drawing.Point(69, 76);
+            this.tbLabel.Name = "tbLabel";
+            this.tbLabel.Size = new System.Drawing.Size(756, 21);
+            this.tbLabel.TabIndex = 3;
+            // 
+            // tbPayTo
+            // 
+            this.tbPayTo.Location = new System.Drawing.Point(69, 49);
+            this.tbPayTo.Name = "tbPayTo";
+            this.tbPayTo.Size = new System.Drawing.Size(507, 21);
+            this.tbPayTo.TabIndex = 1;
+            this.tbPayTo.Leave += new System.EventHandler(this.tbPayTo_Leave);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -1591,6 +879,79 @@
             this.label11.TabIndex = 0;
             this.label11.Text = "Fee";
             this.label11.TransparentBackColor = System.Drawing.Color.Blue;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.cbbShieldTo);
+            this.groupBox1.Controls.Add(this.cbbShieldFrom);
+            this.groupBox1.Controls.Add(this.tbShieldUtxo);
+            this.groupBox1.Controls.Add(this.cbShieldDefaultFee);
+            this.groupBox1.Controls.Add(this.tbShieldFee);
+            this.groupBox1.Controls.Add(this.transparentLabel3);
+            this.groupBox1.Controls.Add(this.transparentLabel6);
+            this.groupBox1.Controls.Add(this.transparentLabel5);
+            this.groupBox1.Controls.Add(this.btnShield);
+            this.groupBox1.Controls.Add(this.transparentLabel4);
+            this.groupBox1.Location = new System.Drawing.Point(9, 273);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(831, 182);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Shield coinbase";
+            // 
+            // cbbShieldTo
+            // 
+            this.cbbShieldTo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbShieldTo.FormattingEnabled = true;
+            this.cbbShieldTo.Location = new System.Drawing.Point(69, 45);
+            this.cbbShieldTo.Name = "cbbShieldTo";
+            this.cbbShieldTo.Size = new System.Drawing.Size(756, 23);
+            this.cbbShieldTo.TabIndex = 9;
+            // 
+            // cbbShieldFrom
+            // 
+            this.cbbShieldFrom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbShieldFrom.FormattingEnabled = true;
+            this.cbbShieldFrom.Location = new System.Drawing.Point(69, 18);
+            this.cbbShieldFrom.Name = "cbbShieldFrom";
+            this.cbbShieldFrom.Size = new System.Drawing.Size(756, 23);
+            this.cbbShieldFrom.TabIndex = 8;
+            // 
+            // tbShieldUtxo
+            // 
+            this.tbShieldUtxo.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.tbShieldUtxo.Location = new System.Drawing.Point(69, 74);
+            this.tbShieldUtxo.Name = "tbShieldUtxo";
+            this.tbShieldUtxo.Size = new System.Drawing.Size(756, 21);
+            this.tbShieldUtxo.TabIndex = 10;
+            this.tbShieldUtxo.Text = "utxo to shield";
+            this.tbShieldUtxo.Enter += new System.EventHandler(this.tbShieldUtxo_Enter);
+            this.tbShieldUtxo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAmount_KeyPress);
+            this.tbShieldUtxo.Leave += new System.EventHandler(this.tbShieldUtxo_Leave);
+            // 
+            // cbShieldDefaultFee
+            // 
+            this.cbShieldDefaultFee.AutoSize = true;
+            this.cbShieldDefaultFee.Checked = true;
+            this.cbShieldDefaultFee.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbShieldDefaultFee.Location = new System.Drawing.Point(740, 103);
+            this.cbShieldDefaultFee.Name = "cbShieldDefaultFee";
+            this.cbShieldDefaultFee.Size = new System.Drawing.Size(85, 19);
+            this.cbShieldDefaultFee.TabIndex = 12;
+            this.cbShieldDefaultFee.Text = "Default fee";
+            this.cbShieldDefaultFee.UseVisualStyleBackColor = true;
+            this.cbShieldDefaultFee.CheckedChanged += new System.EventHandler(this.cbShieldDefaultFee_CheckedChanged);
+            // 
+            // tbShieldFee
+            // 
+            this.tbShieldFee.Enabled = false;
+            this.tbShieldFee.Location = new System.Drawing.Point(69, 101);
+            this.tbShieldFee.Name = "tbShieldFee";
+            this.tbShieldFee.Size = new System.Drawing.Size(665, 21);
+            this.tbShieldFee.TabIndex = 11;
+            this.tbShieldFee.Text = "0.0001";
+            this.tbShieldFee.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAmount_KeyPress);
+            this.tbShieldFee.Leave += new System.EventHandler(this.tbPayTo_Leave);
             // 
             // transparentLabel3
             // 
@@ -1654,6 +1015,471 @@
             this.transparentLabel4.Text = "To";
             this.transparentLabel4.TransparentBackColor = System.Drawing.Color.Blue;
             // 
+            // tpReceive
+            // 
+            this.tpReceive.Controls.Add(this.dtgAddress);
+            this.tpReceive.Controls.Add(this.btnNewZAddress);
+            this.tpReceive.Controls.Add(this.btnAddressBook);
+            this.tpReceive.Controls.Add(this.btnNewAddress);
+            this.tpReceive.ImageIndex = 3;
+            this.tpReceive.Location = new System.Drawing.Point(4, 30);
+            this.tpReceive.Name = "tpReceive";
+            this.tpReceive.Padding = new System.Windows.Forms.Padding(3);
+            this.tpReceive.Size = new System.Drawing.Size(848, 461);
+            this.tpReceive.TabIndex = 2;
+            this.tpReceive.Text = "Receive coins";
+            this.tpReceive.UseVisualStyleBackColor = true;
+            this.tpReceive.Enter += new System.EventHandler(this.tpReceive_Enter);
+            this.tpReceive.Leave += new System.EventHandler(this.tpReceive_Leave);
+            // 
+            // dtgAddress
+            // 
+            this.dtgAddress.AllowUserToAddRows = false;
+            this.dtgAddress.AllowUserToDeleteRows = false;
+            this.dtgAddress.AllowUserToResizeColumns = false;
+            this.dtgAddress.AllowUserToResizeRows = false;
+            this.dtgAddress.BackgroundColor = System.Drawing.SystemColors.ControlDark;
+            this.dtgAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgAddress.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgAddress.Location = new System.Drawing.Point(7, 8);
+            this.dtgAddress.MultiSelect = false;
+            this.dtgAddress.Name = "dtgAddress";
+            this.dtgAddress.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dtgAddress.Size = new System.Drawing.Size(831, 417);
+            this.dtgAddress.TabIndex = 9;
+            this.dtgAddress.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgAddress_CellDoubleClick);
+            this.dtgAddress.Paint += new System.Windows.Forms.PaintEventHandler(this.dtg_Paint);
+            this.dtgAddress.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dtg_MouseClick);
+            // 
+            // btnNewZAddress
+            // 
+            this.btnNewZAddress.Location = new System.Drawing.Point(658, 430);
+            this.btnNewZAddress.Name = "btnNewZAddress";
+            this.btnNewZAddress.Size = new System.Drawing.Size(180, 27);
+            this.btnNewZAddress.TabIndex = 7;
+            this.btnNewZAddress.Text = "Get new Z address";
+            this.btnNewZAddress.UseVisualStyleBackColor = true;
+            this.btnNewZAddress.Click += new System.EventHandler(this.btnNewZAddress_Click);
+            // 
+            // btnAddressBook
+            // 
+            this.btnAddressBook.Location = new System.Drawing.Point(286, 430);
+            this.btnAddressBook.Name = "btnAddressBook";
+            this.btnAddressBook.Size = new System.Drawing.Size(180, 27);
+            this.btnAddressBook.TabIndex = 7;
+            this.btnAddressBook.Text = "Address Book";
+            this.btnAddressBook.UseVisualStyleBackColor = true;
+            this.btnAddressBook.Click += new System.EventHandler(this.btnAddressBook_Click);
+            // 
+            // btnNewAddress
+            // 
+            this.btnNewAddress.Location = new System.Drawing.Point(472, 430);
+            this.btnNewAddress.Name = "btnNewAddress";
+            this.btnNewAddress.Size = new System.Drawing.Size(180, 27);
+            this.btnNewAddress.TabIndex = 7;
+            this.btnNewAddress.Text = "Get new address";
+            this.btnNewAddress.UseVisualStyleBackColor = true;
+            this.btnNewAddress.Click += new System.EventHandler(this.btnNewAddress_Click);
+            // 
+            // tpTransactions
+            // 
+            this.tpTransactions.Controls.Add(this.btnReindex);
+            this.tpTransactions.Controls.Add(this.btnRescan);
+            this.tpTransactions.Controls.Add(this.dtgTransactions);
+            this.tpTransactions.ImageIndex = 1;
+            this.tpTransactions.Location = new System.Drawing.Point(4, 30);
+            this.tpTransactions.Name = "tpTransactions";
+            this.tpTransactions.Padding = new System.Windows.Forms.Padding(3);
+            this.tpTransactions.Size = new System.Drawing.Size(848, 461);
+            this.tpTransactions.TabIndex = 3;
+            this.tpTransactions.Text = "Transactions";
+            this.tpTransactions.UseVisualStyleBackColor = true;
+            this.tpTransactions.Enter += new System.EventHandler(this.tpTransactions_Enter);
+            this.tpTransactions.Leave += new System.EventHandler(this.tpTransactions_Leave);
+            // 
+            // btnReindex
+            // 
+            this.btnReindex.Location = new System.Drawing.Point(472, 430);
+            this.btnReindex.Name = "btnReindex";
+            this.btnReindex.Size = new System.Drawing.Size(180, 27);
+            this.btnReindex.TabIndex = 10;
+            this.btnReindex.Text = "Reindex the wallet";
+            this.btnReindex.UseVisualStyleBackColor = true;
+            this.btnReindex.Click += new System.EventHandler(this.btnReindex_Click);
+            // 
+            // btnRescan
+            // 
+            this.btnRescan.Location = new System.Drawing.Point(658, 430);
+            this.btnRescan.Name = "btnRescan";
+            this.btnRescan.Size = new System.Drawing.Size(180, 27);
+            this.btnRescan.TabIndex = 10;
+            this.btnRescan.Text = "Rescan the transactions";
+            this.btnRescan.UseVisualStyleBackColor = true;
+            this.btnRescan.Click += new System.EventHandler(this.btnRescan_Click);
+            // 
+            // dtgTransactions
+            // 
+            this.dtgTransactions.AllowUserToResizeColumns = false;
+            this.dtgTransactions.AllowUserToResizeRows = false;
+            this.dtgTransactions.AutoGenerateColumns = false;
+            this.dtgTransactions.BackgroundColor = System.Drawing.SystemColors.ControlDark;
+            this.dtgTransactions.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgTransactions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgTransactions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.categoryDataGridViewTextBoxColumn,
+            this.confirmationsDataGridViewTextBoxColumn,
+            this.amountDataGridViewTextBoxColumn,
+            this.timeDataGridViewTextBoxColumn,
+            this.addressDataGridViewTextBoxColumn,
+            this.txidDataGridViewTextBoxColumn});
+            this.dtgTransactions.DataSource = this.transactionConvertedBindingSource;
+            this.dtgTransactions.Location = new System.Drawing.Point(7, 8);
+            this.dtgTransactions.MultiSelect = false;
+            this.dtgTransactions.Name = "dtgTransactions";
+            this.dtgTransactions.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dtgTransactions.Size = new System.Drawing.Size(831, 417);
+            this.dtgTransactions.TabIndex = 0;
+            this.dtgTransactions.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgTransactions_CellDoubleClick);
+            this.dtgTransactions.Paint += new System.Windows.Forms.PaintEventHandler(this.dtg_Paint);
+            this.dtgTransactions.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dtg_MouseClick);
+            // 
+            // categoryDataGridViewTextBoxColumn
+            // 
+            this.categoryDataGridViewTextBoxColumn.DataPropertyName = "category";
+            this.categoryDataGridViewTextBoxColumn.HeaderText = "category";
+            this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
+            // 
+            // confirmationsDataGridViewTextBoxColumn
+            // 
+            this.confirmationsDataGridViewTextBoxColumn.DataPropertyName = "confirmations";
+            this.confirmationsDataGridViewTextBoxColumn.HeaderText = "confirmations";
+            this.confirmationsDataGridViewTextBoxColumn.Name = "confirmationsDataGridViewTextBoxColumn";
+            // 
+            // amountDataGridViewTextBoxColumn
+            // 
+            this.amountDataGridViewTextBoxColumn.DataPropertyName = "amount";
+            this.amountDataGridViewTextBoxColumn.HeaderText = "amount";
+            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
+            // 
+            // timeDataGridViewTextBoxColumn
+            // 
+            this.timeDataGridViewTextBoxColumn.DataPropertyName = "time";
+            this.timeDataGridViewTextBoxColumn.HeaderText = "time";
+            this.timeDataGridViewTextBoxColumn.Name = "timeDataGridViewTextBoxColumn";
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "address";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            // 
+            // txidDataGridViewTextBoxColumn
+            // 
+            this.txidDataGridViewTextBoxColumn.DataPropertyName = "txid";
+            this.txidDataGridViewTextBoxColumn.HeaderText = "txid";
+            this.txidDataGridViewTextBoxColumn.Name = "txidDataGridViewTextBoxColumn";
+            // 
+            // transactionConvertedBindingSource
+            // 
+            this.transactionConvertedBindingSource.DataSource = typeof(SimpleWallet.Types.TransactionConverted);
+            // 
+            // tpMasternode
+            // 
+            this.tpMasternode.Controls.Add(this.tbSearch);
+            this.tpMasternode.Controls.Add(this.lbUpdateTime);
+            this.tpMasternode.Controls.Add(this.label16);
+            this.tpMasternode.Controls.Add(this.label3);
+            this.tpMasternode.Controls.Add(this.btnRefreshMasternode);
+            this.tpMasternode.Controls.Add(this.btnStartAll);
+            this.tpMasternode.Controls.Add(this.btnStartAlias);
+            this.tpMasternode.Controls.Add(this.btnStartMasternode);
+            this.tpMasternode.Controls.Add(this.btnEditConfigFile);
+            this.tpMasternode.Controls.Add(this.btnGetOutputs);
+            this.tpMasternode.Controls.Add(this.btnTurnOffMNMode);
+            this.tpMasternode.Controls.Add(this.btnGetMNPrivKey);
+            this.tpMasternode.Controls.Add(this.dtgGlobalMN);
+            this.tpMasternode.Controls.Add(this.dtgMasternode);
+            this.tpMasternode.Controls.Add(this.btnSearch);
+            this.tpMasternode.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.tpMasternode.ImageIndex = 5;
+            this.tpMasternode.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.tpMasternode.Location = new System.Drawing.Point(4, 30);
+            this.tpMasternode.Name = "tpMasternode";
+            this.tpMasternode.Padding = new System.Windows.Forms.Padding(3);
+            this.tpMasternode.Size = new System.Drawing.Size(848, 461);
+            this.tpMasternode.TabIndex = 6;
+            this.tpMasternode.Text = "Masternode";
+            this.tpMasternode.UseVisualStyleBackColor = true;
+            this.tpMasternode.Enter += new System.EventHandler(this.tpMasternode_Enter);
+            this.tpMasternode.Leave += new System.EventHandler(this.tpMasternode_Leave);
+            // 
+            // tbSearch
+            // 
+            this.tbSearch.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.tbSearch.Location = new System.Drawing.Point(129, 433);
+            this.tbSearch.Name = "tbSearch";
+            this.tbSearch.Size = new System.Drawing.Size(502, 21);
+            this.tbSearch.TabIndex = 4;
+            this.tbSearch.Text = "Masternode address or tx hash";
+            this.tbSearch.Enter += new System.EventHandler(this.tbSearch_Enter);
+            this.tbSearch.Leave += new System.EventHandler(this.tbSearch_Leave);
+            // 
+            // lbUpdateTime
+            // 
+            this.lbUpdateTime.AutoSize = true;
+            this.lbUpdateTime.Location = new System.Drawing.Point(690, 436);
+            this.lbUpdateTime.Name = "lbUpdateTime";
+            this.lbUpdateTime.Size = new System.Drawing.Size(29, 15);
+            this.lbUpdateTime.TabIndex = 3;
+            this.lbUpdateTime.Text = "(60)";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(8, 3);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(144, 15);
+            this.label16.TabIndex = 2;
+            this.label16.Text = "Your local masternode(s)";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 113);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(95, 15);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "All masternodes";
+            // 
+            // btnRefreshMasternode
+            // 
+            this.btnRefreshMasternode.Location = new System.Drawing.Point(725, 403);
+            this.btnRefreshMasternode.Name = "btnRefreshMasternode";
+            this.btnRefreshMasternode.Size = new System.Drawing.Size(97, 23);
+            this.btnRefreshMasternode.TabIndex = 1;
+            this.btnRefreshMasternode.Text = "Refresh";
+            this.ttStart.SetToolTip(this.btnRefreshMasternode, "Refresh masternode list");
+            this.btnRefreshMasternode.UseVisualStyleBackColor = true;
+            this.btnRefreshMasternode.Click += new System.EventHandler(this.btnRefreshMasternode_Click);
+            // 
+            // btnStartAll
+            // 
+            this.btnStartAll.Location = new System.Drawing.Point(611, 403);
+            this.btnStartAll.Name = "btnStartAll";
+            this.btnStartAll.Size = new System.Drawing.Size(110, 23);
+            this.btnStartAll.TabIndex = 1;
+            this.btnStartAll.Text = "Start All";
+            this.btnStartAll.UseVisualStyleBackColor = true;
+            this.btnStartAll.Click += new System.EventHandler(this.btnStartAll_Click);
+            // 
+            // btnStartAlias
+            // 
+            this.btnStartAlias.Location = new System.Drawing.Point(495, 403);
+            this.btnStartAlias.Name = "btnStartAlias";
+            this.btnStartAlias.Size = new System.Drawing.Size(110, 23);
+            this.btnStartAlias.TabIndex = 1;
+            this.btnStartAlias.Text = "Start Alias";
+            this.btnStartAlias.UseVisualStyleBackColor = true;
+            this.btnStartAlias.Click += new System.EventHandler(this.btnStartAlias_Click);
+            // 
+            // btnStartMasternode
+            // 
+            this.btnStartMasternode.Location = new System.Drawing.Point(405, 403);
+            this.btnStartMasternode.Name = "btnStartMasternode";
+            this.btnStartMasternode.Size = new System.Drawing.Size(84, 23);
+            this.btnStartMasternode.TabIndex = 1;
+            this.btnStartMasternode.Text = "Start MN";
+            this.btnStartMasternode.UseVisualStyleBackColor = true;
+            this.btnStartMasternode.Click += new System.EventHandler(this.btnStartMasternode_Click);
+            // 
+            // btnEditConfigFile
+            // 
+            this.btnEditConfigFile.Location = new System.Drawing.Point(245, 403);
+            this.btnEditConfigFile.Name = "btnEditConfigFile";
+            this.btnEditConfigFile.Size = new System.Drawing.Size(154, 23);
+            this.btnEditConfigFile.TabIndex = 1;
+            this.btnEditConfigFile.Text = "Configure Masternode";
+            this.btnEditConfigFile.UseVisualStyleBackColor = true;
+            this.btnEditConfigFile.Click += new System.EventHandler(this.btnEditConfigFile_Click);
+            // 
+            // btnGetOutputs
+            // 
+            this.btnGetOutputs.Location = new System.Drawing.Point(129, 403);
+            this.btnGetOutputs.Name = "btnGetOutputs";
+            this.btnGetOutputs.Size = new System.Drawing.Size(110, 23);
+            this.btnGetOutputs.TabIndex = 1;
+            this.btnGetOutputs.Text = "Get Outputs";
+            this.btnGetOutputs.UseVisualStyleBackColor = true;
+            this.btnGetOutputs.Click += new System.EventHandler(this.btnGetOutputs_Click);
+            // 
+            // btnTurnOffMNMode
+            // 
+            this.btnTurnOffMNMode.Enabled = false;
+            this.btnTurnOffMNMode.Location = new System.Drawing.Point(7, 432);
+            this.btnTurnOffMNMode.Name = "btnTurnOffMNMode";
+            this.btnTurnOffMNMode.Size = new System.Drawing.Size(116, 23);
+            this.btnTurnOffMNMode.TabIndex = 1;
+            this.btnTurnOffMNMode.Text = "Turn Off MN Mode";
+            this.ttStart.SetToolTip(this.btnTurnOffMNMode, "Turn off cold masternode option to avoid restarting masternode active time");
+            this.btnTurnOffMNMode.UseVisualStyleBackColor = true;
+            this.btnTurnOffMNMode.Click += new System.EventHandler(this.btnTurnOffMNMode_Click);
+            // 
+            // btnGetMNPrivKey
+            // 
+            this.btnGetMNPrivKey.Location = new System.Drawing.Point(7, 403);
+            this.btnGetMNPrivKey.Name = "btnGetMNPrivKey";
+            this.btnGetMNPrivKey.Size = new System.Drawing.Size(116, 23);
+            this.btnGetMNPrivKey.TabIndex = 1;
+            this.btnGetMNPrivKey.Text = "Get MN Priv Key";
+            this.btnGetMNPrivKey.UseVisualStyleBackColor = true;
+            this.btnGetMNPrivKey.Click += new System.EventHandler(this.btnGetMNPrivKey_Click);
+            // 
+            // dtgGlobalMN
+            // 
+            this.dtgGlobalMN.AutoGenerateColumns = false;
+            this.dtgGlobalMN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgGlobalMN.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.rankDataGridViewTextBoxColumn,
+            this.addrDataGridViewTextBoxColumn,
+            this.versionDataGridViewTextBoxColumn,
+            this.statusDataGridViewTextBoxColumn,
+            this.activetimeDataGridViewTextBoxColumn,
+            this.lastseenDataGridViewTextBoxColumn,
+            this.lastpaidDataGridViewTextBoxColumn,
+            this.txhashDataGridViewTextBoxColumn,
+            this.ipDataGridViewTextBoxColumn});
+            this.dtgGlobalMN.DataSource = this.masternodeDetailConvertedBindingSource;
+            this.dtgGlobalMN.Location = new System.Drawing.Point(8, 131);
+            this.dtgGlobalMN.MultiSelect = false;
+            this.dtgGlobalMN.Name = "dtgGlobalMN";
+            this.dtgGlobalMN.Size = new System.Drawing.Size(832, 266);
+            this.dtgGlobalMN.TabIndex = 0;
+            this.dtgGlobalMN.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgAddress_CellDoubleClick);
+            this.dtgGlobalMN.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dtgGlobalMN_DataBindingComplete);
+            this.dtgGlobalMN.Paint += new System.Windows.Forms.PaintEventHandler(this.dtg_Paint);
+            this.dtgGlobalMN.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dtg_MouseClick);
+            // 
+            // rankDataGridViewTextBoxColumn
+            // 
+            this.rankDataGridViewTextBoxColumn.DataPropertyName = "rank";
+            this.rankDataGridViewTextBoxColumn.HeaderText = "rank";
+            this.rankDataGridViewTextBoxColumn.Name = "rankDataGridViewTextBoxColumn";
+            // 
+            // addrDataGridViewTextBoxColumn
+            // 
+            this.addrDataGridViewTextBoxColumn.DataPropertyName = "addr";
+            this.addrDataGridViewTextBoxColumn.HeaderText = "addr";
+            this.addrDataGridViewTextBoxColumn.Name = "addrDataGridViewTextBoxColumn";
+            // 
+            // versionDataGridViewTextBoxColumn
+            // 
+            this.versionDataGridViewTextBoxColumn.DataPropertyName = "version";
+            this.versionDataGridViewTextBoxColumn.HeaderText = "version";
+            this.versionDataGridViewTextBoxColumn.Name = "versionDataGridViewTextBoxColumn";
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "status";
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            // 
+            // activetimeDataGridViewTextBoxColumn
+            // 
+            this.activetimeDataGridViewTextBoxColumn.DataPropertyName = "activetime";
+            this.activetimeDataGridViewTextBoxColumn.HeaderText = "activetime";
+            this.activetimeDataGridViewTextBoxColumn.Name = "activetimeDataGridViewTextBoxColumn";
+            // 
+            // lastseenDataGridViewTextBoxColumn
+            // 
+            this.lastseenDataGridViewTextBoxColumn.DataPropertyName = "lastseen";
+            this.lastseenDataGridViewTextBoxColumn.HeaderText = "lastseen";
+            this.lastseenDataGridViewTextBoxColumn.Name = "lastseenDataGridViewTextBoxColumn";
+            // 
+            // lastpaidDataGridViewTextBoxColumn
+            // 
+            this.lastpaidDataGridViewTextBoxColumn.DataPropertyName = "lastpaid";
+            this.lastpaidDataGridViewTextBoxColumn.HeaderText = "lastpaid";
+            this.lastpaidDataGridViewTextBoxColumn.Name = "lastpaidDataGridViewTextBoxColumn";
+            // 
+            // txhashDataGridViewTextBoxColumn
+            // 
+            this.txhashDataGridViewTextBoxColumn.DataPropertyName = "txhash";
+            this.txhashDataGridViewTextBoxColumn.HeaderText = "txhash";
+            this.txhashDataGridViewTextBoxColumn.Name = "txhashDataGridViewTextBoxColumn";
+            // 
+            // ipDataGridViewTextBoxColumn
+            // 
+            this.ipDataGridViewTextBoxColumn.DataPropertyName = "ip";
+            this.ipDataGridViewTextBoxColumn.HeaderText = "ip";
+            this.ipDataGridViewTextBoxColumn.Name = "ipDataGridViewTextBoxColumn";
+            // 
+            // masternodeDetailConvertedBindingSource
+            // 
+            this.masternodeDetailConvertedBindingSource.DataSource = typeof(SimpleWallet.Types.MasternodeDetailConverted);
+            // 
+            // dtgMasternode
+            // 
+            this.dtgMasternode.AutoGenerateColumns = false;
+            this.dtgMasternode.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgMasternode.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.statusDataGridViewTextBoxColumn1,
+            this.aliasDataGridViewTextBoxColumn,
+            this.ipAddressDataGridViewTextBoxColumn,
+            this.privKeyDataGridViewTextBoxColumn,
+            this.txHashDataGridViewTextBoxColumn1,
+            this.indexDataGridViewTextBoxColumn});
+            this.dtgMasternode.DataSource = this.masternodeBindingSource;
+            this.dtgMasternode.Location = new System.Drawing.Point(8, 21);
+            this.dtgMasternode.MultiSelect = false;
+            this.dtgMasternode.Name = "dtgMasternode";
+            this.dtgMasternode.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dtgMasternode.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dtgMasternode.Size = new System.Drawing.Size(832, 89);
+            this.dtgMasternode.TabIndex = 0;
+            this.dtgMasternode.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgAddress_CellDoubleClick);
+            this.dtgMasternode.Paint += new System.Windows.Forms.PaintEventHandler(this.dtg_Paint);
+            this.dtgMasternode.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dtg_MouseClick);
+            // 
+            // statusDataGridViewTextBoxColumn1
+            // 
+            this.statusDataGridViewTextBoxColumn1.DataPropertyName = "status";
+            this.statusDataGridViewTextBoxColumn1.HeaderText = "status";
+            this.statusDataGridViewTextBoxColumn1.Name = "statusDataGridViewTextBoxColumn1";
+            // 
+            // aliasDataGridViewTextBoxColumn
+            // 
+            this.aliasDataGridViewTextBoxColumn.DataPropertyName = "alias";
+            this.aliasDataGridViewTextBoxColumn.HeaderText = "alias";
+            this.aliasDataGridViewTextBoxColumn.Name = "aliasDataGridViewTextBoxColumn";
+            // 
+            // ipAddressDataGridViewTextBoxColumn
+            // 
+            this.ipAddressDataGridViewTextBoxColumn.DataPropertyName = "ipAddress";
+            this.ipAddressDataGridViewTextBoxColumn.HeaderText = "ipAddress";
+            this.ipAddressDataGridViewTextBoxColumn.Name = "ipAddressDataGridViewTextBoxColumn";
+            // 
+            // privKeyDataGridViewTextBoxColumn
+            // 
+            this.privKeyDataGridViewTextBoxColumn.DataPropertyName = "privKey";
+            this.privKeyDataGridViewTextBoxColumn.HeaderText = "privKey";
+            this.privKeyDataGridViewTextBoxColumn.Name = "privKeyDataGridViewTextBoxColumn";
+            // 
+            // txHashDataGridViewTextBoxColumn1
+            // 
+            this.txHashDataGridViewTextBoxColumn1.DataPropertyName = "txHash";
+            this.txHashDataGridViewTextBoxColumn1.HeaderText = "txHash";
+            this.txHashDataGridViewTextBoxColumn1.Name = "txHashDataGridViewTextBoxColumn1";
+            // 
+            // indexDataGridViewTextBoxColumn
+            // 
+            this.indexDataGridViewTextBoxColumn.DataPropertyName = "index";
+            this.indexDataGridViewTextBoxColumn.HeaderText = "index";
+            this.indexDataGridViewTextBoxColumn.Name = "indexDataGridViewTextBoxColumn";
+            // 
+            // masternodeBindingSource
+            // 
+            this.masternodeBindingSource.DataSource = typeof(SimpleWallet.Types.Masternode);
+            // 
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.Transparent;
@@ -1668,6 +1494,200 @@
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             this.btnSearch.MouseEnter += new System.EventHandler(this.btnSearch_MouseEnter);
             this.btnSearch.MouseLeave += new System.EventHandler(this.btnSearch_MouseLeave);
+            // 
+            // imgList
+            // 
+            this.imgList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgList.ImageStream")));
+            this.imgList.TransparentColor = System.Drawing.Color.Transparent;
+            this.imgList.Images.SetKeyName(0, "address-book.png");
+            this.imgList.Images.SetKeyName(1, "history.png");
+            this.imgList.Images.SetKeyName(2, "overview.png");
+            this.imgList.Images.SetKeyName(3, "receive.png");
+            this.imgList.Images.SetKeyName(4, "send.png");
+            this.imgList.Images.SetKeyName(5, "masternodes.png");
+            // 
+            // addressBookBindingSource
+            // 
+            this.addressBookBindingSource.DataSource = typeof(SimpleWallet.Types.AddressBook);
+            // 
+            // pbPercent
+            // 
+            this.pbPercent.Location = new System.Drawing.Point(3, 525);
+            this.pbPercent.Maximum = 10000;
+            this.pbPercent.Name = "pbPercent";
+            this.pbPercent.Size = new System.Drawing.Size(800, 16);
+            this.pbPercent.Step = 1;
+            this.pbPercent.TabIndex = 1;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.Control;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.walletToolStripMenuItem,
+            this.toolsToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, -3);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.menuStrip1.Size = new System.Drawing.Size(168, 24);
+            this.menuStrip1.TabIndex = 7;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem,
+            this.quitToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.fileToolStripMenuItem.Text = "Main";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // quitToolStripMenuItem
+            // 
+            this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
+            this.quitToolStripMenuItem.Text = "Quit";
+            this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
+            // 
+            // walletToolStripMenuItem
+            // 
+            this.walletToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.backupToolStripMenuItem,
+            this.exportPrivateKeyToolStripMenuItem,
+            this.importPrivateKeysToolStripMenuItem,
+            this.showPrivateKeyToolStripMenuItem,
+            this.importOnePrivateKeyToolStripMenuItem,
+            this.enableAutoBackupWalletToolStripMenuItem});
+            this.walletToolStripMenuItem.Name = "walletToolStripMenuItem";
+            this.walletToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+            this.walletToolStripMenuItem.Text = "Settings";
+            // 
+            // backupToolStripMenuItem
+            // 
+            this.backupToolStripMenuItem.Name = "backupToolStripMenuItem";
+            this.backupToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.backupToolStripMenuItem.Text = "Backup";
+            this.backupToolStripMenuItem.Click += new System.EventHandler(this.backupToolStripMenuItem_Click);
+            // 
+            // exportPrivateKeyToolStripMenuItem
+            // 
+            this.exportPrivateKeyToolStripMenuItem.Name = "exportPrivateKeyToolStripMenuItem";
+            this.exportPrivateKeyToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.exportPrivateKeyToolStripMenuItem.Text = "Export private keys";
+            this.exportPrivateKeyToolStripMenuItem.Click += new System.EventHandler(this.exportPrivateKeyToolStripMenuItem_Click);
+            // 
+            // importPrivateKeysToolStripMenuItem
+            // 
+            this.importPrivateKeysToolStripMenuItem.Name = "importPrivateKeysToolStripMenuItem";
+            this.importPrivateKeysToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.importPrivateKeysToolStripMenuItem.Text = "Import private keys";
+            this.importPrivateKeysToolStripMenuItem.Click += new System.EventHandler(this.importPrivateKeysToolStripMenuItem_Click);
+            // 
+            // showPrivateKeyToolStripMenuItem
+            // 
+            this.showPrivateKeyToolStripMenuItem.Name = "showPrivateKeyToolStripMenuItem";
+            this.showPrivateKeyToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.showPrivateKeyToolStripMenuItem.Text = "Show private key";
+            this.showPrivateKeyToolStripMenuItem.Click += new System.EventHandler(this.showPrivateKeyToolStripMenuItem_Click);
+            // 
+            // importOnePrivateKeyToolStripMenuItem
+            // 
+            this.importOnePrivateKeyToolStripMenuItem.Name = "importOnePrivateKeyToolStripMenuItem";
+            this.importOnePrivateKeyToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.importOnePrivateKeyToolStripMenuItem.Text = "Import one private key";
+            this.importOnePrivateKeyToolStripMenuItem.Click += new System.EventHandler(this.importOnePrivateKeyToolStripMenuItem_Click);
+            // 
+            // enableAutoBackupWalletToolStripMenuItem
+            // 
+            this.enableAutoBackupWalletToolStripMenuItem.Name = "enableAutoBackupWalletToolStripMenuItem";
+            this.enableAutoBackupWalletToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.enableAutoBackupWalletToolStripMenuItem.Text = "Enable auto backup wallet";
+            this.enableAutoBackupWalletToolStripMenuItem.Click += new System.EventHandler(this.enableAutoBackupWalletToolStripMenuItem_Click);
+            // 
+            // toolsToolStripMenuItem
+            // 
+            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.debugToolStripMenuItem,
+            this.peersToolStripMenuItem,
+            this.copySnowgemconfDataToolStripMenuItem,
+            this.copyMasternodeDataToolStripMenuItem});
+            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.toolsToolStripMenuItem.Text = "Tools";
+            // 
+            // debugToolStripMenuItem
+            // 
+            this.debugToolStripMenuItem.Name = "debugToolStripMenuItem";
+            this.debugToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.debugToolStripMenuItem.Text = "Debug";
+            // 
+            // peersToolStripMenuItem
+            // 
+            this.peersToolStripMenuItem.Name = "peersToolStripMenuItem";
+            this.peersToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.peersToolStripMenuItem.Text = "Peers";
+            this.peersToolStripMenuItem.Click += new System.EventHandler(this.peersToolStripMenuItem_Click);
+            // 
+            // copySnowgemconfDataToolStripMenuItem
+            // 
+            this.copySnowgemconfDataToolStripMenuItem.Name = "copySnowgemconfDataToolStripMenuItem";
+            this.copySnowgemconfDataToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.copySnowgemconfDataToolStripMenuItem.Text = "Copy snowgem.conf data";
+            this.copySnowgemconfDataToolStripMenuItem.Click += new System.EventHandler(this.copySnowgemconfDataToolStripMenuItem_Click);
+            // 
+            // copyMasternodeDataToolStripMenuItem
+            // 
+            this.copyMasternodeDataToolStripMenuItem.Name = "copyMasternodeDataToolStripMenuItem";
+            this.copyMasternodeDataToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.copyMasternodeDataToolStripMenuItem.Text = "Copy masternode.conf data";
+            this.copyMasternodeDataToolStripMenuItem.Click += new System.EventHandler(this.copyMasternodeDataToolStripMenuItem_Click);
+            // 
+            // pbStatus
+            // 
+            this.pbStatus.BackgroundImage = global::SimpleWallet.Properties.Resources.notsynced;
+            this.pbStatus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbStatus.Location = new System.Drawing.Point(832, 525);
+            this.pbStatus.Name = "pbStatus";
+            this.pbStatus.Size = new System.Drawing.Size(16, 16);
+            this.pbStatus.TabIndex = 6;
+            this.pbStatus.TabStop = false;
+            // 
+            // pbSignal
+            // 
+            this.pbSignal.BackgroundImage = global::SimpleWallet.Properties.Resources.connect0_16;
+            this.pbSignal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbSignal.Location = new System.Drawing.Point(810, 525);
+            this.pbSignal.Name = "pbSignal";
+            this.pbSignal.Size = new System.Drawing.Size(16, 16);
+            this.pbSignal.TabIndex = 6;
+            this.pbSignal.TabStop = false;
+            this.pbSignal.MouseHover += new System.EventHandler(this.pbSignal_MouseHover);
+            // 
+            // masternodeListBindingSource
+            // 
+            this.masternodeListBindingSource.DataSource = typeof(SimpleWallet.Types.MasternodeList);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::SimpleWallet.Properties.Resources.sng_main;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.InitialImage = global::SimpleWallet.Properties.Resources.sng_main;
+            this.pictureBox1.Location = new System.Drawing.Point(684, -2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(168, 58);
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
             // 
             // typesBindingSource
             // 
@@ -1870,5 +1890,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn privKeyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn txHashDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn indexDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnStartAll;
     }
 }

@@ -154,6 +154,16 @@ namespace SimpleWallet
             MASTERNODE_GLOBAL
         }
 
+        public class RightClickData
+        {
+            public bool isClicked { get; set; }
+            public Types.CtxMenuType type { get; set; }
+            public int rowIdx { get; set; }
+            public int colIdx { get; set; }
+            public int x { get; set; }
+            public int y { get; set; }
+        }
+
         public class ListAddressBook
         {
             public List<AddressBook> addressbook { get; set; }

@@ -37,6 +37,7 @@
             // 
             this.rtbMessage.Location = new System.Drawing.Point(13, 13);
             this.rtbMessage.Name = "rtbMessage";
+            this.rtbMessage.ReadOnly = true;
             this.rtbMessage.Size = new System.Drawing.Size(462, 285);
             this.rtbMessage.TabIndex = 0;
             this.rtbMessage.Text = "";
@@ -65,7 +66,7 @@
             this.MinimizeBox = false;
             this.Name = "ErrorMessage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "ErrorMessage";
+            this.Text = "Message";
             this.Load += new System.EventHandler(this.ErrorMessage_Load);
             this.ResumeLayout(false);
 

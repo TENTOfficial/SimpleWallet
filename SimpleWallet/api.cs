@@ -368,7 +368,7 @@ namespace SimpleWallet
             return result;
         }
 
-        public Types.ConfigureResult changeStatus(String status, String aliasName, String IP, String privKey, String txHash, String txIndex)
+        public Types.ConfigureResult changeStatus(String status, String aliasName, String IP, String privKey, String txHash, String txIndex, bool isDisableAll)
         {
             Types.ConfigureResult result = Types.ConfigureResult.OK;
             String appdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
@@ -390,7 +390,7 @@ namespace SimpleWallet
                 else
                 {
                     int index = 0;
-                    if (status == "ENABLE")
+                    if (status == "ENABLE" || isDisableAll)
                     {
                         //config file
                         List<String> text = File.ReadAllLines(confFile).ToList();
@@ -418,7 +418,7 @@ namespace SimpleWallet
                         {
                             text.RemoveAt(index);
                         }
-                        text.Add("masternode=1");
+                        text.Add("masternode=" + (isDisableAll ? "0" : "1"));
                         index = text.FindIndex(x => x.StartsWith("masternodeaddr"));
                         if (index != -1)
                         {
@@ -991,6 +991,14 @@ namespace SimpleWallet
         {
             String data = "";
             List<String> command = new List<String> { "startalias ", name };
+            String ret = Task.Run(() => exec.executeMasternode(command, data)).Result;
+            return ret;
+        }
+
+        public String startAll()
+        {
+            String data = "";
+            List<String> command = new List<String> { "startmasternode", "many", "false" };
             String ret = Task.Run(() => exec.executeMasternode(command, data)).Result;
             return ret;
         }
