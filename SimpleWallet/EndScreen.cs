@@ -77,8 +77,8 @@ namespace SimpleWallet
 
         private async void EndScreen_Load(object sender, EventArgs e)
         {
+            endWallet.RunWorkerAsync();
             await Task.Run(() => api.stopWallet());
-			endWallet.RunWorkerAsync();
         }
     }
 }

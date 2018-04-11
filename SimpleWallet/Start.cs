@@ -1575,7 +1575,7 @@ Are you sure?", @"Reopen to scan the wallet", MessageBoxButtons.YesNo);
                 {
                     for (int i = outputList.Count - 1; i >= 0; i--)
                     {
-                        Masternode mn = new Masternode("Outputs " + i, outputList[i].txhash + " " + outputList[i].outputidx);
+                        Masternode mn = new Masternode("Outputs " + (outputList.Count - i), outputList[i].txhash + " " + outputList[i].outputidx);
                         mn.ShowDialog();
                     }
                 }

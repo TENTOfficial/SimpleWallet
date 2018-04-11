@@ -35,19 +35,21 @@
             // 
             // rtbMessage
             // 
-            this.rtbMessage.Location = new System.Drawing.Point(13, 13);
+            this.rtbMessage.Dock = System.Windows.Forms.DockStyle.Top;
+            this.rtbMessage.Location = new System.Drawing.Point(0, 0);
             this.rtbMessage.Name = "rtbMessage";
             this.rtbMessage.ReadOnly = true;
-            this.rtbMessage.Size = new System.Drawing.Size(462, 285);
+            this.rtbMessage.Size = new System.Drawing.Size(487, 310);
             this.rtbMessage.TabIndex = 0;
             this.rtbMessage.Text = "";
             this.rtbMessage.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.rtbMessage_LinkClicked);
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(400, 304);
+            this.btnOK.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnOK.Location = new System.Drawing.Point(0, 316);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(75, 23);
+            this.btnOK.Size = new System.Drawing.Size(487, 23);
             this.btnOK.TabIndex = 1;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
