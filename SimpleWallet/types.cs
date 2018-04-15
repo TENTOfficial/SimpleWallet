@@ -53,15 +53,20 @@ namespace SimpleWallet
                                                   DaemonEventArgs e);
     public class Types
     {
-        public static String version = "SnowGem Simple Wallet - Version 2.0.0g";
-        public static String startCommandsFile = Path.GetTempPath() + "\\commands.dat";
-        public static String addressLabel = Path.GetTempPath() + "\\addressLabel.dat";
-        public static String masternodeSave = Path.GetTempPath() + "\\masternodesave.dat";
-        public static String outputsSave = Path.GetTempPath() + "\\outputs.dat";
+        public static String version = "SnowGem Simple Wallet - Version 2.0.0i";
+        public static String dataLocation = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) +
+                        "\\Snowgem";
+        public static String simpleWalletLocation = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) +
+                        "\\Snowgem\\simplewallet";
         public static String mnLocation = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) +
                         "\\Snowgem\\masternode.conf";
         public static String cfLocation = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
                  + "\\Snowgem\\snowgem.conf";
+        public static String startCommandsFile = simpleWalletLocation + "\\commands.dat";
+        public static String addressLabel = simpleWalletLocation + "\\addressLabel.dat";
+        public static String masternodeSave = simpleWalletLocation + "\\masternodesave.dat";
+        public static String outputsSave = simpleWalletLocation + "\\outputs.dat";
+        public static String enableBackup = simpleWalletLocation + "\\autoBackup.dat";
         public Dictionary<bool, String> boolDict = new Dictionary<bool, String>();
         public Dictionary<int, String> intDict = new Dictionary<int, String>();
         public Dictionary<String, String> strDict = new Dictionary<String, String>();
@@ -188,6 +193,7 @@ namespace SimpleWallet
             public String lockedbalance { get; set; }
             public String totalbalance { get; set; }
             public String unconfirmedbalance { get; set; }
+            public String immaturebalance { get; set; }
             public List<Dictionary<String, String>> addressbalance { get; set; }
             public List<Transaction> listtransactions { get; set; }
         }

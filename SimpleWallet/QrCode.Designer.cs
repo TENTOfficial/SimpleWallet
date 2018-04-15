@@ -36,19 +36,21 @@
             // 
             // tbQrCode
             // 
-            this.tbQrCode.Location = new System.Drawing.Point(13, 319);
+            this.tbQrCode.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tbQrCode.Location = new System.Drawing.Point(0, 303);
             this.tbQrCode.Name = "tbQrCode";
             this.tbQrCode.ReadOnly = true;
-            this.tbQrCode.Size = new System.Drawing.Size(300, 20);
+            this.tbQrCode.Size = new System.Drawing.Size(328, 20);
             this.tbQrCode.TabIndex = 1;
             // 
             // pbQrCode
             // 
             this.pbQrCode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbQrCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbQrCode.Location = new System.Drawing.Point(13, 13);
+            this.pbQrCode.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pbQrCode.Location = new System.Drawing.Point(0, 0);
             this.pbQrCode.Name = "pbQrCode";
-            this.pbQrCode.Size = new System.Drawing.Size(300, 300);
+            this.pbQrCode.Size = new System.Drawing.Size(328, 300);
             this.pbQrCode.TabIndex = 0;
             this.pbQrCode.TabStop = false;
             // 
@@ -56,7 +58,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(328, 354);
+            this.ClientSize = new System.Drawing.Size(328, 323);
             this.Controls.Add(this.tbQrCode);
             this.Controls.Add(this.pbQrCode);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

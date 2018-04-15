@@ -52,6 +52,8 @@
             this.label12 = new SimpleWallet.TransparentLabel();
             this.label7 = new SimpleWallet.TransparentLabel();
             this.label4 = new SimpleWallet.TransparentLabel();
+            this.lbImmature = new SimpleWallet.TransparentLabel();
+            this.transparentLabel7 = new SimpleWallet.TransparentLabel();
             this.lbUnconfirmed = new SimpleWallet.TransparentLabel();
             this.label2 = new SimpleWallet.TransparentLabel();
             this.lbTransparent = new SimpleWallet.TransparentLabel();
@@ -160,8 +162,6 @@
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.peersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.copySnowgemconfDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.copyMasternodeDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ttStart = new System.Windows.Forms.ToolTip(this.components);
             this.pbStatus = new System.Windows.Forms.PictureBox();
             this.pbSignal = new System.Windows.Forms.PictureBox();
@@ -242,6 +242,8 @@
             this.tpOverview.Controls.Add(this.label12);
             this.tpOverview.Controls.Add(this.label7);
             this.tpOverview.Controls.Add(this.label4);
+            this.tpOverview.Controls.Add(this.lbImmature);
+            this.tpOverview.Controls.Add(this.transparentLabel7);
             this.tpOverview.Controls.Add(this.lbUnconfirmed);
             this.tpOverview.Controls.Add(this.label2);
             this.tpOverview.Controls.Add(this.lbTransparent);
@@ -514,6 +516,31 @@
             this.label4.Text = "WALLET";
             this.label4.TransparentBackColor = System.Drawing.Color.Blue;
             // 
+            // lbImmature
+            // 
+            this.lbImmature.AutoSize = true;
+            this.lbImmature.BackColor = System.Drawing.Color.Transparent;
+            this.lbImmature.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbImmature.Location = new System.Drawing.Point(94, 97);
+            this.lbImmature.Name = "lbImmature";
+            this.lbImmature.Opacity = 0;
+            this.lbImmature.Size = new System.Drawing.Size(103, 15);
+            this.lbImmature.TabIndex = 6;
+            this.lbImmature.Text = "Loading data...";
+            this.lbImmature.TransparentBackColor = System.Drawing.Color.Blue;
+            // 
+            // transparentLabel7
+            // 
+            this.transparentLabel7.AutoSize = true;
+            this.transparentLabel7.BackColor = System.Drawing.Color.Transparent;
+            this.transparentLabel7.Location = new System.Drawing.Point(8, 97);
+            this.transparentLabel7.Name = "transparentLabel7";
+            this.transparentLabel7.Opacity = 0;
+            this.transparentLabel7.Size = new System.Drawing.Size(60, 15);
+            this.transparentLabel7.TabIndex = 6;
+            this.transparentLabel7.Text = "Immature";
+            this.transparentLabel7.TransparentBackColor = System.Drawing.Color.Blue;
+            // 
             // lbUnconfirmed
             // 
             this.lbUnconfirmed.AutoSize = true;
@@ -619,7 +646,7 @@
             this.lbTotal.AutoSize = true;
             this.lbTotal.BackColor = System.Drawing.Color.Transparent;
             this.lbTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTotal.Location = new System.Drawing.Point(94, 98);
+            this.lbTotal.Location = new System.Drawing.Point(94, 112);
             this.lbTotal.Name = "lbTotal";
             this.lbTotal.Opacity = 0;
             this.lbTotal.Size = new System.Drawing.Size(103, 15);
@@ -631,7 +658,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(8, 98);
+            this.label1.Location = new System.Drawing.Point(8, 112);
             this.label1.Name = "label1";
             this.label1.Opacity = 0;
             this.label1.Size = new System.Drawing.Size(34, 15);
@@ -1533,7 +1560,7 @@
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menuStrip1.Size = new System.Drawing.Size(168, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(260, 24);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -1619,9 +1646,7 @@
             // 
             this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.debugToolStripMenuItem,
-            this.peersToolStripMenuItem,
-            this.copySnowgemconfDataToolStripMenuItem,
-            this.copyMasternodeDataToolStripMenuItem});
+            this.peersToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
             this.toolsToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.toolsToolStripMenuItem.Text = "Tools";
@@ -1629,29 +1654,15 @@
             // debugToolStripMenuItem
             // 
             this.debugToolStripMenuItem.Name = "debugToolStripMenuItem";
-            this.debugToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.debugToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.debugToolStripMenuItem.Text = "Debug";
             // 
             // peersToolStripMenuItem
             // 
             this.peersToolStripMenuItem.Name = "peersToolStripMenuItem";
-            this.peersToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.peersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.peersToolStripMenuItem.Text = "Peers";
             this.peersToolStripMenuItem.Click += new System.EventHandler(this.peersToolStripMenuItem_Click);
-            // 
-            // copySnowgemconfDataToolStripMenuItem
-            // 
-            this.copySnowgemconfDataToolStripMenuItem.Name = "copySnowgemconfDataToolStripMenuItem";
-            this.copySnowgemconfDataToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
-            this.copySnowgemconfDataToolStripMenuItem.Text = "Copy snowgem.conf data";
-            this.copySnowgemconfDataToolStripMenuItem.Click += new System.EventHandler(this.copySnowgemconfDataToolStripMenuItem_Click);
-            // 
-            // copyMasternodeDataToolStripMenuItem
-            // 
-            this.copyMasternodeDataToolStripMenuItem.Name = "copyMasternodeDataToolStripMenuItem";
-            this.copyMasternodeDataToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
-            this.copyMasternodeDataToolStripMenuItem.Text = "Copy masternode.conf data";
-            this.copyMasternodeDataToolStripMenuItem.Click += new System.EventHandler(this.copyMasternodeDataToolStripMenuItem_Click);
             // 
             // pbStatus
             // 
@@ -1843,8 +1854,6 @@
         private TransparentLabel transparentLabel2;
         private System.Windows.Forms.Label lbUpdateTime;
         private System.Windows.Forms.Button btnRefreshMasternode;
-        private System.Windows.Forms.ToolStripMenuItem copyMasternodeDataToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem copySnowgemconfDataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem enableAutoBackupWalletToolStripMenuItem;
         private System.Windows.Forms.BindingSource masternodeListBindingSource;
         private System.Windows.Forms.BindingSource typesBindingSource;
@@ -1891,5 +1900,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn txHashDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn indexDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnStartAll;
+        private TransparentLabel lbImmature;
+        private TransparentLabel transparentLabel7;
     }
 }

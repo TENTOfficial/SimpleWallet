@@ -1,6 +1,6 @@
 ﻿namespace SimpleWallet
 {
-    partial class ErrorMessage
+    partial class Message
     {
         /// <summary>
         /// Required designer variable.
@@ -28,45 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ErrorMessage));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Message));
             this.rtbMessage = new System.Windows.Forms.RichTextBox();
-            this.btnOK = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // rtbMessage
             // 
-            this.rtbMessage.Dock = System.Windows.Forms.DockStyle.Top;
+            this.rtbMessage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rtbMessage.Location = new System.Drawing.Point(0, 0);
+            this.rtbMessage.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.rtbMessage.Name = "rtbMessage";
             this.rtbMessage.ReadOnly = true;
-            this.rtbMessage.Size = new System.Drawing.Size(487, 310);
+            this.rtbMessage.Size = new System.Drawing.Size(487, 339);
             this.rtbMessage.TabIndex = 0;
             this.rtbMessage.Text = "";
             this.rtbMessage.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.rtbMessage_LinkClicked);
             // 
-            // btnOK
-            // 
-            this.btnOK.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnOK.Location = new System.Drawing.Point(0, 316);
-            this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(487, 23);
-            this.btnOK.TabIndex = 1;
-            this.btnOK.Text = "OK";
-            this.btnOK.UseVisualStyleBackColor = true;
-            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-            // 
-            // ErrorMessage
+            // Message
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(487, 339);
-            this.Controls.Add(this.btnOK);
             this.Controls.Add(this.rtbMessage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "ErrorMessage";
+            this.Name = "Message";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Message";
             this.Load += new System.EventHandler(this.ErrorMessage_Load);
@@ -77,7 +64,6 @@
         #endregion
 
         private System.Windows.Forms.RichTextBox rtbMessage;
-        private System.Windows.Forms.Button btnOK;
 
     }
 }

@@ -308,35 +308,6 @@ namespace SimpleWallet
                         {
                             text.RemoveAt(index);
                         }
-                        text.Add("masternode=1");
-                        index = text.FindIndex(x => x.StartsWith("masternodeaddr"));
-                        if (index != -1)
-                        {
-                            text.RemoveAt(index);
-                        }
-                        text.Add("masternodeaddr=" + IP + ":16113");
-                        index = text.FindIndex(x => x.StartsWith("externalip"));
-                        if (index != -1)
-                        {
-                            text.RemoveAt(index);
-                        }
-                        text.Add("externalip=" + IP + ":16113");
-                        index = text.FindIndex(x => x.StartsWith("masternodeprivkey"));
-                        if (index != -1)
-                        {
-                            text.RemoveAt(index);
-                        }
-                        text.Add("masternodeprivkey=" + privKey);
-                        index = text.FindIndex(x => x.StartsWith("txindex"));
-                        if (index != -1)
-                        {
-                            text.RemoveAt(index);
-                        }
-                        else
-                        {
-                            result = Types.ConfigureResult.REINDEX;
-                        }
-                        text.Add("txindex=1");
 
                         File.WriteAllLines(confFile, text.ToArray());
 
@@ -418,35 +389,26 @@ namespace SimpleWallet
                         {
                             text.RemoveAt(index);
                         }
-                        text.Add("masternode=" + (isDisableAll ? "0" : "1"));
                         index = text.FindIndex(x => x.StartsWith("masternodeaddr"));
                         if (index != -1)
                         {
                             text.RemoveAt(index);
                         }
-                        text.Add("masternodeaddr=" + IP);
                         index = text.FindIndex(x => x.StartsWith("externalip"));
                         if (index != -1)
                         {
                             text.RemoveAt(index);
                         }
-                        text.Add("externalip=" + IP);
                         index = text.FindIndex(x => x.StartsWith("masternodeprivkey"));
                         if (index != -1)
                         {
                             text.RemoveAt(index);
                         }
-                        text.Add("masternodeprivkey=" + privKey);
                         index = text.FindIndex(x => x.StartsWith("txindex"));
                         if (index != -1)
                         {
                             text.RemoveAt(index);
                         }
-                        else
-                        {
-                            result = Types.ConfigureResult.REINDEX;
-                        }
-                        text.Add("txindex=1");
 
                         File.WriteAllLines(confFile, text.ToArray());
                     }
@@ -489,6 +451,7 @@ namespace SimpleWallet
             {
                 List<String> temp = new List<string>();
                 String strTmp = s;
+                if (strTmp.StartsWith("# ")) continue;
                 if (strTmp[0] == '#')
                 {
                     strTmp = strTmp.Substring(1, s.Length - 1);
@@ -1068,6 +1031,22 @@ namespace SimpleWallet
                 }
             }
             return false;
+        }
+
+        public void KillProcess(String name)
+        {
+            foreach (Process clsProcess in Process.GetProcesses())
+            {
+                String temp = clsProcess.ProcessName.ToLower();
+                if (temp.Contains(name))
+                {
+                    try
+                    {
+                        clsProcess.Kill();
+                    }
+                    catch (Exception ex) { }
+                }
+            }
         }
     }
 }

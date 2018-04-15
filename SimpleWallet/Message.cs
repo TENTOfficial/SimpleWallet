@@ -10,18 +10,21 @@ using System.Windows.Forms;
 
 namespace SimpleWallet
 {
-    public partial class ErrorMessage : Form
+    public partial class Message : Form
     {
         String message = "";
-        public ErrorMessage(String message)
+        String title = "";
+        public Message(String title, String message)
         {
             InitializeComponent();
             this.message = message;
+            this.title = title;
         }
 
         private void ErrorMessage_Load(object sender, EventArgs e)
         {
             rtbMessage.Text = message;
+            this.Text = title;
         }
 
         private void btnOK_Click(object sender, EventArgs e)

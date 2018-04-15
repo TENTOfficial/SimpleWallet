@@ -98,11 +98,11 @@
     <Compile Include="EndScreen.Designer.cs">
       <DependentUpon>EndScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="ErrorMessage.cs">
+    <Compile Include="Message.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ErrorMessage.Designer.cs">
-      <DependentUpon>ErrorMessage.cs</DependentUpon>
+    <Compile Include="Message.Designer.cs">
+      <DependentUpon>Message.cs</DependentUpon>
     </Compile>
     <Compile Include="executor.cs" />
     <Compile Include="ImportKey.cs">
@@ -185,8 +185,8 @@
     <EmbeddedResource Include="EndScreen.resx">
       <DependentUpon>EndScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ErrorMessage.resx">
-      <DependentUpon>ErrorMessage.cs</DependentUpon>
+    <EmbeddedResource Include="Message.resx">
+      <DependentUpon>Message.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ImportKey.resx">
       <DependentUpon>ImportKey.cs</DependentUpon>
