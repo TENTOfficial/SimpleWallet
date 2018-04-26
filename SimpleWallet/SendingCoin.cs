@@ -33,6 +33,17 @@ namespace SimpleWallet
             this.type = type;
         }
 
+        public SendingCoin(String labelText, Types.TransactionType type = Types.TransactionType.SEND_COIN)
+        {
+            InitializeComponent();
+
+            sendBgr.WorkerSupportsCancellation = true;
+            sendBgr.DoWork += new DoWorkEventHandler(this.sendBgr_DoWork);
+            sendBgr.RunWorkerCompleted += new RunWorkerCompletedEventHandler(this.sendBgr_RunWorkerCompleted);
+
+            this.labelText = labelText;
+        }
+
         private void SendingCoin_Load(object sender, EventArgs e)
         {
             sendBgr.RunWorkerAsync();
@@ -114,7 +125,7 @@ namespace SimpleWallet
             {
                 Task.Run(() => checkTransactions()).Wait();
             }
-            else
+            else if (type == Types.TransactionType.SHIELD_COIN)
             {
                 Task.Run(() => checkShield()).Wait();
             }

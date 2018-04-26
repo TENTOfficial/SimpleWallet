@@ -66,6 +66,7 @@ namespace SimpleWallet
             this.opacity = 0;
             this.BackColor = Color.Transparent;
         }
+
         protected override void OnPaint(PaintEventArgs e)
         {
             if (Parent != null)
@@ -733,26 +734,16 @@ namespace SimpleWallet
             return strDict;
         }
 
-        public Dictionary<String, String> importPrivateKeys()
+        public Dictionary<String, String> importPrivateKeys(String location)
         {
             Dictionary<String, String> strDict = new Dictionary<String, String>();
             String data = "";
             String ret = "";
             List<String> command = new List<String>();
 
-            OpenFileDialog dialog = new OpenFileDialog();
-            dialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            System.Windows.Forms.DialogResult result = dialog.ShowDialog();
-            if (result == System.Windows.Forms.DialogResult.OK)
-            {
-                command.Add("z_importwallet " + "\"" + dialog.FileName + "\"");
-                ret = Task.Run(() => exec.executeOthers(command, data)).Result;
-            }
-            else
-            {
-                strDict["message"] = "Please put your file location";
-                strDict["result"] = "fail";
-            }
+            command.Add("z_importwallet " + "\"" + location + "\"");
+            ret = Task.Run(() => exec.executeOthers(command, data)).Result;
+           
             if (ret.Contains("error"))
             {
                 strDict["message"] = ret;

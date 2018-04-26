@@ -233,29 +233,9 @@ namespace SimpleWallet.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap shield1 {
-            get {
-                object obj = ResourceManager.GetObject("shield1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap sng_main {
             get {
                 object obj = ResourceManager.GetObject("sng_main", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap snowgem_wallet {
-            get {
-                object obj = ResourceManager.GetObject("snowgem wallet", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

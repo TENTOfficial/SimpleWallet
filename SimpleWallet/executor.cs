@@ -39,9 +39,12 @@ namespace SimpleWallet
 
         public event ReceivedDataEventHandler progressChange;
         public event ReceivedDataEventHandler progressDone;
+        public event ReceivedDataEventHandler downloadProgressChange;
+        public event ReceivedDataEventHandler downloadProgressDone;
         public event DeamonErrorEventHandler errorOccurs;
         public event DaemonEventHandler daemondHdl;
 
+        WebClient wc = new WebClient();
         private static Executor instance = null;
         private static readonly object padlock = new object();
 
@@ -376,6 +379,32 @@ namespace SimpleWallet
             return ret;
         }
 
+        public void stopNewVersion()
+        {
+            wc.CancelAsync();
+        }
+
+        public bool downloadNewVersion(String url, String name)
+        {
+            bool rtn = true;
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            String fileLoc = Path.GetTempPath() + "\\" + name;
+
+            try
+            {
+                wc.DownloadProgressChanged += newVersion_DownloadProgressChanged;
+                wc.DownloadFileCompleted += newVersion_DownloadFileCompleted;
+
+                wc.DownloadFileAsync(new System.Uri(url), fileLoc, true);
+            }
+            catch (Exception ex)
+            {
+                rtn = false;
+            }
+
+            return rtn;
+        }
+
         public bool downloadParams(String file, Types.DownloadFileType downloadType)
         {
             bool shouldDownload = false;
@@ -444,6 +473,18 @@ namespace SimpleWallet
         {
             if (progressDone != null)
                 progressDone(this, e);
+        }
+
+        protected void OnDownloadProgressChange(ReceivedDataEventArgs e)
+        {
+            if (downloadProgressChange != null)
+                downloadProgressChange(this, e);
+        }
+
+        protected void OnDownloadProgressDone(ReceivedDataEventArgs e)
+        {
+            if (downloadProgressDone != null)
+                downloadProgressDone(this, e);
         }  
 
         void verifying_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
@@ -478,6 +519,23 @@ namespace SimpleWallet
         void proving_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
             OnProgressChange(new ReceivedDataEventArgs(false, e.ProgressPercentage, false, provingKey));
+        }
+
+        void newVersion_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
+        {
+            if (e.Cancelled)
+            {
+                OnDownloadProgressDone(new ReceivedDataEventArgs(true, 100, true, ""));
+            }
+            else
+            {
+                OnDownloadProgressDone(new ReceivedDataEventArgs(false, 100, false, ""));
+            }
+        }
+
+        void newVersion_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
+        {
+            OnDownloadProgressChange(new ReceivedDataEventArgs(false, e.ProgressPercentage, false, ""));
         }
     }
 }

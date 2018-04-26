@@ -53,7 +53,8 @@ namespace SimpleWallet
                                                   DaemonEventArgs e);
     public class Types
     {
-        public static String version = "SnowGem Simple Wallet - Version 2.0.0i";
+        public static String version = "SnowGem Simple Wallet - Version 2.0.0j";
+        public static int time = 1524636720;
         public static String dataLocation = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) +
                         "\\Snowgem";
         public static String simpleWalletLocation = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) +
@@ -62,6 +63,8 @@ namespace SimpleWallet
                         "\\Snowgem\\masternode.conf";
         public static String cfLocation = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
                  + "\\Snowgem\\snowgem.conf";
+        public static String logLocation = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
+                 + "\\Snowgem\\debug.log";
         public static String startCommandsFile = simpleWalletLocation + "\\commands.dat";
         public static String addressLabel = simpleWalletLocation + "\\addressLabel.dat";
         public static String masternodeSave = simpleWalletLocation + "\\masternodesave.dat";
@@ -91,6 +94,7 @@ namespace SimpleWallet
         {
             SEND_COIN = 0,
             SHIELD_COIN,
+            IMPORT_KEY,
             END
         }
 
@@ -181,6 +185,14 @@ namespace SimpleWallet
             public float shieldingUTXOs { get; set; }
             public float shieldingValue { get; set; }
             public String opid { get; set; }
+        }
+
+        public class Version
+        {
+            public String version { get; set; }
+            public int time { get; set; }
+            public String link { get; set; }
+            public String content { get; set; }
         }
 
         public class AllData

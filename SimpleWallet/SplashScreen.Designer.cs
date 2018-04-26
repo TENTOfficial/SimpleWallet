@@ -32,8 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SplashScreen));
             this.pbProcess = new System.Windows.Forms.ProgressBar();
             this.ttSplash = new System.Windows.Forms.ToolTip(this.components);
-            this.lbCurrentStatus = new SimpleWallet.TransparentLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbLog = new System.Windows.Forms.Label();
+            this.lbCurrentStatus = new SimpleWallet.TransparentLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,19 +50,6 @@
             this.pbProcess.Visible = false;
             this.pbProcess.MouseHover += new System.EventHandler(this.pbProcess_MouseHover);
             // 
-            // lbCurrentStatus
-            // 
-            this.lbCurrentStatus.BackColor = System.Drawing.Color.Transparent;
-            this.lbCurrentStatus.ForeColor = System.Drawing.Color.Lime;
-            this.lbCurrentStatus.Location = new System.Drawing.Point(0, 328);
-            this.lbCurrentStatus.Name = "lbCurrentStatus";
-            this.lbCurrentStatus.Opacity = 0;
-            this.lbCurrentStatus.Size = new System.Drawing.Size(668, 19);
-            this.lbCurrentStatus.TabIndex = 4;
-            this.lbCurrentStatus.Text = "Status";
-            this.lbCurrentStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbCurrentStatus.TransparentBackColor = System.Drawing.Color.Blue;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::SimpleWallet.Properties.Resources.splash;
@@ -73,6 +61,28 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
+            // lbLog
+            // 
+            this.lbLog.AutoSize = true;
+            this.lbLog.Location = new System.Drawing.Point(0, 244);
+            this.lbLog.Name = "lbLog";
+            this.lbLog.Size = new System.Drawing.Size(16, 15);
+            this.lbLog.TabIndex = 6;
+            this.lbLog.Text = "   ";
+            // 
+            // lbCurrentStatus
+            // 
+            this.lbCurrentStatus.BackColor = System.Drawing.Color.Transparent;
+            this.lbCurrentStatus.ForeColor = System.Drawing.Color.Lime;
+            this.lbCurrentStatus.Location = new System.Drawing.Point(0, 328);
+            this.lbCurrentStatus.Name = "lbCurrentStatus";
+            this.lbCurrentStatus.Opacity = 0;
+            this.lbCurrentStatus.Size = new System.Drawing.Size(668, 19);
+            this.lbCurrentStatus.TabIndex = 4;
+            this.lbCurrentStatus.Text = "Checking version...";
+            this.lbCurrentStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbCurrentStatus.TransparentBackColor = System.Drawing.Color.Blue;
+            // 
             // SplashScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -80,6 +90,7 @@
             this.BackColor = System.Drawing.Color.Gray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(668, 356);
+            this.Controls.Add(this.lbLog);
             this.Controls.Add(this.lbCurrentStatus);
             this.Controls.Add(this.pbProcess);
             this.Controls.Add(this.pictureBox1);
@@ -96,6 +107,7 @@
             this.Load += new System.EventHandler(this.SplashScreen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -105,5 +117,6 @@
         private System.Windows.Forms.ToolTip ttSplash;
         private TransparentLabel lbCurrentStatus;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lbLog;
     }
 }

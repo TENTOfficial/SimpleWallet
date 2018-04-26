@@ -12,6 +12,7 @@ using System.Diagnostics;
 using Newtonsoft.Json;
 using System.IO;
 using System.Net;
+using System.Timers;
 
 namespace SimpleWallet
 {
@@ -25,7 +26,10 @@ namespace SimpleWallet
         BackgroundWorker startWallet = new BackgroundWorker();
         const String verifyingKey = "sprout-verifying.key";
         const String provingKey = "sprout-proving.key";
+        String currStatus = "Checking version...";
 
+        Int32 unixTimestamp = 0;
+        bool installNewVersion = false;
         bool veriStatus = false;
         bool provStatus = false;
         bool shouldRestart = false;
@@ -33,10 +37,16 @@ namespace SimpleWallet
 
         bool checkParamsDone = false;
         Dictionary<String, String> result = new Dictionary<String, String>();
+        System.Timers.Timer aTimer = new System.Timers.Timer(500);
 
         public SplashScreen()
         {
+            aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
+            aTimer.Start();
             InitializeComponent();
+
+            lbLog.Parent = pictureBox1;
+            lbLog.BackColor = Color.Transparent;
 
             exec.progressChange += Download_ProgressChange;
             exec.progressDone += Download_ProgressDone;
@@ -48,48 +58,69 @@ namespace SimpleWallet
 
         }
 
+        private void OnTimedEvent(object source, ElapsedEventArgs e)
+        {
+            Int32 curr = (Int32)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds;
+            lbCurrentStatus.Invoke(new Action(() => lbCurrentStatus.Text = "(" + (curr - unixTimestamp) + ") " + currStatus));
+        }
+
         void startWallet_RunWorkerCompleted(Object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
-            if (Api.checkResult(result))
+            if (installNewVersion)
             {
-                this.Hide();
-                start.ShowDialog();
-                if (shouldRestart || start.shouldRestart == true)
-                {
-                    Task.Run(() => Application.Restart());
-                }
-                else
-                    this.Close();
+                this.Close();
             }
             else
             {
-                MessageBox.Show(Api.getMessage(result));
+                if (Api.checkResult(result))
+                {
+                    aTimer.Stop();
+                    this.Hide();
+                    start.ShowDialog();
+                    if (shouldRestart || start.shouldRestart == true)
+                    {
+                        Task.Run(() => Application.Restart());
+                    }
+                    else
+                        this.Close();
+                }
+                else
+                {
+                    MessageBox.Show(Api.getMessage(result));
+                }
             }
         }
 
         void startWallet_DoWork(System.Object sender, System.ComponentModel.DoWorkEventArgs e)
         {
-            beginning(e);
-
-            //get data
-            String data = api.getAllData(Types.GetAllDataType.ALL);
-            dynamic parse = JsonConvert.DeserializeObject<Types.AllData>(data);
-
-            start.bestHash = parse.bestblockhash;
-            start.bestTime = parse.besttime;
-            start.connections = parse.connectionCount;
-            start.totalbalance = parse.totalbalance;
-            start.unconfirmedbalance = parse.unconfirmedbalance;
-            start.privatebalance = parse.privatebalance;
-            start.lockedbalance = parse.lockedbalance;
-            start.transparentbalance = parse.transparentbalance;
-            start.listtransactions = new List<Types.Transaction>(parse.listtransactions);
-            List<Dictionary<String, String>> addressbalance = parse.addressbalance;
-            if (addressbalance != null && addressbalance.Count > 0)
+            unixTimestamp = (Int32)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds;
+            bool init = initialization(e);
+            if (init)
             {
-                start.walletDic = new Dictionary<String, String>(parse.addressbalance[0]);
-            }
+                installNewVersion = false;
+                //get data
+                String data = api.getAllData(Types.GetAllDataType.ALL);
+                dynamic parse = JsonConvert.DeserializeObject<Types.AllData>(data);
 
+                start.bestHash = parse.bestblockhash;
+                start.bestTime = parse.besttime;
+                start.connections = parse.connectionCount;
+                start.totalbalance = parse.totalbalance;
+                start.unconfirmedbalance = parse.unconfirmedbalance;
+                start.privatebalance = parse.privatebalance;
+                start.lockedbalance = parse.lockedbalance;
+                start.transparentbalance = parse.transparentbalance;
+                start.listtransactions = new List<Types.Transaction>(parse.listtransactions);
+                List<Dictionary<String, String>> addressbalance = parse.addressbalance;
+                if (addressbalance != null && addressbalance.Count > 0)
+                {
+                    start.walletDic = new Dictionary<String, String>(parse.addressbalance[0]);
+                }
+            }
+            else
+            {
+                installNewVersion = true;
+            }
         }
 
         private void SplashScreen_Load(object sender, EventArgs e)
@@ -111,17 +142,32 @@ namespace SimpleWallet
             startWallet.RunWorkerAsync();
         }
 
-        void beginning(System.ComponentModel.DoWorkEventArgs e)
+        bool initialization(System.ComponentModel.DoWorkEventArgs e)
         {
+            //check new version>
+            WebClient client = new WebClient();
+            String downloadedString = client.DownloadString("https://snowgem.org/version.json");
+            Types.Version parse = JsonConvert.DeserializeObject<Types.Version>(downloadedString);
+            if (Types.time < parse.time)
+            {
+                NewVersion nVer = new NewVersion(parse);
+                nVer.ShowDialog();
+                if (nVer.isFinished)
+                {
+                    return false;
+                }
+            }
+
+
             api.checkConfig();
-            String currStatus = "Checking params...";
-            lbCurrentStatus.Invoke(new Action(() => lbCurrentStatus.Text = currStatus));
+            currStatus = "Checking params...";
+            //lbCurrentStatus.Invoke(new Action(() => lbCurrentStatus.Text = currStatus));
             bool downloadFile = exec.checkParamsFile(verifyingKey, provingKey);
             if (downloadFile)
             {
                 pbProcess.Invoke(new Action(() => pbProcess.Visible = true));
                 currStatus = "Downloading params";
-                lbCurrentStatus.Invoke(new Action(() => lbCurrentStatus.Text = currStatus));
+                //lbCurrentStatus.Invoke(new Action(() => lbCurrentStatus.Text = currStatus));
                 downloadFile = Task.Run(() => exec.downloadParams(verifyingKey, Types.DownloadFileType.VERIFYING)).Result;
                 if (!downloadFile)
                 {
@@ -197,11 +243,12 @@ namespace SimpleWallet
                         countdot = 0;
                     }
                 }
-                lbCurrentStatus.Invoke(new Action(() => lbCurrentStatus.Text = currStatus));
                 countdot++;
 
                 Thread.Sleep(200);
             }
+
+            return true;
         }
 
 

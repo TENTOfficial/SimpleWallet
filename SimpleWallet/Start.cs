@@ -325,7 +325,6 @@ namespace SimpleWallet
                         data = api.getAllData(Types.GetAllDataType.WITH_BALANCE);
                         parse = JsonConvert.DeserializeObject<Types.AllData>(data);
                         walletDic = new Dictionary<String, String>(parse.addressbalance[0]);
-                        walletDic.OrderBy(i => i.Key);
                         populateBalance(walletDic);
                         startCheckBalance(walletDic);
                         btnNewAddress.Invoke(new Action(() => btnNewAddress.Enabled = true));
@@ -991,7 +990,9 @@ namespace SimpleWallet
                     int count = 0;
                     int countShieldFrom = 0;
                     int countShieldTo = 0;
-                    foreach (String wallet in walletDic.Keys.ToList())
+                    List<String> temp = walletDic.Keys.ToList();
+                    temp.Sort();
+                    foreach (String wallet in temp)
                     {
                         if ((Double.TryParse(walletDic[wallet], out output) && Convert.ToDouble(walletDic[wallet]) != 0) ||
                             (Double.TryParse(walletDic[wallet].Replace(".", ","), out output) && Convert.ToDouble(walletDic[wallet].Replace(".", ",")) != 0))
@@ -1176,7 +1177,13 @@ namespace SimpleWallet
 
                 if (err.Contains("bad-txns-oversize"))
                 {
-                    err += "\nGo to https://snowgem.org/faq to get help.";
+                    err += "\nGo to https://snowgem.org/faq#bad-txns-oversize to get help.";
+                    Message errMsg = new Message("Error", err);
+                    errMsg.ShowDialog();
+                }
+                else if(err.Contains("Could not find any non-coinbase UTXOs to spend"))
+                {
+                    err += "\nGo to https://snowgem.org/faq#shieldcoinbase to get help.";
                     Message errMsg = new Message("Error", err);
                     errMsg.ShowDialog();
                 }
@@ -1286,7 +1293,31 @@ namespace SimpleWallet
         private void importPrivateKeysToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Importing process will take alot of time, please be patient");
-            api.importPrivateKeys();
+            String location = "";
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            System.Windows.Forms.DialogResult result = dialog.ShowDialog();
+            if (result == System.Windows.Forms.DialogResult.OK)
+            {
+                location = dialog.FileName;
+
+                Dictionary<String, String> strDict = Task.Run(() => api.importPrivateKeys(location)).Result;
+                if (!Api.checkResult(strDict))
+                {
+                    MessageBox.Show(Api.getMessage(strDict));
+                }
+                else
+                {
+                    shouldGetTransaction = true;
+                    shouldGetWallet = true;
+                    MessageBox.Show("Import success");
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Please put your file location");
+            }
         }
 
         private void showPrivateKeyToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1885,6 +1916,7 @@ Are you sure?", @"Reopen to scan the wallet", MessageBoxButtons.YesNo);
 
         private void btnShield_Click(object sender, EventArgs e)
         {
+            double output = 0;
             if (cbbShieldFrom.SelectedIndex == -1)
             {
                 MessageBox.Show("Please select shielding wallet ");
@@ -1896,18 +1928,12 @@ Are you sure?", @"Reopen to scan the wallet", MessageBoxButtons.YesNo);
                 return;
             }
 
-            if (String.IsNullOrEmpty(tbShieldUtxo.Text))
-            {
-                MessageBox.Show("Shield utxo is empty");
-                return;
-            }
-
             ((Button)sender).Enabled = false;
 
             String from = cbbShieldFrom.SelectedItem.ToString().Split(new String[] { " - " }, StringSplitOptions.None)[0];
             String to = cbbShieldTo.SelectedItem.ToString();
             Dictionary<String, String> strDict = api.checkWallet(tbPayTo.Text);
-            strDict = Task.Run(() => api.shieldCoin(from, to, tbShieldUtxo.Text,
+            strDict = Task.Run(() => api.shieldCoin(from, to, "500",
                 tbShieldFee.Text, cbShieldDefaultFee.Checked)).Result;
 
             SendingCoin send = new SendingCoin(strDict, Types.TransactionType.SHIELD_COIN);
@@ -1939,24 +1965,6 @@ Are you sure?", @"Reopen to scan the wallet", MessageBoxButtons.YesNo);
             else
             {
                 tbShieldFee.Enabled = true;
-            }
-        }
-
-        private void tbShieldUtxo_Enter(object sender, EventArgs e)
-        {
-            if (tbShieldUtxo.Text == "utxo to shield")
-            {
-                tbShieldUtxo.Text = "";
-                tbShieldUtxo.ForeColor = Color.Black;
-            }
-        }
-
-        private void tbShieldUtxo_Leave(object sender, EventArgs e)
-        {
-            if (tbShieldUtxo.Text == "")
-            {
-                tbShieldUtxo.Text = "utxo to shield";
-                tbShieldUtxo.ForeColor = Color.Gray;
             }
         }
 
@@ -2512,9 +2520,18 @@ Are you sure?", @"Reopen to scan the wallet", MessageBoxButtons.YesNo);
 
         private void btnStartAll_Click(object sender, EventArgs e)
         {
-            String rtn = api.startAll();
-            Message errMsg = new Message("Message",rtn);
-            errMsg.ShowDialog();
+            DialogResult dialogResult = MessageBox.Show(@"Do you want to start all alias?", "", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                String rtn = api.startAll();
+                Message errMsg = new Message("Message", rtn);
+                errMsg.ShowDialog();
+            }
+        }
+
+        private void pbStatus_MouseHover(object sender, EventArgs e)
+        {
+            ttStart.SetToolTip((PictureBox)sender, "Current height: " + bestHeight);
         }
     }
 

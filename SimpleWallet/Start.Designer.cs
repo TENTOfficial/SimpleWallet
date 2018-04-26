@@ -86,15 +86,13 @@
             this.label10 = new SimpleWallet.TransparentLabel();
             this.label11 = new SimpleWallet.TransparentLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnShield = new SimpleWallet.TransparentButton();
             this.cbbShieldTo = new System.Windows.Forms.ComboBox();
             this.cbbShieldFrom = new System.Windows.Forms.ComboBox();
-            this.tbShieldUtxo = new System.Windows.Forms.TextBox();
             this.cbShieldDefaultFee = new System.Windows.Forms.CheckBox();
             this.tbShieldFee = new System.Windows.Forms.TextBox();
             this.transparentLabel3 = new SimpleWallet.TransparentLabel();
-            this.transparentLabel6 = new SimpleWallet.TransparentLabel();
             this.transparentLabel5 = new SimpleWallet.TransparentLabel();
-            this.btnShield = new SimpleWallet.TransparentButton();
             this.transparentLabel4 = new SimpleWallet.TransparentLabel();
             this.tpReceive = new System.Windows.Forms.TabPage();
             this.dtgAddress = new System.Windows.Forms.DataGridView();
@@ -146,7 +144,6 @@
             this.masternodeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnSearch = new SimpleWallet.RoundButton();
             this.imgList = new System.Windows.Forms.ImageList(this.components);
-            this.addressBookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pbPercent = new System.Windows.Forms.ProgressBar();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -154,19 +151,20 @@
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.walletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.importOnePrivateKeyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showPrivateKeyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportPrivateKeyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importPrivateKeysToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.showPrivateKeyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.importOnePrivateKeyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.enableAutoBackupWalletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.peersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ttStart = new System.Windows.Forms.ToolTip(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pbStatus = new System.Windows.Forms.PictureBox();
             this.pbSignal = new System.Windows.Forms.PictureBox();
+            this.addressBookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.masternodeListBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.typesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tcMain.SuspendLayout();
             this.tpOverview.SuspendLayout();
@@ -187,12 +185,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.masternodeDetailConvertedBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgMasternode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.masternodeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.addressBookBindingSource)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSignal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addressBookBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.masternodeListBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.typesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -220,7 +218,7 @@
             // 
             // tpOverview
             // 
-            this.tpOverview.BackgroundImage = global::SimpleWallet.Properties.Resources.background_bottom;
+            this.tpOverview.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tpOverview.BackgroundImage")));
             this.tpOverview.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tpOverview.Controls.Add(this.pbTransaction4);
             this.tpOverview.Controls.Add(this.pbTransaction3);
@@ -909,15 +907,13 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnShield);
             this.groupBox1.Controls.Add(this.cbbShieldTo);
             this.groupBox1.Controls.Add(this.cbbShieldFrom);
-            this.groupBox1.Controls.Add(this.tbShieldUtxo);
             this.groupBox1.Controls.Add(this.cbShieldDefaultFee);
             this.groupBox1.Controls.Add(this.tbShieldFee);
             this.groupBox1.Controls.Add(this.transparentLabel3);
-            this.groupBox1.Controls.Add(this.transparentLabel6);
             this.groupBox1.Controls.Add(this.transparentLabel5);
-            this.groupBox1.Controls.Add(this.btnShield);
             this.groupBox1.Controls.Add(this.transparentLabel4);
             this.groupBox1.Location = new System.Drawing.Point(9, 273);
             this.groupBox1.Name = "groupBox1";
@@ -925,6 +921,21 @@
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Shield coinbase";
+            // 
+            // btnShield
+            // 
+            this.btnShield.BackColor = System.Drawing.Color.Transparent;
+            this.btnShield.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnShield.BackgroundImage")));
+            this.btnShield.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnShield.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShield.Location = new System.Drawing.Point(737, 77);
+            this.btnShield.Name = "btnShield";
+            this.btnShield.Size = new System.Drawing.Size(88, 99);
+            this.btnShield.TabIndex = 13;
+            this.btnShield.Text = "Shield";
+            this.ttStart.SetToolTip(this.btnShield, "Start shield coinbase");
+            this.btnShield.UseVisualStyleBackColor = true;
+            this.btnShield.Click += new System.EventHandler(this.btnShield_Click);
             // 
             // cbbShieldTo
             // 
@@ -944,24 +955,12 @@
             this.cbbShieldFrom.Size = new System.Drawing.Size(756, 23);
             this.cbbShieldFrom.TabIndex = 8;
             // 
-            // tbShieldUtxo
-            // 
-            this.tbShieldUtxo.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.tbShieldUtxo.Location = new System.Drawing.Point(69, 74);
-            this.tbShieldUtxo.Name = "tbShieldUtxo";
-            this.tbShieldUtxo.Size = new System.Drawing.Size(756, 21);
-            this.tbShieldUtxo.TabIndex = 10;
-            this.tbShieldUtxo.Text = "utxo to shield";
-            this.tbShieldUtxo.Enter += new System.EventHandler(this.tbShieldUtxo_Enter);
-            this.tbShieldUtxo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAmount_KeyPress);
-            this.tbShieldUtxo.Leave += new System.EventHandler(this.tbShieldUtxo_Leave);
-            // 
             // cbShieldDefaultFee
             // 
             this.cbShieldDefaultFee.AutoSize = true;
             this.cbShieldDefaultFee.Checked = true;
             this.cbShieldDefaultFee.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbShieldDefaultFee.Location = new System.Drawing.Point(740, 103);
+            this.cbShieldDefaultFee.Location = new System.Drawing.Point(655, 76);
             this.cbShieldDefaultFee.Name = "cbShieldDefaultFee";
             this.cbShieldDefaultFee.Size = new System.Drawing.Size(85, 19);
             this.cbShieldDefaultFee.TabIndex = 12;
@@ -972,9 +971,9 @@
             // tbShieldFee
             // 
             this.tbShieldFee.Enabled = false;
-            this.tbShieldFee.Location = new System.Drawing.Point(69, 101);
+            this.tbShieldFee.Location = new System.Drawing.Point(69, 74);
             this.tbShieldFee.Name = "tbShieldFee";
-            this.tbShieldFee.Size = new System.Drawing.Size(665, 21);
+            this.tbShieldFee.Size = new System.Drawing.Size(580, 21);
             this.tbShieldFee.TabIndex = 11;
             this.tbShieldFee.Text = "0.0001";
             this.tbShieldFee.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAmount_KeyPress);
@@ -992,43 +991,17 @@
             this.transparentLabel3.Text = "From";
             this.transparentLabel3.TransparentBackColor = System.Drawing.Color.Blue;
             // 
-            // transparentLabel6
-            // 
-            this.transparentLabel6.AutoSize = true;
-            this.transparentLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.transparentLabel6.Location = new System.Drawing.Point(6, 77);
-            this.transparentLabel6.Name = "transparentLabel6";
-            this.transparentLabel6.Opacity = 0;
-            this.transparentLabel6.Size = new System.Drawing.Size(63, 15);
-            this.transparentLabel6.TabIndex = 0;
-            this.transparentLabel6.Text = "Max utxos";
-            this.transparentLabel6.TransparentBackColor = System.Drawing.Color.Blue;
-            // 
             // transparentLabel5
             // 
             this.transparentLabel5.AutoSize = true;
             this.transparentLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.transparentLabel5.Location = new System.Drawing.Point(6, 104);
+            this.transparentLabel5.Location = new System.Drawing.Point(6, 77);
             this.transparentLabel5.Name = "transparentLabel5";
             this.transparentLabel5.Opacity = 0;
             this.transparentLabel5.Size = new System.Drawing.Size(28, 15);
             this.transparentLabel5.TabIndex = 0;
             this.transparentLabel5.Text = "Fee";
             this.transparentLabel5.TransparentBackColor = System.Drawing.Color.Blue;
-            // 
-            // btnShield
-            // 
-            this.btnShield.BackColor = System.Drawing.Color.Transparent;
-            this.btnShield.BackgroundImage = global::SimpleWallet.Properties.Resources.shield1;
-            this.btnShield.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnShield.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShield.Location = new System.Drawing.Point(776, 129);
-            this.btnShield.Name = "btnShield";
-            this.btnShield.Size = new System.Drawing.Size(49, 47);
-            this.btnShield.TabIndex = 13;
-            this.ttStart.SetToolTip(this.btnShield, "Start shield coinbase");
-            this.btnShield.UseVisualStyleBackColor = true;
-            this.btnShield.Click += new System.EventHandler(this.btnShield_Click);
             // 
             // transparentLabel4
             // 
@@ -1510,7 +1483,7 @@
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.Transparent;
-            this.btnSearch.BackgroundImage = global::SimpleWallet.Properties.Resources.search1;
+            this.btnSearch.BackgroundImage = global::SimpleWallet.Properties.Resources.search_dark;
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Location = new System.Drawing.Point(637, 431);
@@ -1532,10 +1505,6 @@
             this.imgList.Images.SetKeyName(3, "receive.png");
             this.imgList.Images.SetKeyName(4, "send.png");
             this.imgList.Images.SetKeyName(5, "masternodes.png");
-            // 
-            // addressBookBindingSource
-            // 
-            this.addressBookBindingSource.DataSource = typeof(SimpleWallet.Types.AddressBook);
             // 
             // pbPercent
             // 
@@ -1560,7 +1529,7 @@
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menuStrip1.Size = new System.Drawing.Size(260, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(168, 24);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -1591,10 +1560,10 @@
             // 
             this.walletToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.backupToolStripMenuItem,
+            this.importOnePrivateKeyToolStripMenuItem,
+            this.showPrivateKeyToolStripMenuItem,
             this.exportPrivateKeyToolStripMenuItem,
             this.importPrivateKeysToolStripMenuItem,
-            this.showPrivateKeyToolStripMenuItem,
-            this.importOnePrivateKeyToolStripMenuItem,
             this.enableAutoBackupWalletToolStripMenuItem});
             this.walletToolStripMenuItem.Name = "walletToolStripMenuItem";
             this.walletToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
@@ -1606,6 +1575,20 @@
             this.backupToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.backupToolStripMenuItem.Text = "Backup";
             this.backupToolStripMenuItem.Click += new System.EventHandler(this.backupToolStripMenuItem_Click);
+            // 
+            // importOnePrivateKeyToolStripMenuItem
+            // 
+            this.importOnePrivateKeyToolStripMenuItem.Name = "importOnePrivateKeyToolStripMenuItem";
+            this.importOnePrivateKeyToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.importOnePrivateKeyToolStripMenuItem.Text = "Import one private key";
+            this.importOnePrivateKeyToolStripMenuItem.Click += new System.EventHandler(this.importOnePrivateKeyToolStripMenuItem_Click);
+            // 
+            // showPrivateKeyToolStripMenuItem
+            // 
+            this.showPrivateKeyToolStripMenuItem.Name = "showPrivateKeyToolStripMenuItem";
+            this.showPrivateKeyToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.showPrivateKeyToolStripMenuItem.Text = "Show private key";
+            this.showPrivateKeyToolStripMenuItem.Click += new System.EventHandler(this.showPrivateKeyToolStripMenuItem_Click);
             // 
             // exportPrivateKeyToolStripMenuItem
             // 
@@ -1620,20 +1603,6 @@
             this.importPrivateKeysToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.importPrivateKeysToolStripMenuItem.Text = "Import private keys";
             this.importPrivateKeysToolStripMenuItem.Click += new System.EventHandler(this.importPrivateKeysToolStripMenuItem_Click);
-            // 
-            // showPrivateKeyToolStripMenuItem
-            // 
-            this.showPrivateKeyToolStripMenuItem.Name = "showPrivateKeyToolStripMenuItem";
-            this.showPrivateKeyToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
-            this.showPrivateKeyToolStripMenuItem.Text = "Show private key";
-            this.showPrivateKeyToolStripMenuItem.Click += new System.EventHandler(this.showPrivateKeyToolStripMenuItem_Click);
-            // 
-            // importOnePrivateKeyToolStripMenuItem
-            // 
-            this.importOnePrivateKeyToolStripMenuItem.Name = "importOnePrivateKeyToolStripMenuItem";
-            this.importOnePrivateKeyToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
-            this.importOnePrivateKeyToolStripMenuItem.Text = "Import one private key";
-            this.importOnePrivateKeyToolStripMenuItem.Click += new System.EventHandler(this.importOnePrivateKeyToolStripMenuItem_Click);
             // 
             // enableAutoBackupWalletToolStripMenuItem
             // 
@@ -1654,25 +1623,38 @@
             // debugToolStripMenuItem
             // 
             this.debugToolStripMenuItem.Name = "debugToolStripMenuItem";
-            this.debugToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.debugToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.debugToolStripMenuItem.Text = "Debug";
             // 
             // peersToolStripMenuItem
             // 
             this.peersToolStripMenuItem.Name = "peersToolStripMenuItem";
-            this.peersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.peersToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.peersToolStripMenuItem.Text = "Peers";
             this.peersToolStripMenuItem.Click += new System.EventHandler(this.peersToolStripMenuItem_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::SimpleWallet.Properties.Resources.sng_main;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.ErrorImage = global::SimpleWallet.Properties.Resources.sng_main;
+            this.pictureBox1.Location = new System.Drawing.Point(684, -2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(168, 58);
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
             // 
             // pbStatus
             // 
             this.pbStatus.BackgroundImage = global::SimpleWallet.Properties.Resources.notsynced;
             this.pbStatus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbStatus.InitialImage = null;
             this.pbStatus.Location = new System.Drawing.Point(832, 525);
             this.pbStatus.Name = "pbStatus";
             this.pbStatus.Size = new System.Drawing.Size(16, 16);
             this.pbStatus.TabIndex = 6;
             this.pbStatus.TabStop = false;
+            this.pbStatus.MouseHover += new System.EventHandler(this.pbStatus_MouseHover);
             // 
             // pbSignal
             // 
@@ -1685,20 +1667,13 @@
             this.pbSignal.TabStop = false;
             this.pbSignal.MouseHover += new System.EventHandler(this.pbSignal_MouseHover);
             // 
+            // addressBookBindingSource
+            // 
+            this.addressBookBindingSource.DataSource = typeof(SimpleWallet.Types.AddressBook);
+            // 
             // masternodeListBindingSource
             // 
             this.masternodeListBindingSource.DataSource = typeof(SimpleWallet.Types.MasternodeList);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::SimpleWallet.Properties.Resources.sng_main;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.InitialImage = global::SimpleWallet.Properties.Resources.sng_main;
-            this.pictureBox1.Location = new System.Drawing.Point(684, -2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(168, 58);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
             // 
             // typesBindingSource
             // 
@@ -1749,13 +1724,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.masternodeDetailConvertedBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgMasternode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.masternodeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.addressBookBindingSource)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSignal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addressBookBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.masternodeListBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.typesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1872,8 +1847,6 @@
         private System.Windows.Forms.Button btnTurnOffMNMode;
         private System.Windows.Forms.GroupBox groupBox1;
         private TransparentLabel transparentLabel3;
-        private System.Windows.Forms.TextBox tbShieldUtxo;
-        private TransparentLabel transparentLabel6;
         private System.Windows.Forms.TextBox tbShieldFee;
         private TransparentLabel transparentLabel5;
         private TransparentLabel transparentLabel4;
