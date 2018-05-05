@@ -309,7 +309,18 @@ namespace SimpleWallet
                         {
                             text.RemoveAt(index);
                         }
-
+                        index = text.FindIndex(x => x.StartsWith("txindex"));
+                        if (index != -1)
+                        {
+                            text.RemoveAt(index);
+                        }
+                        text.Add("txindex=1");
+                        index = text.FindIndex(x => x.StartsWith("daemon"));
+                        if (index != -1)
+                        {
+                            text.RemoveAt(index);
+                        }
+                        text.Add("daemon=1");
                         File.WriteAllLines(confFile, text.ToArray());
 
                         if (!isNew)
@@ -385,6 +396,18 @@ namespace SimpleWallet
                             text.RemoveAt(index);
                         }
                         text.Add("server=1");
+                        index = text.FindIndex(x => x.StartsWith("txindex"));
+                        if (index != -1)
+                        {
+                            text.RemoveAt(index);
+                        }
+                        text.Add("txindex=1");
+                        index = text.FindIndex(x => x.StartsWith("daemon"));
+                        if (index != -1)
+                        {
+                            text.RemoveAt(index);
+                        }
+                        text.Add("daemon=1");
                         index = text.FindIndex(x => x.StartsWith("masternode="));
                         if (index != -1)
                         {
@@ -401,11 +424,6 @@ namespace SimpleWallet
                             text.RemoveAt(index);
                         }
                         index = text.FindIndex(x => x.StartsWith("masternodeprivkey"));
-                        if (index != -1)
-                        {
-                            text.RemoveAt(index);
-                        }
-                        index = text.FindIndex(x => x.StartsWith("txindex"));
                         if (index != -1)
                         {
                             text.RemoveAt(index);

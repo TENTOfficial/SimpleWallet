@@ -41,9 +41,9 @@
             this.label1.Location = new System.Drawing.Point(17, 277);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(375, 15);
+            this.label1.Size = new System.Drawing.Size(372, 15);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Please do not shut down the computer until this window dissapears.";
+            this.label1.Text = "Please do not shutdown the computer until this window dissapears.";
             // 
             // label2
             // 
@@ -51,9 +51,9 @@
             this.label2.Location = new System.Drawing.Point(132, 261);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(163, 15);
+            this.label2.Size = new System.Drawing.Size(165, 15);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Snowgem is shutting down...";
+            this.label2.Text = "SnowGem is shutting down...";
             // 
             // pictureBox1
             // 

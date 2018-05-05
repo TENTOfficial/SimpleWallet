@@ -1529,7 +1529,7 @@
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menuStrip1.Size = new System.Drawing.Size(168, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(260, 24);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -1623,14 +1623,14 @@
             // debugToolStripMenuItem
             // 
             this.debugToolStripMenuItem.Name = "debugToolStripMenuItem";
-            this.debugToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.debugToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.debugToolStripMenuItem.Text = "Debug";
             // 
             // peersToolStripMenuItem
             // 
             this.peersToolStripMenuItem.Name = "peersToolStripMenuItem";
-            this.peersToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
-            this.peersToolStripMenuItem.Text = "Peers";
+            this.peersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.peersToolStripMenuItem.Text = "Get Peers";
             this.peersToolStripMenuItem.Click += new System.EventHandler(this.peersToolStripMenuItem_Click);
             // 
             // pictureBox1

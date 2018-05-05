@@ -1594,7 +1594,7 @@ Are you sure?", @"Reopen to scan the wallet", MessageBoxButtons.YesNo);
             String peerstr = "";
             foreach (String s in split)
             {
-                peerstr += s + "\n";
+                peerstr += "addnode=" + s + "\n";
             }
             Debug db = new Debug(Types.DebugType.PEERS, peerstr);
             db.ShowDialog();
