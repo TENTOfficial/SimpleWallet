@@ -255,22 +255,6 @@ namespace SimpleWallet
                 enableAutoBackupWalletToolStripMenuItem.Text = "Disable auto backup wallet";
             }
 
-            Types.MasternodeType mnType = api.isMasternodeEnable();
-            if (mnType == Types.MasternodeType.ON)
-            {
-                btnTurnOffMNMode.Invoke(new Action(() => btnTurnOffMNMode.Text = "Turn Off MN Mode"));
-                btnTurnOffMNMode.Invoke(new Action(() => btnTurnOffMNMode.Enabled = true));
-            }
-            else if (mnType == Types.MasternodeType.OFF)
-            {
-                btnTurnOffMNMode.Invoke(new Action(() => btnTurnOffMNMode.Text = "Turn On MN Mode"));
-                btnTurnOffMNMode.Invoke(new Action(() => btnTurnOffMNMode.Enabled = true));
-            }
-            else
-            {
-                btnTurnOffMNMode.Invoke(new Action(() => btnTurnOffMNMode.Enabled = false));
-            }
-
             Task.Run(() => startSync());
             Task.Run(() => startCheckMasternodeList());
             //Task.Run(() => startCheckBalance());
@@ -1875,43 +1859,6 @@ Are you sure?", @"Reopen to scan the wallet", MessageBoxButtons.YesNo);
         private void btnDelete_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void btnTurnOffMNMode_Click(object sender, EventArgs e)
-        {
-            List<String> data = File.ReadAllLines(Types.cfLocation).ToList();
-            int index = data.FindIndex(x => x.StartsWith("masternode="));
-            if (index >= 0)
-            {
-                String[] split = data[index].Split('=');
-                if (split.Length >= 2)
-                {
-                    data.RemoveAt(index);
-                    if (split[1] == "1")
-                    {
-                        data.Add("masternode=0");
-                        btnTurnOffMNMode.Invoke(new Action(() => btnTurnOffMNMode.Text = "Turn On MN Mode"));
-                    }
-                    else
-                    {
-                        data.Add("masternode=1");
-                        btnTurnOffMNMode.Invoke(new Action(() => btnTurnOffMNMode.Text = "Turn Off MN Mode"));
-                    }
-                }
-            }
-            else
-            {
-                data.Add("masternode=0");
-            }
-            File.WriteAllLines(Types.cfLocation, data);
-
-            DialogResult dialogResult = MessageBox.Show("Your configuration has changed. Please restart your wallet to update", "Restart the wallet?", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
-                canClose = true;
-                shouldRestart = true;
-                this.Close();
-            }
         }
 
         private void btnShield_Click(object sender, EventArgs e)

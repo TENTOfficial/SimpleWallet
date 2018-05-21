@@ -73,7 +73,8 @@ namespace SimpleWallet
         public Dictionary<bool, String> boolDict = new Dictionary<bool, String>();
         public Dictionary<int, String> intDict = new Dictionary<int, String>();
         public Dictionary<String, String> strDict = new Dictionary<String, String>();
-
+        public static String verifyingKeyMD5 = "21e8b499aa84b5920ca0cea260074f34";
+        public static String provingKeyMD5 = "af23e521697ed69d8b8a6b9c53e48300";
         public enum MasternodeType
         {
             NONE = 0,

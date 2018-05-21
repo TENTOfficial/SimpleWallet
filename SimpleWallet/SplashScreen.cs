@@ -146,7 +146,7 @@ namespace SimpleWallet
         {
             //check new version>
             WebClient client = new WebClient();
-            String downloadedString = client.DownloadString("https://snowgem.org/version.json");
+            String downloadedString = client.DownloadString("https://data.snowgem.org/simplewallet/version.json");
             Types.Version parse = JsonConvert.DeserializeObject<Types.Version>(downloadedString);
             if (Types.time < parse.time)
             {

@@ -12,6 +12,7 @@ using System.Diagnostics;
 using Newtonsoft.Json;
 using System.IO;
 using System.Net;
+using System.Security.Cryptography;
 
 namespace SimpleWallet
 {
@@ -321,62 +322,84 @@ namespace SimpleWallet
             return getResultMasternode;
         }
 
+        static string CalculateMD5(string filename)
+        {
+            using (var md5 = MD5.Create())
+            {
+                using (var stream = File.OpenRead(filename))
+                {
+                    var hash = md5.ComputeHash(stream);
+                    return BitConverter.ToString(hash).Replace("-", "").ToLowerInvariant();
+                }
+            }
+        }
+
         public bool checkParamsFile(String file1, String file2)
         {
-            bool ret = false;
-            String webLink = "https://snowgem.org/downloads/";
-            String file1Link = webLink + file1;
-            String file2Link = webLink + file2;
+            //String webLink = "https://snowgem.org/downloads/";
+            //String file1Link = webLink + file1;
+            //String file2Link = webLink + file2;
             String appdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             String file1Loc = appdata + "\\SnowgemParams\\" + file1;
             String file2Loc = appdata + "\\SnowgemParams\\" + file2;
-            Int64 length = 0;
-            WebClient wc = new WebClient();
-            Stream response = null;
+            //Int64 length = 0;
+            //WebClient wc = new WebClient();
+            //Stream response = null;
             if (!Directory.Exists(appdata + "\\SnowgemParams"))
             {
                 Directory.CreateDirectory(appdata + "\\SnowgemParams");
                 return true;
             }
-            if(!File.Exists(file1Loc) || !File.Exists(file2Loc))
+            if (!File.Exists(file1Loc) || !File.Exists(file2Loc))
             {
                 return true;
             }
 
-            try
+            string md5Hash = CalculateMD5(file1Loc);
+            if (md5Hash != Types.verifyingKeyMD5)
             {
-                response = wc.OpenRead(new System.Uri(file1Link));
-                length = new System.IO.FileInfo(file1Loc).Length;
-                response.Close();
+                return true;
             }
-            catch (Exception ex)
+            md5Hash = CalculateMD5(file2Loc);
+            if (md5Hash != Types.provingKeyMD5)
             {
-                MessageBox.Show(ex.Message);
+                return true;
             }
-            Int64 bytes_total = Convert.ToInt64(wc.ResponseHeaders["Content-Length"]);
+
+            return false;
+            //try
+            //{
+            //    response = wc.OpenRead(new System.Uri(file1Link));
+            //    length = new System.IO.FileInfo(file1Loc).Length;
+            //    response.Close();
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
+            //Int64 bytes_total = Convert.ToInt64(wc.ResponseHeaders["Content-Length"]);
             
-            if (bytes_total != length)
-            {
-                ret = true;
-            }
+            //if (bytes_total != length)
+            //{
+            //    ret = true;
+            //}
 
-            try
-            {
-                response = wc.OpenRead(new System.Uri(file2Link));
-                length = new System.IO.FileInfo(file2Loc).Length;
-                response.Close();
-            }
-            catch (Exception ex)
-            {
-                //MessageBox.Show(ex.Message);
-            }
-            bytes_total = Convert.ToInt64(wc.ResponseHeaders["Content-Length"]);
+            //try
+            //{
+            //    response = wc.OpenRead(new System.Uri(file2Link));
+            //    length = new System.IO.FileInfo(file2Loc).Length;
+            //    response.Close();
+            //}
+            //catch (Exception ex)
+            //{
+            //    //MessageBox.Show(ex.Message);
+            //}
+            //bytes_total = Convert.ToInt64(wc.ResponseHeaders["Content-Length"]);
 
-            if (bytes_total != length)
-            {
-                ret = true;
-            }
-            return ret;
+            //if (bytes_total != length)
+            //{
+            //    ret = true;
+            //}
         }
 
         public void stopNewVersion()

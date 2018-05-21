@@ -121,7 +121,6 @@
             this.btnStartMasternode = new System.Windows.Forms.Button();
             this.btnEditConfigFile = new System.Windows.Forms.Button();
             this.btnGetOutputs = new System.Windows.Forms.Button();
-            this.btnTurnOffMNMode = new System.Windows.Forms.Button();
             this.btnGetMNPrivKey = new System.Windows.Forms.Button();
             this.dtgGlobalMN = new System.Windows.Forms.DataGridView();
             this.rankDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -1195,7 +1194,6 @@
             this.tpMasternode.Controls.Add(this.btnStartMasternode);
             this.tpMasternode.Controls.Add(this.btnEditConfigFile);
             this.tpMasternode.Controls.Add(this.btnGetOutputs);
-            this.tpMasternode.Controls.Add(this.btnTurnOffMNMode);
             this.tpMasternode.Controls.Add(this.btnGetMNPrivKey);
             this.tpMasternode.Controls.Add(this.dtgGlobalMN);
             this.tpMasternode.Controls.Add(this.dtgMasternode);
@@ -1216,9 +1214,9 @@
             // tbSearch
             // 
             this.tbSearch.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.tbSearch.Location = new System.Drawing.Point(129, 433);
+            this.tbSearch.Location = new System.Drawing.Point(7, 433);
             this.tbSearch.Name = "tbSearch";
-            this.tbSearch.Size = new System.Drawing.Size(502, 21);
+            this.tbSearch.Size = new System.Drawing.Size(624, 21);
             this.tbSearch.TabIndex = 4;
             this.tbSearch.Text = "Masternode address or tx hash";
             this.tbSearch.Enter += new System.EventHandler(this.tbSearch_Enter);
@@ -1311,18 +1309,6 @@
             this.btnGetOutputs.Text = "Get Outputs";
             this.btnGetOutputs.UseVisualStyleBackColor = true;
             this.btnGetOutputs.Click += new System.EventHandler(this.btnGetOutputs_Click);
-            // 
-            // btnTurnOffMNMode
-            // 
-            this.btnTurnOffMNMode.Enabled = false;
-            this.btnTurnOffMNMode.Location = new System.Drawing.Point(7, 432);
-            this.btnTurnOffMNMode.Name = "btnTurnOffMNMode";
-            this.btnTurnOffMNMode.Size = new System.Drawing.Size(116, 23);
-            this.btnTurnOffMNMode.TabIndex = 1;
-            this.btnTurnOffMNMode.Text = "Turn Off MN Mode";
-            this.ttStart.SetToolTip(this.btnTurnOffMNMode, "Turn off cold masternode option to avoid restarting masternode active time");
-            this.btnTurnOffMNMode.UseVisualStyleBackColor = true;
-            this.btnTurnOffMNMode.Click += new System.EventHandler(this.btnTurnOffMNMode_Click);
             // 
             // btnGetMNPrivKey
             // 
@@ -1529,7 +1515,7 @@
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menuStrip1.Size = new System.Drawing.Size(260, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(168, 24);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -1623,13 +1609,13 @@
             // debugToolStripMenuItem
             // 
             this.debugToolStripMenuItem.Name = "debugToolStripMenuItem";
-            this.debugToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.debugToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.debugToolStripMenuItem.Text = "Debug";
             // 
             // peersToolStripMenuItem
             // 
             this.peersToolStripMenuItem.Name = "peersToolStripMenuItem";
-            this.peersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.peersToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.peersToolStripMenuItem.Text = "Get Peers";
             this.peersToolStripMenuItem.Click += new System.EventHandler(this.peersToolStripMenuItem_Click);
             // 
@@ -1844,7 +1830,6 @@
         private System.Windows.Forms.BindingSource masternodeDetailConvertedBindingSource;
         private System.Windows.Forms.TextBox tbSearch;
         private SimpleWallet.RoundButton btnSearch;
-        private System.Windows.Forms.Button btnTurnOffMNMode;
         private System.Windows.Forms.GroupBox groupBox1;
         private TransparentLabel transparentLabel3;
         private System.Windows.Forms.TextBox tbShieldFee;
