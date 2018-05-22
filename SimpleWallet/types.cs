@@ -53,7 +53,7 @@ namespace SimpleWallet
                                                   DaemonEventArgs e);
     public class Types
     {
-        public static String version = "SnowGem Simple Wallet - Version 2.0.0j";
+        public static String version = "SnowGem Simple Wallet - Version 2.0.1";
         public static int time = 1524636720;
         public static String dataLocation = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) +
                         "\\Snowgem";
@@ -67,6 +67,7 @@ namespace SimpleWallet
                  + "\\Snowgem\\debug.log";
         public static String startCommandsFile = simpleWalletLocation + "\\commands.dat";
         public static String addressLabel = simpleWalletLocation + "\\addressLabel.dat";
+        public static String mnCache = dataLocation + "\\mncache.dat";
         public static String masternodeSave = simpleWalletLocation + "\\masternodesave.dat";
         public static String outputsSave = simpleWalletLocation + "\\outputs.dat";
         public static String enableBackup = simpleWalletLocation + "\\autoBackup.dat";
@@ -132,6 +133,7 @@ namespace SimpleWallet
             BALANCE,
             MASTERNODE,
             GET_TRANSACTION,
+            DEBUG,
             OTHERS
         }
 

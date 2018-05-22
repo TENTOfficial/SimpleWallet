@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using System.Diagnostics;
+using System.IO;
 
 namespace SimpleWallet
 {
@@ -67,6 +68,10 @@ namespace SimpleWallet
                 }
                 count++;
                 Thread.Sleep(50);
+            }
+            if (Start.shouldDeleteMNCache)
+            {
+                File.Delete(Types.mnCache);
             }
         }
 		

@@ -71,6 +71,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddPeers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPeers.Designer.cs">
+      <DependentUpon>AddPeers.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddressBook.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +185,9 @@
       <DependentUpon>TransactionDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="types.cs" />
+    <EmbeddedResource Include="AddPeers.resx">
+      <DependentUpon>AddPeers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddressBook.resx">
       <DependentUpon>AddressBook.cs</DependentUpon>
     </EmbeddedResource>

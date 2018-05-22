@@ -34,6 +34,8 @@ namespace SimpleWallet
         String getResultDaemond = "";
         String dataToGetTransaction = "";
         String getResultGetTransaction = "";
+        String dataToGetDebug = "";
+        String getResultDebug = "";
 
         bool error = false;
         bool isClosedDeamon = true;
@@ -134,6 +136,11 @@ namespace SimpleWallet
                 {
                     process.OutputDataReceived += new DataReceivedEventHandler(this.outputHandlerGetTransaction);
                     process.ErrorDataReceived += new DataReceivedEventHandler(this.outputHandlerGetTransaction);
+                }
+                else if (type == Types.OutputType.DEBUG)
+                {
+                    process.OutputDataReceived += new DataReceivedEventHandler(this.outputHandlerDebug);
+                    process.ErrorDataReceived += new DataReceivedEventHandler(this.outputHandlerDebug);
                 }
                 process.Start();
                 process.BeginErrorReadLine();
@@ -261,6 +268,25 @@ namespace SimpleWallet
             }
         }
 
+        void outputHandlerDebug(Object sender, DataReceivedEventArgs e)
+        {
+            // Prepend line numbers to each line of the output.
+            if (!String.IsNullOrEmpty(e.Data))
+            {
+                if (e.Data.Contains(dataToGetDebug))
+                {
+                    if (String.IsNullOrEmpty(getResultDebug))
+                    {
+                        getResultDebug += e.Data;
+                    }
+                    else
+                    {
+                        getResultDebug += "\n" + e.Data;
+                    }
+                }
+            }
+        }
+
         public String executeStart(String command)
         {
             String exportDir = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
@@ -322,6 +348,13 @@ namespace SimpleWallet
             return getResultMasternode;
         }
 
+        public String executeDebug(List<String> command, String dataToGet)
+        {
+            dataToGetDebug = dataToGet;
+            getResultDebug = "";
+            executeCommand(command, Types.OutputType.DEBUG);
+            return getResultDebug;
+        }
         static string CalculateMD5(string filename)
         {
             using (var md5 = MD5.Create())
@@ -430,7 +463,6 @@ namespace SimpleWallet
 
         public bool downloadParams(String file, Types.DownloadFileType downloadType)
         {
-            bool shouldDownload = false;
             String webLink = "https://snowgem.org/downloads/";
             String fileLink = webLink + file;
             String appdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
@@ -440,25 +472,7 @@ namespace SimpleWallet
             Stream response = null;
             Int64 bytes_total = 0;
 
-            try
-            {
-                response = wc.OpenRead(new System.Uri(fileLink));
-                bytes_total = Convert.ToInt64(wc.ResponseHeaders["Content-Length"]);
-                response.Close();
-                length = new System.IO.FileInfo(fileLoc).Length;
-            }
-            catch(Exception ex)
-            {
-                //MessageBox.Show(ex.Message);
-            }
 
-            if(bytes_total != length)
-            {
-                shouldDownload = true;
-            }
-
-            if(shouldDownload)
-            {
                 if(downloadType == Types.DownloadFileType.PROVING)
                 {
                     wc.DownloadProgressChanged += proving_DownloadProgressChanged;
@@ -470,8 +484,7 @@ namespace SimpleWallet
                     wc.DownloadFileCompleted += verifying_DownloadFileCompleted;
                 }
                 wc.DownloadFileAsync(new System.Uri(fileLink), appdata + "\\SnowgemParams\\" + file, true);
-            }
-            return shouldDownload;
+            return true;
         }
 
         protected void OnDaemonStatus(DaemonEventArgs e)

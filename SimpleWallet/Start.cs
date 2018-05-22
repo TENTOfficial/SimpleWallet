@@ -32,6 +32,7 @@ namespace SimpleWallet
         public String transparentbalance = "0.00";
         public String immaturebalance = "0.00";
         String masternodeText = "";
+        public static bool shouldDeleteMNCache = false;
         public List<String> addressBalanceChange = new List<String>();
         public List<Types.Transaction> listtransactions = new List<Types.Transaction>();
         List<Types.TransactionConverted> txconvert = new List<Types.TransactionConverted>();
@@ -2479,6 +2480,48 @@ Are you sure?", @"Reopen to scan the wallet", MessageBoxButtons.YesNo);
         private void pbStatus_MouseHover(object sender, EventArgs e)
         {
             ttStart.SetToolTip((PictureBox)sender, "Current height: " + bestHeight);
+        }
+
+        private void addPeersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddPeers ap = new AddPeers();
+            ap.ShowDialog();
+            if(ap.isAdded)
+            {
+                DialogResult dialogResult = MessageBox.Show("Do you want to restart the wallet?", "Reopen to load new peers", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    canClose = true;
+                    shouldRestart = true;
+                    this.Close();
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    shouldRestart = false;
+                }
+            }
+        }
+
+        private void btnClearMNCache_Click(object sender, EventArgs e)
+        {
+            shouldDeleteMNCache = true;
+            DialogResult dialogResult = MessageBox.Show("Do you want to restart the wallet?", "Reopen to load masternode list", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                canClose = true;
+                shouldRestart = true;
+                this.Close();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                shouldRestart = false;
+            }
+        }
+
+        private void debugToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Debug db = new Debug(Types.DebugType.DEBUG, "");
+            db.ShowDialog();
         }
     }
 

@@ -697,6 +697,14 @@ namespace SimpleWallet
             return strDict;
         }
 
+        public String getDebug(String request)
+        {
+            String data = "";
+            List<String> command = new List<String> { request };
+            String ret = Task.Run(() => exec.executeDebug(command, data)).Result;
+            return ret;
+
+        }
         public Dictionary<String, String> backupWallet()
         {
             Dictionary<String, String> strDict = new Dictionary<String, String>();

@@ -121,6 +121,7 @@
             this.btnStartMasternode = new System.Windows.Forms.Button();
             this.btnEditConfigFile = new System.Windows.Forms.Button();
             this.btnGetOutputs = new System.Windows.Forms.Button();
+            this.btnClearMNCache = new System.Windows.Forms.Button();
             this.btnGetMNPrivKey = new System.Windows.Forms.Button();
             this.dtgGlobalMN = new System.Windows.Forms.DataGridView();
             this.rankDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -158,6 +159,7 @@
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.peersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addPeersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ttStart = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pbStatus = new System.Windows.Forms.PictureBox();
@@ -1194,6 +1196,7 @@
             this.tpMasternode.Controls.Add(this.btnStartMasternode);
             this.tpMasternode.Controls.Add(this.btnEditConfigFile);
             this.tpMasternode.Controls.Add(this.btnGetOutputs);
+            this.tpMasternode.Controls.Add(this.btnClearMNCache);
             this.tpMasternode.Controls.Add(this.btnGetMNPrivKey);
             this.tpMasternode.Controls.Add(this.dtgGlobalMN);
             this.tpMasternode.Controls.Add(this.dtgMasternode);
@@ -1214,9 +1217,9 @@
             // tbSearch
             // 
             this.tbSearch.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.tbSearch.Location = new System.Drawing.Point(7, 433);
+            this.tbSearch.Location = new System.Drawing.Point(129, 432);
             this.tbSearch.Name = "tbSearch";
-            this.tbSearch.Size = new System.Drawing.Size(624, 21);
+            this.tbSearch.Size = new System.Drawing.Size(670, 21);
             this.tbSearch.TabIndex = 4;
             this.tbSearch.Text = "Masternode address or tx hash";
             this.tbSearch.Enter += new System.EventHandler(this.tbSearch_Enter);
@@ -1225,7 +1228,7 @@
             // lbUpdateTime
             // 
             this.lbUpdateTime.AutoSize = true;
-            this.lbUpdateTime.Location = new System.Drawing.Point(690, 436);
+            this.lbUpdateTime.Location = new System.Drawing.Point(803, 407);
             this.lbUpdateTime.Name = "lbUpdateTime";
             this.lbUpdateTime.Size = new System.Drawing.Size(29, 15);
             this.lbUpdateTime.TabIndex = 3;
@@ -1253,7 +1256,7 @@
             // 
             this.btnRefreshMasternode.Location = new System.Drawing.Point(725, 403);
             this.btnRefreshMasternode.Name = "btnRefreshMasternode";
-            this.btnRefreshMasternode.Size = new System.Drawing.Size(97, 23);
+            this.btnRefreshMasternode.Size = new System.Drawing.Size(74, 23);
             this.btnRefreshMasternode.TabIndex = 1;
             this.btnRefreshMasternode.Text = "Refresh";
             this.ttStart.SetToolTip(this.btnRefreshMasternode, "Refresh masternode list");
@@ -1309,6 +1312,16 @@
             this.btnGetOutputs.Text = "Get Outputs";
             this.btnGetOutputs.UseVisualStyleBackColor = true;
             this.btnGetOutputs.Click += new System.EventHandler(this.btnGetOutputs_Click);
+            // 
+            // btnClearMNCache
+            // 
+            this.btnClearMNCache.Location = new System.Drawing.Point(6, 430);
+            this.btnClearMNCache.Name = "btnClearMNCache";
+            this.btnClearMNCache.Size = new System.Drawing.Size(116, 23);
+            this.btnClearMNCache.TabIndex = 1;
+            this.btnClearMNCache.Text = "Clear MN Cache";
+            this.btnClearMNCache.UseVisualStyleBackColor = true;
+            this.btnClearMNCache.Click += new System.EventHandler(this.btnClearMNCache_Click);
             // 
             // btnGetMNPrivKey
             // 
@@ -1472,7 +1485,7 @@
             this.btnSearch.BackgroundImage = global::SimpleWallet.Properties.Resources.search_dark;
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(637, 431);
+            this.btnSearch.Location = new System.Drawing.Point(805, 430);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(25, 25);
             this.btnSearch.TabIndex = 1;
@@ -1515,7 +1528,7 @@
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menuStrip1.Size = new System.Drawing.Size(168, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(260, 24);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -1601,7 +1614,8 @@
             // 
             this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.debugToolStripMenuItem,
-            this.peersToolStripMenuItem});
+            this.peersToolStripMenuItem,
+            this.addPeersToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
             this.toolsToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.toolsToolStripMenuItem.Text = "Tools";
@@ -1609,15 +1623,23 @@
             // debugToolStripMenuItem
             // 
             this.debugToolStripMenuItem.Name = "debugToolStripMenuItem";
-            this.debugToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.debugToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.debugToolStripMenuItem.Text = "Debug";
+            this.debugToolStripMenuItem.Click += new System.EventHandler(this.debugToolStripMenuItem_Click);
             // 
             // peersToolStripMenuItem
             // 
             this.peersToolStripMenuItem.Name = "peersToolStripMenuItem";
-            this.peersToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.peersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.peersToolStripMenuItem.Text = "Get Peers";
             this.peersToolStripMenuItem.Click += new System.EventHandler(this.peersToolStripMenuItem_Click);
+            // 
+            // addPeersToolStripMenuItem
+            // 
+            this.addPeersToolStripMenuItem.Name = "addPeersToolStripMenuItem";
+            this.addPeersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addPeersToolStripMenuItem.Text = "Add Peers";
+            this.addPeersToolStripMenuItem.Click += new System.EventHandler(this.addPeersToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -1860,5 +1882,7 @@
         private System.Windows.Forms.Button btnStartAll;
         private TransparentLabel lbImmature;
         private TransparentLabel transparentLabel7;
+        private System.Windows.Forms.ToolStripMenuItem addPeersToolStripMenuItem;
+        private System.Windows.Forms.Button btnClearMNCache;
     }
 }
