@@ -158,7 +158,6 @@ namespace SimpleWallet
                 }
             }
 
-
             api.checkConfig();
             currStatus = "Checking params...";
             //lbCurrentStatus.Invoke(new Action(() => lbCurrentStatus.Text = currStatus));
