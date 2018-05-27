@@ -145,18 +145,22 @@ namespace SimpleWallet
         bool initialization(System.ComponentModel.DoWorkEventArgs e)
         {
             //check new version>
-            WebClient client = new WebClient();
-            String downloadedString = client.DownloadString("https://data.snowgem.org/simplewallet/version.json");
-            Types.Version parse = JsonConvert.DeserializeObject<Types.Version>(downloadedString);
-            if (Types.time < parse.time)
+            try
             {
-                NewVersion nVer = new NewVersion(parse);
-                nVer.ShowDialog();
-                if (nVer.isFinished)
+                WebClient client = new WebClient();
+                String downloadedString = client.DownloadString("https://data.snowgem.org/simplewallet/version.json");
+                Types.Version parse = JsonConvert.DeserializeObject<Types.Version>(downloadedString);
+                if (Types.time < parse.time)
                 {
-                    return false;
+                    NewVersion nVer = new NewVersion(parse);
+                    nVer.ShowDialog();
+                    if (nVer.isFinished)
+                    {
+                        return false;
+                    }
                 }
             }
+            catch (Exception ex) { }
 
             api.checkConfig();
             currStatus = "Checking params...";
