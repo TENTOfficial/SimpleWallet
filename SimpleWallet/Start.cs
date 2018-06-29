@@ -2243,7 +2243,7 @@ Are you sure?", @"Reopen to scan the wallet", MessageBoxButtons.YesNo);
                         text.Add("txindex=1");
                     }
 
-                    String txt = String.Join("\n", text);
+                    String txt = String.Join(Environment.NewLine, text);
                     Clipboard.SetText(txt);
                 }
             }

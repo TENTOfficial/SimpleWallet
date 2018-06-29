@@ -264,6 +264,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\snowgem_crystal.png" />
     <None Include="Resources\background_bottom1.png" />
     <None Include="Resources\sng_main.png" />
     <None Include="Resources\background_bottom.png" />

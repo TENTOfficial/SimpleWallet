@@ -57,7 +57,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::SimpleWallet.Properties.Resources.logo_500;
+            this.pictureBox1.BackgroundImage = global::SimpleWallet.Properties.Resources.snowgem_crystal;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(93, 7);

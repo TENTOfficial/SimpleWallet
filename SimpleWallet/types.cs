@@ -53,8 +53,8 @@ namespace SimpleWallet
                                                   DaemonEventArgs e);
     public class Types
     {
-        public static String version = "SnowGem Simple Wallet - Version 2.0.1";
-        public static int time = 1527063753;
+        public static String version = "SnowGem Simple Wallet - Version 2.0.3";
+        public static int time = 1529647706;
         public static String dataLocation = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) +
                         "\\Snowgem";
         public static String simpleWalletLocation = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) +

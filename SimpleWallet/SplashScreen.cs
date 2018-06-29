@@ -160,7 +160,10 @@ namespace SimpleWallet
                     }
                 }
             }
-            catch (Exception ex) { }
+            catch (Exception ex) {
+                int a = 1;
+                a++;
+            }
 
             api.checkConfig();
             currStatus = "Checking params...";

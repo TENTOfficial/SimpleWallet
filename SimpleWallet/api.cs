@@ -320,7 +320,6 @@ namespace SimpleWallet
                         {
                             text.RemoveAt(index);
                         }
-                        text.Add("daemon=1");
                         File.WriteAllLines(confFile, text.ToArray());
 
                         if (!isNew)
@@ -407,7 +406,6 @@ namespace SimpleWallet
                         {
                             text.RemoveAt(index);
                         }
-                        text.Add("daemon=1");
                         index = text.FindIndex(x => x.StartsWith("masternode="));
                         if (index != -1)
                         {

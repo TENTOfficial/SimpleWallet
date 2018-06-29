@@ -36,36 +36,6 @@
             this.pbTransaction3 = new System.Windows.Forms.PictureBox();
             this.pbTransaction2 = new System.Windows.Forms.PictureBox();
             this.pbTransaction1 = new System.Windows.Forms.PictureBox();
-            this.lbAddress4 = new SimpleWallet.TransparentLabel();
-            this.lbAddress3 = new SimpleWallet.TransparentLabel();
-            this.lbAddress2 = new SimpleWallet.TransparentLabel();
-            this.lbAddress1 = new SimpleWallet.TransparentLabel();
-            this.lbValue4 = new SimpleWallet.TransparentLabel();
-            this.lbValue3 = new SimpleWallet.TransparentLabel();
-            this.lbValue2 = new SimpleWallet.TransparentLabel();
-            this.lbValue1 = new SimpleWallet.TransparentLabel();
-            this.lbTime4 = new SimpleWallet.TransparentLabel();
-            this.lbTime3 = new SimpleWallet.TransparentLabel();
-            this.lbTime2 = new SimpleWallet.TransparentLabel();
-            this.lbTime1 = new SimpleWallet.TransparentLabel();
-            this.label5 = new SimpleWallet.TransparentLabel();
-            this.label12 = new SimpleWallet.TransparentLabel();
-            this.label7 = new SimpleWallet.TransparentLabel();
-            this.label4 = new SimpleWallet.TransparentLabel();
-            this.lbImmature = new SimpleWallet.TransparentLabel();
-            this.transparentLabel7 = new SimpleWallet.TransparentLabel();
-            this.lbUnconfirmed = new SimpleWallet.TransparentLabel();
-            this.label2 = new SimpleWallet.TransparentLabel();
-            this.lbTransparent = new SimpleWallet.TransparentLabel();
-            this.tlTransparentBalance = new SimpleWallet.TransparentLabel();
-            this.lbLocked = new SimpleWallet.TransparentLabel();
-            this.lbPrivate = new SimpleWallet.TransparentLabel();
-            this.transparentLabel2 = new SimpleWallet.TransparentLabel();
-            this.transparentLabel1 = new SimpleWallet.TransparentLabel();
-            this.lbTotal = new SimpleWallet.TransparentLabel();
-            this.label1 = new SimpleWallet.TransparentLabel();
-            this.lbBestHash = new SimpleWallet.TransparentLabel();
-            this.lbBestTime = new SimpleWallet.TransparentLabel();
             this.tpSend = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -80,20 +50,11 @@
             this.tbFee = new System.Windows.Forms.TextBox();
             this.tbLabel = new System.Windows.Forms.TextBox();
             this.tbPayTo = new System.Windows.Forms.TextBox();
-            this.label6 = new SimpleWallet.TransparentLabel();
-            this.label9 = new SimpleWallet.TransparentLabel();
-            this.label8 = new SimpleWallet.TransparentLabel();
-            this.label10 = new SimpleWallet.TransparentLabel();
-            this.label11 = new SimpleWallet.TransparentLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnShield = new SimpleWallet.TransparentButton();
             this.cbbShieldTo = new System.Windows.Forms.ComboBox();
             this.cbbShieldFrom = new System.Windows.Forms.ComboBox();
             this.cbShieldDefaultFee = new System.Windows.Forms.CheckBox();
             this.tbShieldFee = new System.Windows.Forms.TextBox();
-            this.transparentLabel3 = new SimpleWallet.TransparentLabel();
-            this.transparentLabel5 = new SimpleWallet.TransparentLabel();
-            this.transparentLabel4 = new SimpleWallet.TransparentLabel();
             this.tpReceive = new System.Windows.Forms.TabPage();
             this.dtgAddress = new System.Windows.Forms.DataGridView();
             this.btnNewZAddress = new System.Windows.Forms.Button();
@@ -142,7 +103,6 @@
             this.txHashDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.indexDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.masternodeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnSearch = new SimpleWallet.RoundButton();
             this.imgList = new System.Windows.Forms.ImageList(this.components);
             this.pbPercent = new System.Windows.Forms.ProgressBar();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -166,6 +126,46 @@
             this.pbSignal = new System.Windows.Forms.PictureBox();
             this.addressBookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.masternodeListBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lbAddress4 = new SimpleWallet.TransparentLabel();
+            this.lbAddress3 = new SimpleWallet.TransparentLabel();
+            this.lbAddress2 = new SimpleWallet.TransparentLabel();
+            this.lbAddress1 = new SimpleWallet.TransparentLabel();
+            this.lbValue4 = new SimpleWallet.TransparentLabel();
+            this.lbValue3 = new SimpleWallet.TransparentLabel();
+            this.lbValue2 = new SimpleWallet.TransparentLabel();
+            this.lbValue1 = new SimpleWallet.TransparentLabel();
+            this.lbTime4 = new SimpleWallet.TransparentLabel();
+            this.lbTime3 = new SimpleWallet.TransparentLabel();
+            this.lbTime2 = new SimpleWallet.TransparentLabel();
+            this.lbTime1 = new SimpleWallet.TransparentLabel();
+            this.label5 = new SimpleWallet.TransparentLabel();
+            this.label12 = new SimpleWallet.TransparentLabel();
+            this.label7 = new SimpleWallet.TransparentLabel();
+            this.label4 = new SimpleWallet.TransparentLabel();
+            this.lbImmature = new SimpleWallet.TransparentLabel();
+            this.transparentLabel7 = new SimpleWallet.TransparentLabel();
+            this.lbUnconfirmed = new SimpleWallet.TransparentLabel();
+            this.label2 = new SimpleWallet.TransparentLabel();
+            this.lbTransparent = new SimpleWallet.TransparentLabel();
+            this.tlTransparentBalance = new SimpleWallet.TransparentLabel();
+            this.lbLocked = new SimpleWallet.TransparentLabel();
+            this.lbPrivate = new SimpleWallet.TransparentLabel();
+            this.transparentLabel2 = new SimpleWallet.TransparentLabel();
+            this.transparentLabel1 = new SimpleWallet.TransparentLabel();
+            this.lbTotal = new SimpleWallet.TransparentLabel();
+            this.label1 = new SimpleWallet.TransparentLabel();
+            this.lbBestHash = new SimpleWallet.TransparentLabel();
+            this.lbBestTime = new SimpleWallet.TransparentLabel();
+            this.label6 = new SimpleWallet.TransparentLabel();
+            this.label9 = new SimpleWallet.TransparentLabel();
+            this.label8 = new SimpleWallet.TransparentLabel();
+            this.label10 = new SimpleWallet.TransparentLabel();
+            this.label11 = new SimpleWallet.TransparentLabel();
+            this.btnShield = new SimpleWallet.TransparentButton();
+            this.transparentLabel3 = new SimpleWallet.TransparentLabel();
+            this.transparentLabel5 = new SimpleWallet.TransparentLabel();
+            this.transparentLabel4 = new SimpleWallet.TransparentLabel();
+            this.btnSearch = new SimpleWallet.RoundButton();
             this.typesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tcMain.SuspendLayout();
             this.tpOverview.SuspendLayout();
@@ -308,384 +308,6 @@
             this.pbTransaction1.TabIndex = 10;
             this.pbTransaction1.TabStop = false;
             this.pbTransaction1.Visible = false;
-            // 
-            // lbAddress4
-            // 
-            this.lbAddress4.AutoSize = true;
-            this.lbAddress4.BackColor = System.Drawing.Color.Transparent;
-            this.lbAddress4.Location = new System.Drawing.Point(499, 261);
-            this.lbAddress4.Name = "lbAddress4";
-            this.lbAddress4.Opacity = 0;
-            this.lbAddress4.Size = new System.Drawing.Size(51, 15);
-            this.lbAddress4.TabIndex = 13;
-            this.lbAddress4.Text = "address";
-            this.lbAddress4.TransparentBackColor = System.Drawing.Color.Blue;
-            this.lbAddress4.Visible = false;
-            // 
-            // lbAddress3
-            // 
-            this.lbAddress3.AutoSize = true;
-            this.lbAddress3.BackColor = System.Drawing.Color.Transparent;
-            this.lbAddress3.Location = new System.Drawing.Point(499, 197);
-            this.lbAddress3.Name = "lbAddress3";
-            this.lbAddress3.Opacity = 0;
-            this.lbAddress3.Size = new System.Drawing.Size(51, 15);
-            this.lbAddress3.TabIndex = 13;
-            this.lbAddress3.Text = "address";
-            this.lbAddress3.TransparentBackColor = System.Drawing.Color.Blue;
-            this.lbAddress3.Visible = false;
-            // 
-            // lbAddress2
-            // 
-            this.lbAddress2.AutoSize = true;
-            this.lbAddress2.BackColor = System.Drawing.Color.Transparent;
-            this.lbAddress2.Location = new System.Drawing.Point(499, 133);
-            this.lbAddress2.Name = "lbAddress2";
-            this.lbAddress2.Opacity = 0;
-            this.lbAddress2.Size = new System.Drawing.Size(51, 15);
-            this.lbAddress2.TabIndex = 13;
-            this.lbAddress2.Text = "address";
-            this.lbAddress2.TransparentBackColor = System.Drawing.Color.Blue;
-            this.lbAddress2.Visible = false;
-            // 
-            // lbAddress1
-            // 
-            this.lbAddress1.AutoSize = true;
-            this.lbAddress1.BackColor = System.Drawing.Color.Transparent;
-            this.lbAddress1.Location = new System.Drawing.Point(499, 69);
-            this.lbAddress1.Name = "lbAddress1";
-            this.lbAddress1.Opacity = 0;
-            this.lbAddress1.Size = new System.Drawing.Size(51, 15);
-            this.lbAddress1.TabIndex = 13;
-            this.lbAddress1.Text = "address";
-            this.lbAddress1.TransparentBackColor = System.Drawing.Color.Blue;
-            this.lbAddress1.Visible = false;
-            // 
-            // lbValue4
-            // 
-            this.lbValue4.AutoSize = true;
-            this.lbValue4.BackColor = System.Drawing.Color.Transparent;
-            this.lbValue4.Location = new System.Drawing.Point(650, 237);
-            this.lbValue4.Name = "lbValue4";
-            this.lbValue4.Opacity = 0;
-            this.lbValue4.Size = new System.Drawing.Size(36, 15);
-            this.lbValue4.TabIndex = 13;
-            this.lbValue4.Text = "value";
-            this.lbValue4.TransparentBackColor = System.Drawing.Color.Blue;
-            this.lbValue4.Visible = false;
-            // 
-            // lbValue3
-            // 
-            this.lbValue3.AutoSize = true;
-            this.lbValue3.BackColor = System.Drawing.Color.Transparent;
-            this.lbValue3.Location = new System.Drawing.Point(650, 172);
-            this.lbValue3.Name = "lbValue3";
-            this.lbValue3.Opacity = 0;
-            this.lbValue3.Size = new System.Drawing.Size(36, 15);
-            this.lbValue3.TabIndex = 13;
-            this.lbValue3.Text = "value";
-            this.lbValue3.TransparentBackColor = System.Drawing.Color.Blue;
-            this.lbValue3.Visible = false;
-            // 
-            // lbValue2
-            // 
-            this.lbValue2.AutoSize = true;
-            this.lbValue2.BackColor = System.Drawing.Color.Transparent;
-            this.lbValue2.Location = new System.Drawing.Point(650, 108);
-            this.lbValue2.Name = "lbValue2";
-            this.lbValue2.Opacity = 0;
-            this.lbValue2.Size = new System.Drawing.Size(36, 15);
-            this.lbValue2.TabIndex = 13;
-            this.lbValue2.Text = "value";
-            this.lbValue2.TransparentBackColor = System.Drawing.Color.Blue;
-            this.lbValue2.Visible = false;
-            // 
-            // lbValue1
-            // 
-            this.lbValue1.AutoSize = true;
-            this.lbValue1.BackColor = System.Drawing.Color.Transparent;
-            this.lbValue1.Location = new System.Drawing.Point(650, 44);
-            this.lbValue1.Name = "lbValue1";
-            this.lbValue1.Opacity = 0;
-            this.lbValue1.Size = new System.Drawing.Size(36, 15);
-            this.lbValue1.TabIndex = 13;
-            this.lbValue1.Text = "value";
-            this.lbValue1.TransparentBackColor = System.Drawing.Color.Blue;
-            this.lbValue1.Visible = false;
-            // 
-            // lbTime4
-            // 
-            this.lbTime4.AutoSize = true;
-            this.lbTime4.BackColor = System.Drawing.Color.Transparent;
-            this.lbTime4.Location = new System.Drawing.Point(499, 237);
-            this.lbTime4.Name = "lbTime4";
-            this.lbTime4.Opacity = 0;
-            this.lbTime4.Size = new System.Drawing.Size(31, 15);
-            this.lbTime4.TabIndex = 13;
-            this.lbTime4.Text = "time";
-            this.lbTime4.TransparentBackColor = System.Drawing.Color.Blue;
-            this.lbTime4.Visible = false;
-            // 
-            // lbTime3
-            // 
-            this.lbTime3.AutoSize = true;
-            this.lbTime3.BackColor = System.Drawing.Color.Transparent;
-            this.lbTime3.Location = new System.Drawing.Point(499, 172);
-            this.lbTime3.Name = "lbTime3";
-            this.lbTime3.Opacity = 0;
-            this.lbTime3.Size = new System.Drawing.Size(31, 15);
-            this.lbTime3.TabIndex = 13;
-            this.lbTime3.Text = "time";
-            this.lbTime3.TransparentBackColor = System.Drawing.Color.Blue;
-            this.lbTime3.Visible = false;
-            // 
-            // lbTime2
-            // 
-            this.lbTime2.AutoSize = true;
-            this.lbTime2.BackColor = System.Drawing.Color.Transparent;
-            this.lbTime2.Location = new System.Drawing.Point(499, 108);
-            this.lbTime2.Name = "lbTime2";
-            this.lbTime2.Opacity = 0;
-            this.lbTime2.Size = new System.Drawing.Size(31, 15);
-            this.lbTime2.TabIndex = 13;
-            this.lbTime2.Text = "time";
-            this.lbTime2.TransparentBackColor = System.Drawing.Color.Blue;
-            this.lbTime2.Visible = false;
-            // 
-            // lbTime1
-            // 
-            this.lbTime1.AutoSize = true;
-            this.lbTime1.BackColor = System.Drawing.Color.Transparent;
-            this.lbTime1.Location = new System.Drawing.Point(499, 44);
-            this.lbTime1.Name = "lbTime1";
-            this.lbTime1.Opacity = 0;
-            this.lbTime1.Size = new System.Drawing.Size(31, 15);
-            this.lbTime1.TabIndex = 13;
-            this.lbTime1.Text = "time";
-            this.lbTime1.TransparentBackColor = System.Drawing.Color.Blue;
-            this.lbTime1.Visible = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(430, 3);
-            this.label5.Name = "label5";
-            this.label5.Opacity = 0;
-            this.label5.Size = new System.Drawing.Size(201, 24);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Recent Transactions";
-            this.label5.TransparentBackColor = System.Drawing.Color.Blue;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Location = new System.Drawing.Point(8, 432);
-            this.label12.Name = "label12";
-            this.label12.Opacity = 0;
-            this.label12.Size = new System.Drawing.Size(105, 15);
-            this.label12.TabIndex = 3;
-            this.label12.Text = "Latest block hash:";
-            this.label12.TransparentBackColor = System.Drawing.Color.Blue;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Location = new System.Drawing.Point(8, 417);
-            this.label7.Name = "label7";
-            this.label7.Opacity = 0;
-            this.label7.Size = new System.Drawing.Size(102, 15);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Latest block time:";
-            this.label7.TransparentBackColor = System.Drawing.Color.Blue;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 3);
-            this.label4.Name = "label4";
-            this.label4.Opacity = 0;
-            this.label4.Size = new System.Drawing.Size(79, 20);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "WALLET";
-            this.label4.TransparentBackColor = System.Drawing.Color.Blue;
-            // 
-            // lbImmature
-            // 
-            this.lbImmature.AutoSize = true;
-            this.lbImmature.BackColor = System.Drawing.Color.Transparent;
-            this.lbImmature.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbImmature.Location = new System.Drawing.Point(94, 97);
-            this.lbImmature.Name = "lbImmature";
-            this.lbImmature.Opacity = 0;
-            this.lbImmature.Size = new System.Drawing.Size(103, 15);
-            this.lbImmature.TabIndex = 6;
-            this.lbImmature.Text = "Loading data...";
-            this.lbImmature.TransparentBackColor = System.Drawing.Color.Blue;
-            // 
-            // transparentLabel7
-            // 
-            this.transparentLabel7.AutoSize = true;
-            this.transparentLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.transparentLabel7.Location = new System.Drawing.Point(8, 97);
-            this.transparentLabel7.Name = "transparentLabel7";
-            this.transparentLabel7.Opacity = 0;
-            this.transparentLabel7.Size = new System.Drawing.Size(60, 15);
-            this.transparentLabel7.TabIndex = 6;
-            this.transparentLabel7.Text = "Immature";
-            this.transparentLabel7.TransparentBackColor = System.Drawing.Color.Blue;
-            // 
-            // lbUnconfirmed
-            // 
-            this.lbUnconfirmed.AutoSize = true;
-            this.lbUnconfirmed.BackColor = System.Drawing.Color.Transparent;
-            this.lbUnconfirmed.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUnconfirmed.Location = new System.Drawing.Point(94, 82);
-            this.lbUnconfirmed.Name = "lbUnconfirmed";
-            this.lbUnconfirmed.Opacity = 0;
-            this.lbUnconfirmed.Size = new System.Drawing.Size(103, 15);
-            this.lbUnconfirmed.TabIndex = 6;
-            this.lbUnconfirmed.Text = "Loading data...";
-            this.lbUnconfirmed.TransparentBackColor = System.Drawing.Color.Blue;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(8, 82);
-            this.label2.Name = "label2";
-            this.label2.Opacity = 0;
-            this.label2.Size = new System.Drawing.Size(78, 15);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Unconfirmed";
-            this.label2.TransparentBackColor = System.Drawing.Color.Blue;
-            // 
-            // lbTransparent
-            // 
-            this.lbTransparent.AutoSize = true;
-            this.lbTransparent.BackColor = System.Drawing.Color.Transparent;
-            this.lbTransparent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTransparent.Location = new System.Drawing.Point(94, 35);
-            this.lbTransparent.Name = "lbTransparent";
-            this.lbTransparent.Opacity = 0;
-            this.lbTransparent.Size = new System.Drawing.Size(103, 15);
-            this.lbTransparent.TabIndex = 5;
-            this.lbTransparent.Text = "Loading data...";
-            this.lbTransparent.TransparentBackColor = System.Drawing.Color.Blue;
-            // 
-            // tlTransparentBalance
-            // 
-            this.tlTransparentBalance.AutoSize = true;
-            this.tlTransparentBalance.BackColor = System.Drawing.Color.Transparent;
-            this.tlTransparentBalance.Location = new System.Drawing.Point(8, 35);
-            this.tlTransparentBalance.Name = "tlTransparentBalance";
-            this.tlTransparentBalance.Opacity = 0;
-            this.tlTransparentBalance.Size = new System.Drawing.Size(73, 15);
-            this.tlTransparentBalance.TabIndex = 5;
-            this.tlTransparentBalance.Text = "Transparent";
-            this.tlTransparentBalance.TransparentBackColor = System.Drawing.Color.Blue;
-            // 
-            // lbLocked
-            // 
-            this.lbLocked.AutoSize = true;
-            this.lbLocked.BackColor = System.Drawing.Color.Transparent;
-            this.lbLocked.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLocked.Location = new System.Drawing.Point(94, 67);
-            this.lbLocked.Name = "lbLocked";
-            this.lbLocked.Opacity = 0;
-            this.lbLocked.Size = new System.Drawing.Size(103, 15);
-            this.lbLocked.TabIndex = 5;
-            this.lbLocked.Text = "Loading data...";
-            this.lbLocked.TransparentBackColor = System.Drawing.Color.Blue;
-            // 
-            // lbPrivate
-            // 
-            this.lbPrivate.AutoSize = true;
-            this.lbPrivate.BackColor = System.Drawing.Color.Transparent;
-            this.lbPrivate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPrivate.Location = new System.Drawing.Point(94, 51);
-            this.lbPrivate.Name = "lbPrivate";
-            this.lbPrivate.Opacity = 0;
-            this.lbPrivate.Size = new System.Drawing.Size(103, 15);
-            this.lbPrivate.TabIndex = 5;
-            this.lbPrivate.Text = "Loading data...";
-            this.lbPrivate.TransparentBackColor = System.Drawing.Color.Blue;
-            // 
-            // transparentLabel2
-            // 
-            this.transparentLabel2.AutoSize = true;
-            this.transparentLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.transparentLabel2.Location = new System.Drawing.Point(8, 67);
-            this.transparentLabel2.Name = "transparentLabel2";
-            this.transparentLabel2.Opacity = 0;
-            this.transparentLabel2.Size = new System.Drawing.Size(47, 15);
-            this.transparentLabel2.TabIndex = 5;
-            this.transparentLabel2.Text = "Locked";
-            this.transparentLabel2.TransparentBackColor = System.Drawing.Color.Blue;
-            // 
-            // transparentLabel1
-            // 
-            this.transparentLabel1.AutoSize = true;
-            this.transparentLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.transparentLabel1.Location = new System.Drawing.Point(8, 51);
-            this.transparentLabel1.Name = "transparentLabel1";
-            this.transparentLabel1.Opacity = 0;
-            this.transparentLabel1.Size = new System.Drawing.Size(44, 15);
-            this.transparentLabel1.TabIndex = 5;
-            this.transparentLabel1.Text = "Private";
-            this.transparentLabel1.TransparentBackColor = System.Drawing.Color.Blue;
-            // 
-            // lbTotal
-            // 
-            this.lbTotal.AutoSize = true;
-            this.lbTotal.BackColor = System.Drawing.Color.Transparent;
-            this.lbTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTotal.Location = new System.Drawing.Point(94, 112);
-            this.lbTotal.Name = "lbTotal";
-            this.lbTotal.Opacity = 0;
-            this.lbTotal.Size = new System.Drawing.Size(103, 15);
-            this.lbTotal.TabIndex = 5;
-            this.lbTotal.Text = "Loading data...";
-            this.lbTotal.TransparentBackColor = System.Drawing.Color.Blue;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(8, 112);
-            this.label1.Name = "label1";
-            this.label1.Opacity = 0;
-            this.label1.Size = new System.Drawing.Size(34, 15);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Total";
-            this.label1.TransparentBackColor = System.Drawing.Color.Blue;
-            // 
-            // lbBestHash
-            // 
-            this.lbBestHash.AutoSize = true;
-            this.lbBestHash.BackColor = System.Drawing.Color.Transparent;
-            this.lbBestHash.Location = new System.Drawing.Point(140, 432);
-            this.lbBestHash.Name = "lbBestHash";
-            this.lbBestHash.Opacity = 0;
-            this.lbBestHash.Size = new System.Drawing.Size(0, 15);
-            this.lbBestHash.TabIndex = 4;
-            this.lbBestHash.TransparentBackColor = System.Drawing.Color.Blue;
-            // 
-            // lbBestTime
-            // 
-            this.lbBestTime.AutoSize = true;
-            this.lbBestTime.BackColor = System.Drawing.Color.Transparent;
-            this.lbBestTime.Location = new System.Drawing.Point(140, 417);
-            this.lbBestTime.Name = "lbBestTime";
-            this.lbBestTime.Opacity = 0;
-            this.lbBestTime.Size = new System.Drawing.Size(0, 15);
-            this.lbBestTime.TabIndex = 3;
-            this.lbBestTime.TransparentBackColor = System.Drawing.Color.Blue;
             // 
             // tpSend
             // 
@@ -846,66 +468,6 @@
             this.tbPayTo.TabIndex = 1;
             this.tbPayTo.Leave += new System.EventHandler(this.tbPayTo_Leave);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(6, 23);
-            this.label6.Name = "label6";
-            this.label6.Opacity = 0;
-            this.label6.Size = new System.Drawing.Size(36, 15);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "From";
-            this.label6.TransparentBackColor = System.Drawing.Color.Blue;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Location = new System.Drawing.Point(6, 79);
-            this.label9.Name = "label9";
-            this.label9.Opacity = 0;
-            this.label9.Size = new System.Drawing.Size(58, 15);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Message";
-            this.label9.TransparentBackColor = System.Drawing.Color.Blue;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Location = new System.Drawing.Point(6, 52);
-            this.label8.Name = "label8";
-            this.label8.Opacity = 0;
-            this.label8.Size = new System.Drawing.Size(44, 15);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Pay To";
-            this.label8.TransparentBackColor = System.Drawing.Color.Blue;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Location = new System.Drawing.Point(6, 106);
-            this.label10.Name = "label10";
-            this.label10.Opacity = 0;
-            this.label10.Size = new System.Drawing.Size(49, 15);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Amount";
-            this.label10.TransparentBackColor = System.Drawing.Color.Blue;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Location = new System.Drawing.Point(6, 133);
-            this.label11.Name = "label11";
-            this.label11.Opacity = 0;
-            this.label11.Size = new System.Drawing.Size(28, 15);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Fee";
-            this.label11.TransparentBackColor = System.Drawing.Color.Blue;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnShield);
@@ -922,21 +484,6 @@
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Shield coinbase";
-            // 
-            // btnShield
-            // 
-            this.btnShield.BackColor = System.Drawing.Color.Transparent;
-            this.btnShield.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnShield.BackgroundImage")));
-            this.btnShield.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnShield.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShield.Location = new System.Drawing.Point(737, 77);
-            this.btnShield.Name = "btnShield";
-            this.btnShield.Size = new System.Drawing.Size(88, 99);
-            this.btnShield.TabIndex = 13;
-            this.btnShield.Text = "Shield";
-            this.ttStart.SetToolTip(this.btnShield, "Start shield coinbase");
-            this.btnShield.UseVisualStyleBackColor = true;
-            this.btnShield.Click += new System.EventHandler(this.btnShield_Click);
             // 
             // cbbShieldTo
             // 
@@ -979,42 +526,6 @@
             this.tbShieldFee.Text = "0.0001";
             this.tbShieldFee.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAmount_KeyPress);
             this.tbShieldFee.Leave += new System.EventHandler(this.tbPayTo_Leave);
-            // 
-            // transparentLabel3
-            // 
-            this.transparentLabel3.AutoSize = true;
-            this.transparentLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.transparentLabel3.Location = new System.Drawing.Point(6, 23);
-            this.transparentLabel3.Name = "transparentLabel3";
-            this.transparentLabel3.Opacity = 0;
-            this.transparentLabel3.Size = new System.Drawing.Size(36, 15);
-            this.transparentLabel3.TabIndex = 0;
-            this.transparentLabel3.Text = "From";
-            this.transparentLabel3.TransparentBackColor = System.Drawing.Color.Blue;
-            // 
-            // transparentLabel5
-            // 
-            this.transparentLabel5.AutoSize = true;
-            this.transparentLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.transparentLabel5.Location = new System.Drawing.Point(6, 77);
-            this.transparentLabel5.Name = "transparentLabel5";
-            this.transparentLabel5.Opacity = 0;
-            this.transparentLabel5.Size = new System.Drawing.Size(28, 15);
-            this.transparentLabel5.TabIndex = 0;
-            this.transparentLabel5.Text = "Fee";
-            this.transparentLabel5.TransparentBackColor = System.Drawing.Color.Blue;
-            // 
-            // transparentLabel4
-            // 
-            this.transparentLabel4.AutoSize = true;
-            this.transparentLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.transparentLabel4.Location = new System.Drawing.Point(6, 50);
-            this.transparentLabel4.Name = "transparentLabel4";
-            this.transparentLabel4.Opacity = 0;
-            this.transparentLabel4.Size = new System.Drawing.Size(21, 15);
-            this.transparentLabel4.TabIndex = 0;
-            this.transparentLabel4.Text = "To";
-            this.transparentLabel4.TransparentBackColor = System.Drawing.Color.Blue;
             // 
             // tpReceive
             // 
@@ -1479,21 +990,6 @@
             // 
             this.masternodeBindingSource.DataSource = typeof(SimpleWallet.Types.Masternode);
             // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.Transparent;
-            this.btnSearch.BackgroundImage = global::SimpleWallet.Properties.Resources.search_dark;
-            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(805, 430);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(25, 25);
-            this.btnSearch.TabIndex = 1;
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            this.btnSearch.MouseEnter += new System.EventHandler(this.btnSearch_MouseEnter);
-            this.btnSearch.MouseLeave += new System.EventHandler(this.btnSearch_MouseLeave);
-            // 
             // imgList
             // 
             this.imgList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgList.ImageStream")));
@@ -1528,7 +1024,7 @@
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menuStrip1.Size = new System.Drawing.Size(260, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(168, 24);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -1623,21 +1119,21 @@
             // debugToolStripMenuItem
             // 
             this.debugToolStripMenuItem.Name = "debugToolStripMenuItem";
-            this.debugToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.debugToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.debugToolStripMenuItem.Text = "Debug";
             this.debugToolStripMenuItem.Click += new System.EventHandler(this.debugToolStripMenuItem_Click);
             // 
             // peersToolStripMenuItem
             // 
             this.peersToolStripMenuItem.Name = "peersToolStripMenuItem";
-            this.peersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.peersToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.peersToolStripMenuItem.Text = "Get Peers";
             this.peersToolStripMenuItem.Click += new System.EventHandler(this.peersToolStripMenuItem_Click);
             // 
             // addPeersToolStripMenuItem
             // 
             this.addPeersToolStripMenuItem.Name = "addPeersToolStripMenuItem";
-            this.addPeersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addPeersToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.addPeersToolStripMenuItem.Text = "Add Peers";
             this.addPeersToolStripMenuItem.Click += new System.EventHandler(this.addPeersToolStripMenuItem_Click);
             // 
@@ -1682,6 +1178,510 @@
             // masternodeListBindingSource
             // 
             this.masternodeListBindingSource.DataSource = typeof(SimpleWallet.Types.MasternodeList);
+            // 
+            // lbAddress4
+            // 
+            this.lbAddress4.AutoSize = true;
+            this.lbAddress4.BackColor = System.Drawing.Color.Transparent;
+            this.lbAddress4.Location = new System.Drawing.Point(499, 261);
+            this.lbAddress4.Name = "lbAddress4";
+            this.lbAddress4.Opacity = 0;
+            this.lbAddress4.Size = new System.Drawing.Size(51, 15);
+            this.lbAddress4.TabIndex = 13;
+            this.lbAddress4.Text = "address";
+            this.lbAddress4.TransparentBackColor = System.Drawing.Color.Blue;
+            this.lbAddress4.Visible = false;
+            // 
+            // lbAddress3
+            // 
+            this.lbAddress3.AutoSize = true;
+            this.lbAddress3.BackColor = System.Drawing.Color.Transparent;
+            this.lbAddress3.Location = new System.Drawing.Point(499, 197);
+            this.lbAddress3.Name = "lbAddress3";
+            this.lbAddress3.Opacity = 0;
+            this.lbAddress3.Size = new System.Drawing.Size(51, 15);
+            this.lbAddress3.TabIndex = 13;
+            this.lbAddress3.Text = "address";
+            this.lbAddress3.TransparentBackColor = System.Drawing.Color.Blue;
+            this.lbAddress3.Visible = false;
+            // 
+            // lbAddress2
+            // 
+            this.lbAddress2.AutoSize = true;
+            this.lbAddress2.BackColor = System.Drawing.Color.Transparent;
+            this.lbAddress2.Location = new System.Drawing.Point(499, 133);
+            this.lbAddress2.Name = "lbAddress2";
+            this.lbAddress2.Opacity = 0;
+            this.lbAddress2.Size = new System.Drawing.Size(51, 15);
+            this.lbAddress2.TabIndex = 13;
+            this.lbAddress2.Text = "address";
+            this.lbAddress2.TransparentBackColor = System.Drawing.Color.Blue;
+            this.lbAddress2.Visible = false;
+            // 
+            // lbAddress1
+            // 
+            this.lbAddress1.AutoSize = true;
+            this.lbAddress1.BackColor = System.Drawing.Color.Transparent;
+            this.lbAddress1.Location = new System.Drawing.Point(499, 69);
+            this.lbAddress1.Name = "lbAddress1";
+            this.lbAddress1.Opacity = 0;
+            this.lbAddress1.Size = new System.Drawing.Size(51, 15);
+            this.lbAddress1.TabIndex = 13;
+            this.lbAddress1.Text = "address";
+            this.lbAddress1.TransparentBackColor = System.Drawing.Color.Blue;
+            this.lbAddress1.Visible = false;
+            // 
+            // lbValue4
+            // 
+            this.lbValue4.AutoSize = true;
+            this.lbValue4.BackColor = System.Drawing.Color.Transparent;
+            this.lbValue4.Location = new System.Drawing.Point(650, 237);
+            this.lbValue4.Name = "lbValue4";
+            this.lbValue4.Opacity = 0;
+            this.lbValue4.Size = new System.Drawing.Size(36, 15);
+            this.lbValue4.TabIndex = 13;
+            this.lbValue4.Text = "value";
+            this.lbValue4.TransparentBackColor = System.Drawing.Color.Blue;
+            this.lbValue4.Visible = false;
+            // 
+            // lbValue3
+            // 
+            this.lbValue3.AutoSize = true;
+            this.lbValue3.BackColor = System.Drawing.Color.Transparent;
+            this.lbValue3.Location = new System.Drawing.Point(650, 172);
+            this.lbValue3.Name = "lbValue3";
+            this.lbValue3.Opacity = 0;
+            this.lbValue3.Size = new System.Drawing.Size(36, 15);
+            this.lbValue3.TabIndex = 13;
+            this.lbValue3.Text = "value";
+            this.lbValue3.TransparentBackColor = System.Drawing.Color.Blue;
+            this.lbValue3.Visible = false;
+            // 
+            // lbValue2
+            // 
+            this.lbValue2.AutoSize = true;
+            this.lbValue2.BackColor = System.Drawing.Color.Transparent;
+            this.lbValue2.Location = new System.Drawing.Point(650, 108);
+            this.lbValue2.Name = "lbValue2";
+            this.lbValue2.Opacity = 0;
+            this.lbValue2.Size = new System.Drawing.Size(36, 15);
+            this.lbValue2.TabIndex = 13;
+            this.lbValue2.Text = "value";
+            this.lbValue2.TransparentBackColor = System.Drawing.Color.Blue;
+            this.lbValue2.Visible = false;
+            // 
+            // lbValue1
+            // 
+            this.lbValue1.AutoSize = true;
+            this.lbValue1.BackColor = System.Drawing.Color.Transparent;
+            this.lbValue1.Location = new System.Drawing.Point(650, 44);
+            this.lbValue1.Name = "lbValue1";
+            this.lbValue1.Opacity = 0;
+            this.lbValue1.Size = new System.Drawing.Size(36, 15);
+            this.lbValue1.TabIndex = 13;
+            this.lbValue1.Text = "value";
+            this.lbValue1.TransparentBackColor = System.Drawing.Color.Blue;
+            this.lbValue1.Visible = false;
+            // 
+            // lbTime4
+            // 
+            this.lbTime4.AutoSize = true;
+            this.lbTime4.BackColor = System.Drawing.Color.Transparent;
+            this.lbTime4.Location = new System.Drawing.Point(499, 237);
+            this.lbTime4.Name = "lbTime4";
+            this.lbTime4.Opacity = 0;
+            this.lbTime4.Size = new System.Drawing.Size(31, 15);
+            this.lbTime4.TabIndex = 13;
+            this.lbTime4.Text = "time";
+            this.lbTime4.TransparentBackColor = System.Drawing.Color.Blue;
+            this.lbTime4.Visible = false;
+            // 
+            // lbTime3
+            // 
+            this.lbTime3.AutoSize = true;
+            this.lbTime3.BackColor = System.Drawing.Color.Transparent;
+            this.lbTime3.Location = new System.Drawing.Point(499, 172);
+            this.lbTime3.Name = "lbTime3";
+            this.lbTime3.Opacity = 0;
+            this.lbTime3.Size = new System.Drawing.Size(31, 15);
+            this.lbTime3.TabIndex = 13;
+            this.lbTime3.Text = "time";
+            this.lbTime3.TransparentBackColor = System.Drawing.Color.Blue;
+            this.lbTime3.Visible = false;
+            // 
+            // lbTime2
+            // 
+            this.lbTime2.AutoSize = true;
+            this.lbTime2.BackColor = System.Drawing.Color.Transparent;
+            this.lbTime2.Location = new System.Drawing.Point(499, 108);
+            this.lbTime2.Name = "lbTime2";
+            this.lbTime2.Opacity = 0;
+            this.lbTime2.Size = new System.Drawing.Size(31, 15);
+            this.lbTime2.TabIndex = 13;
+            this.lbTime2.Text = "time";
+            this.lbTime2.TransparentBackColor = System.Drawing.Color.Blue;
+            this.lbTime2.Visible = false;
+            // 
+            // lbTime1
+            // 
+            this.lbTime1.AutoSize = true;
+            this.lbTime1.BackColor = System.Drawing.Color.Transparent;
+            this.lbTime1.Location = new System.Drawing.Point(499, 44);
+            this.lbTime1.Name = "lbTime1";
+            this.lbTime1.Opacity = 0;
+            this.lbTime1.Size = new System.Drawing.Size(31, 15);
+            this.lbTime1.TabIndex = 13;
+            this.lbTime1.Text = "time";
+            this.lbTime1.TransparentBackColor = System.Drawing.Color.Blue;
+            this.lbTime1.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(430, 3);
+            this.label5.Name = "label5";
+            this.label5.Opacity = 0;
+            this.label5.Size = new System.Drawing.Size(201, 24);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Recent Transactions";
+            this.label5.TransparentBackColor = System.Drawing.Color.Blue;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Location = new System.Drawing.Point(8, 432);
+            this.label12.Name = "label12";
+            this.label12.Opacity = 0;
+            this.label12.Size = new System.Drawing.Size(105, 15);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "Latest block hash:";
+            this.label12.TransparentBackColor = System.Drawing.Color.Blue;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Location = new System.Drawing.Point(8, 417);
+            this.label7.Name = "label7";
+            this.label7.Opacity = 0;
+            this.label7.Size = new System.Drawing.Size(102, 15);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Latest block time:";
+            this.label7.TransparentBackColor = System.Drawing.Color.Blue;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(3, 3);
+            this.label4.Name = "label4";
+            this.label4.Opacity = 0;
+            this.label4.Size = new System.Drawing.Size(79, 20);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "WALLET";
+            this.label4.TransparentBackColor = System.Drawing.Color.Blue;
+            // 
+            // lbImmature
+            // 
+            this.lbImmature.AutoSize = true;
+            this.lbImmature.BackColor = System.Drawing.Color.Transparent;
+            this.lbImmature.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbImmature.Location = new System.Drawing.Point(94, 97);
+            this.lbImmature.Name = "lbImmature";
+            this.lbImmature.Opacity = 0;
+            this.lbImmature.Size = new System.Drawing.Size(103, 15);
+            this.lbImmature.TabIndex = 6;
+            this.lbImmature.Text = "Loading data...";
+            this.lbImmature.TransparentBackColor = System.Drawing.Color.Blue;
+            // 
+            // transparentLabel7
+            // 
+            this.transparentLabel7.AutoSize = true;
+            this.transparentLabel7.BackColor = System.Drawing.Color.Transparent;
+            this.transparentLabel7.Location = new System.Drawing.Point(8, 97);
+            this.transparentLabel7.Name = "transparentLabel7";
+            this.transparentLabel7.Opacity = 0;
+            this.transparentLabel7.Size = new System.Drawing.Size(60, 15);
+            this.transparentLabel7.TabIndex = 6;
+            this.transparentLabel7.Text = "Immature";
+            this.transparentLabel7.TransparentBackColor = System.Drawing.Color.Blue;
+            // 
+            // lbUnconfirmed
+            // 
+            this.lbUnconfirmed.AutoSize = true;
+            this.lbUnconfirmed.BackColor = System.Drawing.Color.Transparent;
+            this.lbUnconfirmed.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUnconfirmed.Location = new System.Drawing.Point(94, 82);
+            this.lbUnconfirmed.Name = "lbUnconfirmed";
+            this.lbUnconfirmed.Opacity = 0;
+            this.lbUnconfirmed.Size = new System.Drawing.Size(103, 15);
+            this.lbUnconfirmed.TabIndex = 6;
+            this.lbUnconfirmed.Text = "Loading data...";
+            this.lbUnconfirmed.TransparentBackColor = System.Drawing.Color.Blue;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(8, 82);
+            this.label2.Name = "label2";
+            this.label2.Opacity = 0;
+            this.label2.Size = new System.Drawing.Size(78, 15);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Unconfirmed";
+            this.label2.TransparentBackColor = System.Drawing.Color.Blue;
+            // 
+            // lbTransparent
+            // 
+            this.lbTransparent.AutoSize = true;
+            this.lbTransparent.BackColor = System.Drawing.Color.Transparent;
+            this.lbTransparent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTransparent.Location = new System.Drawing.Point(94, 35);
+            this.lbTransparent.Name = "lbTransparent";
+            this.lbTransparent.Opacity = 0;
+            this.lbTransparent.Size = new System.Drawing.Size(103, 15);
+            this.lbTransparent.TabIndex = 5;
+            this.lbTransparent.Text = "Loading data...";
+            this.lbTransparent.TransparentBackColor = System.Drawing.Color.Blue;
+            // 
+            // tlTransparentBalance
+            // 
+            this.tlTransparentBalance.AutoSize = true;
+            this.tlTransparentBalance.BackColor = System.Drawing.Color.Transparent;
+            this.tlTransparentBalance.Location = new System.Drawing.Point(8, 35);
+            this.tlTransparentBalance.Name = "tlTransparentBalance";
+            this.tlTransparentBalance.Opacity = 0;
+            this.tlTransparentBalance.Size = new System.Drawing.Size(73, 15);
+            this.tlTransparentBalance.TabIndex = 5;
+            this.tlTransparentBalance.Text = "Transparent";
+            this.tlTransparentBalance.TransparentBackColor = System.Drawing.Color.Blue;
+            // 
+            // lbLocked
+            // 
+            this.lbLocked.AutoSize = true;
+            this.lbLocked.BackColor = System.Drawing.Color.Transparent;
+            this.lbLocked.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLocked.Location = new System.Drawing.Point(94, 67);
+            this.lbLocked.Name = "lbLocked";
+            this.lbLocked.Opacity = 0;
+            this.lbLocked.Size = new System.Drawing.Size(103, 15);
+            this.lbLocked.TabIndex = 5;
+            this.lbLocked.Text = "Loading data...";
+            this.lbLocked.TransparentBackColor = System.Drawing.Color.Blue;
+            // 
+            // lbPrivate
+            // 
+            this.lbPrivate.AutoSize = true;
+            this.lbPrivate.BackColor = System.Drawing.Color.Transparent;
+            this.lbPrivate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPrivate.Location = new System.Drawing.Point(94, 51);
+            this.lbPrivate.Name = "lbPrivate";
+            this.lbPrivate.Opacity = 0;
+            this.lbPrivate.Size = new System.Drawing.Size(103, 15);
+            this.lbPrivate.TabIndex = 5;
+            this.lbPrivate.Text = "Loading data...";
+            this.lbPrivate.TransparentBackColor = System.Drawing.Color.Blue;
+            // 
+            // transparentLabel2
+            // 
+            this.transparentLabel2.AutoSize = true;
+            this.transparentLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.transparentLabel2.Location = new System.Drawing.Point(8, 67);
+            this.transparentLabel2.Name = "transparentLabel2";
+            this.transparentLabel2.Opacity = 0;
+            this.transparentLabel2.Size = new System.Drawing.Size(47, 15);
+            this.transparentLabel2.TabIndex = 5;
+            this.transparentLabel2.Text = "Locked";
+            this.transparentLabel2.TransparentBackColor = System.Drawing.Color.Blue;
+            // 
+            // transparentLabel1
+            // 
+            this.transparentLabel1.AutoSize = true;
+            this.transparentLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.transparentLabel1.Location = new System.Drawing.Point(8, 51);
+            this.transparentLabel1.Name = "transparentLabel1";
+            this.transparentLabel1.Opacity = 0;
+            this.transparentLabel1.Size = new System.Drawing.Size(44, 15);
+            this.transparentLabel1.TabIndex = 5;
+            this.transparentLabel1.Text = "Private";
+            this.transparentLabel1.TransparentBackColor = System.Drawing.Color.Blue;
+            // 
+            // lbTotal
+            // 
+            this.lbTotal.AutoSize = true;
+            this.lbTotal.BackColor = System.Drawing.Color.Transparent;
+            this.lbTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotal.Location = new System.Drawing.Point(94, 112);
+            this.lbTotal.Name = "lbTotal";
+            this.lbTotal.Opacity = 0;
+            this.lbTotal.Size = new System.Drawing.Size(103, 15);
+            this.lbTotal.TabIndex = 5;
+            this.lbTotal.Text = "Loading data...";
+            this.lbTotal.TransparentBackColor = System.Drawing.Color.Blue;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(8, 112);
+            this.label1.Name = "label1";
+            this.label1.Opacity = 0;
+            this.label1.Size = new System.Drawing.Size(34, 15);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Total";
+            this.label1.TransparentBackColor = System.Drawing.Color.Blue;
+            // 
+            // lbBestHash
+            // 
+            this.lbBestHash.AutoSize = true;
+            this.lbBestHash.BackColor = System.Drawing.Color.Transparent;
+            this.lbBestHash.Location = new System.Drawing.Point(140, 432);
+            this.lbBestHash.Name = "lbBestHash";
+            this.lbBestHash.Opacity = 0;
+            this.lbBestHash.Size = new System.Drawing.Size(0, 15);
+            this.lbBestHash.TabIndex = 4;
+            this.lbBestHash.TransparentBackColor = System.Drawing.Color.Blue;
+            // 
+            // lbBestTime
+            // 
+            this.lbBestTime.AutoSize = true;
+            this.lbBestTime.BackColor = System.Drawing.Color.Transparent;
+            this.lbBestTime.Location = new System.Drawing.Point(140, 417);
+            this.lbBestTime.Name = "lbBestTime";
+            this.lbBestTime.Opacity = 0;
+            this.lbBestTime.Size = new System.Drawing.Size(0, 15);
+            this.lbBestTime.TabIndex = 3;
+            this.lbBestTime.TransparentBackColor = System.Drawing.Color.Blue;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Location = new System.Drawing.Point(6, 23);
+            this.label6.Name = "label6";
+            this.label6.Opacity = 0;
+            this.label6.Size = new System.Drawing.Size(36, 15);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "From";
+            this.label6.TransparentBackColor = System.Drawing.Color.Blue;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Location = new System.Drawing.Point(6, 79);
+            this.label9.Name = "label9";
+            this.label9.Opacity = 0;
+            this.label9.Size = new System.Drawing.Size(58, 15);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Message";
+            this.label9.TransparentBackColor = System.Drawing.Color.Blue;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Location = new System.Drawing.Point(6, 52);
+            this.label8.Name = "label8";
+            this.label8.Opacity = 0;
+            this.label8.Size = new System.Drawing.Size(44, 15);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Pay To";
+            this.label8.TransparentBackColor = System.Drawing.Color.Blue;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Location = new System.Drawing.Point(6, 106);
+            this.label10.Name = "label10";
+            this.label10.Opacity = 0;
+            this.label10.Size = new System.Drawing.Size(49, 15);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Amount";
+            this.label10.TransparentBackColor = System.Drawing.Color.Blue;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Location = new System.Drawing.Point(6, 133);
+            this.label11.Name = "label11";
+            this.label11.Opacity = 0;
+            this.label11.Size = new System.Drawing.Size(28, 15);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Fee";
+            this.label11.TransparentBackColor = System.Drawing.Color.Blue;
+            // 
+            // btnShield
+            // 
+            this.btnShield.BackColor = System.Drawing.Color.Transparent;
+            this.btnShield.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnShield.BackgroundImage")));
+            this.btnShield.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnShield.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShield.Location = new System.Drawing.Point(737, 77);
+            this.btnShield.Name = "btnShield";
+            this.btnShield.Size = new System.Drawing.Size(88, 99);
+            this.btnShield.TabIndex = 13;
+            this.btnShield.Text = "Shield";
+            this.ttStart.SetToolTip(this.btnShield, "Start shield coinbase");
+            this.btnShield.UseVisualStyleBackColor = true;
+            this.btnShield.Click += new System.EventHandler(this.btnShield_Click);
+            // 
+            // transparentLabel3
+            // 
+            this.transparentLabel3.AutoSize = true;
+            this.transparentLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.transparentLabel3.Location = new System.Drawing.Point(6, 23);
+            this.transparentLabel3.Name = "transparentLabel3";
+            this.transparentLabel3.Opacity = 0;
+            this.transparentLabel3.Size = new System.Drawing.Size(36, 15);
+            this.transparentLabel3.TabIndex = 0;
+            this.transparentLabel3.Text = "From";
+            this.transparentLabel3.TransparentBackColor = System.Drawing.Color.Blue;
+            // 
+            // transparentLabel5
+            // 
+            this.transparentLabel5.AutoSize = true;
+            this.transparentLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.transparentLabel5.Location = new System.Drawing.Point(6, 77);
+            this.transparentLabel5.Name = "transparentLabel5";
+            this.transparentLabel5.Opacity = 0;
+            this.transparentLabel5.Size = new System.Drawing.Size(28, 15);
+            this.transparentLabel5.TabIndex = 0;
+            this.transparentLabel5.Text = "Fee";
+            this.transparentLabel5.TransparentBackColor = System.Drawing.Color.Blue;
+            // 
+            // transparentLabel4
+            // 
+            this.transparentLabel4.AutoSize = true;
+            this.transparentLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.transparentLabel4.Location = new System.Drawing.Point(6, 50);
+            this.transparentLabel4.Name = "transparentLabel4";
+            this.transparentLabel4.Opacity = 0;
+            this.transparentLabel4.Size = new System.Drawing.Size(21, 15);
+            this.transparentLabel4.TabIndex = 0;
+            this.transparentLabel4.Text = "To";
+            this.transparentLabel4.TransparentBackColor = System.Drawing.Color.Blue;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.Transparent;
+            this.btnSearch.BackgroundImage = global::SimpleWallet.Properties.Resources.search_dark;
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Location = new System.Drawing.Point(805, 430);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(25, 25);
+            this.btnSearch.TabIndex = 1;
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.btnSearch.MouseEnter += new System.EventHandler(this.btnSearch_MouseEnter);
+            this.btnSearch.MouseLeave += new System.EventHandler(this.btnSearch_MouseLeave);
             // 
             // typesBindingSource
             // 
